@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+		<meta http-equiv="Expires" content="0">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>评论列表</title>
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/mui.min.css?v=4375b1e6e6" />
+		<!--<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>-->
+		<link rel="stylesheet" href="/Static/css/v1.0/common/reset.css?v=ed0ec998e6" />
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/zixun.css?v=5288ab0b49" />
+
+		<style>
+			body {
+				font-family: 'PingFangSC-Medium', "Source Han Sans CN", "Microsoft YaHei", "Helvetica", simsun;
+			}
+			
+			.hc-h5-wrap {
+				padding-top: 44px;
+			}
+			
+			.hc-h5-wrap>header {
+				height: 44px;
+				line-height: 44px;
+			}
+			
+			.mui-icon-back:before,
+			.mui-icon-left-nav:before {
+				color: #fff;
+			}
+			
+			.mui-bar-nav.mui-bar .mui-icon {
+				margin-right: -5px;
+			}
+			
+			.mui-title {
+				color: #fff;
+			}
+			
+			.mui-icon .mui-pull-right img {
+				width: 17px;
+				height: 17px;
+			}
+			
+			.wraper {
+				padding-top: 0;
+				background: #edeff3;
+				padding-bottom: 0;
+			}
+			
+			.za-nocontent-img {
+				width: 1.02rem;
+				height: 0.86rem;
+				margin-top: 1.23rem;
+			}
+			
+			.za-oncontent-h4 {
+				color: #333;
+				margin-top: 16px;
+				font-size: 18px;
+			}
+			
+			.za-nocontent-btn {
+				width: 86px;
+				padding: 3px;
+				font-size: 12px;
+				border-radius: 4px;
+				background: transparent;
+				margin-top: 13px;
+			}
+			
+			.lincoapp-comment .main-comment-list li {
+				padding: 15px 15px 0 15px;
+				border-bottom: 1px solid #f7f7f7;
+				background: #fff;
+				margin-bottom: 9px;
+			}
+			
+			.lincoapp-comment .main-comment-list li:last-child {
+				margin-bottom: 0px;
+			}
+			
+			.lincoapp-comment .main-comment-list .u-img {
+				display: block;
+				float: left;
+				width: 37px;
+				height: 37px;
+				margin-right: 6px;
+			}
+			
+			.lincoapp-comment .main-comment-list .img {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+			}
+			
+			.lincoapp-comment .main-comment-list .detail {
+				overflow: hidden;
+				font-size: 14px;
+				color: #333;
+			}
+			
+			.lincoapp-comment .main-comment-list .cmt-name-wrap {
+				position: relative;
+				font-size: 10px;
+				color: #888;
+			}
+			
+			.lincoapp-comment .main-comment-list .cmt-name {
+				display: block;
+				-webkit-box-flex: 1;
+				margin-bottom: -2px;
+				font-weight: 400;
+				font-size: 14px;
+				color: #333;
+			}
+			
+			.lincoapp-comment .main-comment-list .cmt-title {
+				position: relative;
+				display: box;
+				display: -webkit-box;
+				padding-right: .3rem;
+				font-size: 10px;
+				color: #888;
+			}
+			
+			.lincoapp-comment .main-comment-list .cmt-title time,
+			.lincoapp-comment .main-comment-list .cmt-title span {
+				margin-right: 0px;
+				font-size: 10px;
+				font-family: "PingFangSC-Regular";
+			}
+			
+			.lincoapp-comment .main-comment-list .cmt-title .btn-report {
+				position: absolute;
+				right: 0;
+				top: 0;
+				color: #666;
+			}
+			
+			.lincoapp-comment .main-comment-list .cmt-title .btn-report-2 {
+				position: absolute;
+				right: 0;
+				top: 0;
+				color: #666;
+			}
+			
+			.lincoapp-comment .main-comment-list .cmt-content {
+				margin: 3px 0;
+				line-height: 1.5;
+				font-size: 12px;
+				color: #333;
+				font-family: "PingFangSC-Regular";
+			}
+			
+			.lincoapp-comment .main-comment-list .cmt-bar {
+				text-align: right;
+				margin-bottom: 15px;
+				font-family: "PingFangSC-Regular";
+			}
+			
+			.lincoapp-comment .main-comment-list .cmt-btn2 {
+				display: inline-block;
+				color: #333;
+				font-size: 12px;
+				margin-right: 15px;
+			}
+			
+			.lincoapp-comment .main-comment-list .cmt-btn2:before {
+				content: '';
+				display: inline-block;
+				width: 17px;
+				height: 17px;
+				background: url(/Static/images/v1.0/info/user/icon_reply.png) no-repeat;
+				-webkit-background-size: 1.5rem auto;
+				background-size: 100% auto;
+				margin-right: 4px;
+				vertical-align: -5px;
+			}
+			
+			.lincoapp-comment .main-comment-list .btn-report:before {
+				content: '';
+				display: inline-block;
+				width: 17px;
+				height: 17px;
+				margin-right: 3px;
+				background: url(/Static/images/v1.0/info/user/icon_unzan.png) no-repeat;
+				-webkit-background-size: 100% auto;
+				background-size: 100% auto;
+				vertical-align: -3px;
+			}
+			
+			.lincoapp-comment .main-comment-list .btn-report-2:before {
+				content: '';
+				display: inline-block;
+				width: 17px;
+				height: 17px;
+				background: url(/Static/images/v1.0/info/user/icon_dozan.png) no-repeat;
+				-webkit-background-size: 100% auto;
+				background-size: 100% auto;
+				vertical-align: -3px;
+				margin-right: 3px;
+			}
+			
+			.za-jubao-font {
+				font-size: 12px;
+			}
+			
+			#rmpinglun,
+			#pinglun {
+				display: none;
+			}
+			
+			.za-comment-title {
+				height: 30px;
+				width: 100%;
+				background: #edeff3;
+				line-height: 30px;
+				padding-left: 15px;
+				font-size: 12px;
+			}
+			
+			.za-comment-title img {
+				width: 13px;
+				height: 15px;
+			}
+			
+			.za-comment-title span {
+				font-size: 12px;
+				color: #666;
+			}
+			
+			.eidt_warp {
+				position: fixed;
+				background: #EDEFF3;
+				z-index: 999;
+				width: 100%;
+			}
+			
+			.eidt_warp textarea {
+				margin: 0;
+				padding: 5px 15px;
+				font-size: 14px;
+				border: 0;
+				height: 32px;
+				margin-left: 8px;
+				margin-top: 8px;
+				border-radius: 4px;
+				width: 2.95rem;
+			}
+			
+			.eidt_warp button {
+				width: 0.6rem;
+				margin-top: 8px;
+				height: 32px;
+				border: 0;
+				background: -webkit-linear-gradient(left,#FF1E00, #FFC100) !important; /* Safari 5.1 - 6.0 */
+				background: -o-linear-gradient(left,#FF1E00, #FFC100) !important; /* Opera 11.1 - 12.0 */
+				background: -moz-linear-gradient(left,#FF1E00, #FFC100) !important; /* Firefox 3.6 - 15 */
+				background: linear-gradient(left,#FF1E00, #FFC100) !important; /* 标准的语法 */
+				color: #fff;
+				position: relative;
+				border-radius: 4px;
+			}
+			
+			@media only screen and (min-width: 320px) and (max-width: 340px) {
+				.eidt_warp textarea {
+					width: 2.95rem;
+				}
+				.eidt_warp button {
+					width: 0.6rem;
+				}
+			}
+			
+			.za-hide-class {
+				position: relative;
+				font-size: 12px;
+				color: #666;
+				text-align: right;
+			}
+			
+			.za-hide-class:before {
+				content: '';
+				position: absolute;
+				background-image: url(/Static/images/v1.0/info/user/icon_up.png);
+				height: 19px;
+				width: 19px;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				right: 23px;
+			}
+			
+			#commetSuccess {
+				display: none;
+				position: absolute;
+				z-index: 999;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+			
+			#commetSuccess div {
+				width: 2.4rem;
+				height: 1.34rem;
+				border-radius: 0.04rem;
+				background-color: white;
+				margin: 2.58rem auto;
+				padding-top: 0.28rem;
+			}
+			
+			#commetSuccess div img {
+				display: block;
+				height: 0.5rem;
+				width: 0.5rem;
+				margin: 0rem auto;
+				margin-bottom: 0.15rem;
+			}
+			
+			#commetSuccess div p {
+				text-align: center;
+				color: black;
+				font-size: 0.14rem;
+			}
+			.content_inner{
+				padding-top: 0rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="hc-h5-wrap">
+			<header id="header" class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<a id="offCanvasBtn" class="mui-icon mui-pull-right"><img style="width: 19px;height: 17px;margin-top: 4px;" src="/Static/images/v1.0/info/user/icon_eidt_small.png" /></a>
+				<h1 class="mui-title">评论<span id="totalnum" style="margin-left: 5px;">(0)</span></h1>
+			</header>
+			<div class="wraper">
+				<div class="content_wrap">
+					<div id="refresh" class="hc-bg-ff hc-size-14 hc-text-center">
+						<div class="refresh">
+							<div class="pull_logo hc-g"></div>
+							<div class="pull_txt hc-g hc-line-16 hc-color-7f">下拉即可刷新</div>
+							<div class="pull_time hc-g hc-size-11 hc-line-16 hc-color-ac">暂未更新</div>
+						</div>
+					</div>
+					<div id="eidt_warp" class="eidt_warp">
+						<textarea type="" name="" id="pltext" rows="1" value="" placeholder="说点什么吧..." autoHeight="true"></textarea>
+						<button type="button" id="sendbtn">发送</button>
+					</div>
+					<center id="no-content-msg" style="display: none;">
+						<img class="za-nocontent-img" src="/Static/images/v1.0/info/user/user_pinglun.png" />
+						<h4 class="za-oncontent-h4">暂无评论</h4>
+						<p style="margin-top: 5px;">快去发布你的精彩评论吧！</p>
+						<!--<button id="fbBtn" class="za-nocontent-btn" type="button">发布评论</button>-->
+					</center>
+					<div class="content">
+						<div class="content_inner lincoapp-comment">
+
+							<div id="rm_warp" style="margin-top: 40px;">
+								<div class="za-comment-title" id="rmpinglun">
+									<img src="/Static/images/v1.0/info/user/icon_hot.png" />
+									<span>热门评论</span>
+								</div>
+								<ul class="main-comment-list hotInfoList" id="content-rm">
+									<!--<li data-id="6403044741606858666">
+					                    <span class="u-img">
+					                        <img src="//thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epxv2JmfC6wKZXvt9Nia0b3NMtAbnCN0BOfucr7QibiaMJeQzyiaCjmZwv63FvbhVm71AQJkGvahauJnQ/132" class="img">
+					                    </span>
+					                    <div class="detail">
+					                        <div class="cmt-name-wrap">
+					                            <a class="cmt-name">幸福	</a>
+					                        </div>
+					                        <div class="cmt-title">
+					                            <time class="time">1小时前</time>  			                            
+					                            <span class="btn-report j-ToggleReport">				                    
+					                            	645</span>
+					                            <span class="btn-report-2 j-ToggleReport" style="display: none;">				                    
+					                            	645</span>
+					                        </div>				                        
+					                        <div class="cmt-content"><span style="color: #FD8237 ;">回复@VISHOW：</span>军事强大就是一个大国走向强大的最根本保证！军事科研创新的强大引攀！决定了祖国未来强上加强！人民富上更富！为习主席的现代军事思想点赞！为我们强大的中国点赞！</div>
+					                        <div class="cmt-bar">				                            
+					                            <em class="cmt-btn2 btn-reply j-ToggleReply">回复</em>
+					                            <span class="za-jubao-font">举报</span>
+					                        </div>				                        
+					                    </div>
+					                </li>
+									<li data-id="6403044741606858666">
+					                    <span class="u-img">
+					                        <img src="//thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epxv2JmfC6wKZXvt9Nia0b3NMtAbnCN0BOfucr7QibiaMJeQzyiaCjmZwv63FvbhVm71AQJkGvahauJnQ/132" class="img">
+					                    </span>
+					                    <div class="detail">
+					                        <div class="cmt-name-wrap">
+					                            <a class="cmt-name">幸福	</a>
+					                        </div>
+					                        <div class="cmt-title">
+					                            <time class="time">1小时前</time>  			                            
+					                            <span class="btn-report-2 j-ToggleReport">				                    
+					                            	645</span>
+					                        </div>				                        
+					                        <div class="cmt-content">加强！人民富上更富！为习主席的现代军事思想点赞！为我们强大的中国点赞！</div>
+					                        <div class="cmt-bar">				                            
+					                            <em class="cmt-btn2 btn-reply j-ToggleReply">回复</em>
+					                            <span class="za-jubao-font">举报</span>
+					                        </div>				                        
+					                    </div>
+					                </li>								-->
+								</ul>
+							</div>
+							<div id="pl_warp">
+								<div class="za-comment-title" id="pinglun">
+									<img src="/Static/images/v1.0/info/user/icon_pl.png" />
+									<span>评论</span>
+								</div>
+								<ul class="main-comment-list hotInfoList" id="content">
+									<!--<li data-id="6403044741606858666">
+					                    <span class="u-img">
+					                        <img src="//thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epxv2JmfC6wKZXvt9Nia0b3NMtAbnCN0BOfucr7QibiaMJeQzyiaCjmZwv63FvbhVm71AQJkGvahauJnQ/132" class="img">
+					                    </span>
+					                    <div class="detail">
+					                        <div class="cmt-name-wrap">
+					                            <a class="cmt-name">幸福	</a>
+					                        </div>
+					                        <div class="cmt-title">
+					                            <time class="time">1小时前</time>  			                            
+					                            <span class="btn-report j-ToggleReport">				                    
+					                            	645</span>
+					                            <span class="btn-report-2 j-ToggleReport" style="display: none;">				                    
+					                            	645</span>
+					                        </div>				                        
+					                        <div class="cmt-content">军事强大就是一个大国走向强大的最根本保证！军事科研创新的强大引攀！决定了祖国未来强上加强！人民富上更富！为习主席的现代军事思想点赞！为我们强大的中国点赞！</div>
+					                        <div class="cmt-bar">				                            
+					                            <em class="cmt-btn2 btn-reply j-ToggleReply">回复</em>
+					                            <span class="za-jubao-font">举报</span>
+					                        </div>				                        
+					                    </div>
+					                </li>
+									<li data-id="6403044741606858666">
+					                    <span class="u-img">
+					                        <img src="//thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epxv2JmfC6wKZXvt9Nia0b3NMtAbnCN0BOfucr7QibiaMJeQzyiaCjmZwv63FvbhVm71AQJkGvahauJnQ/132" class="img">
+					                    </span>
+					                    <div class="detail">
+					                        <div class="cmt-name-wrap">
+					                            <a class="cmt-name">幸福	</a>
+					                        </div>
+					                        <div class="cmt-title">
+					                            <time class="time">1小时前</time>  			                            
+					                            <span class="btn-report-2 j-ToggleReport">				                    
+					                            	645</span>
+					                        </div>				                        
+					                        <div class="cmt-content">加强！人民富上更富！为习主席的现代军事思想点赞！为我们强大的中国点赞！</div>
+					                        <div class="cmt-bar">				                            
+					                            <em class="cmt-btn2 btn-reply j-ToggleReply">回复</em>
+					                            <span class="za-jubao-font">举报</span>
+					                        </div>				                        
+					                    </div>
+					                </li>
+					                <li data-id="6403044741606858666">
+					                    <span class="u-img">
+					                        <img src="//thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epxv2JmfC6wKZXvt9Nia0b3NMtAbnCN0BOfucr7QibiaMJeQzyiaCjmZwv63FvbhVm71AQJkGvahauJnQ/132" class="img">
+					                    </span>
+					                    <div class="detail">
+					                        <div class="cmt-name-wrap">
+					                            <a class="cmt-name">幸福	</a>
+					                        </div>
+					                        <div class="cmt-title">
+					                            <time class="time">1小时前</time>  			                            
+					                            <span class="btn-report j-ToggleReport">				                    
+					                            	645</span>
+					                            <span class="btn-report-2 j-ToggleReport" style="display: none;">				                    
+					                            	645</span>
+					                        </div>				                        
+					                        <div class="cmt-content">军事强大就是一个大国走向强大的最根本保证！军事科研创新的强大引攀！决定了祖国未来强上加强！人民富上更富！为习主席的现代军事思想点赞！为我们强大的中国点赞！</div>
+					                        <div class="cmt-bar">				                            
+					                            <em class="cmt-btn2 btn-reply j-ToggleReply">回复</em>
+					                            <span class="za-jubao-font">举报</span>
+					                        </div>				                        
+					                    </div>
+					                </li>
+									<li data-id="6403044741606858666">
+					                    <span class="u-img">
+					                        <img src="//thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epxv2JmfC6wKZXvt9Nia0b3NMtAbnCN0BOfucr7QibiaMJeQzyiaCjmZwv63FvbhVm71AQJkGvahauJnQ/132" class="img">
+					                    </span>
+					                    <div class="detail">
+					                        <div class="cmt-name-wrap">
+					                            <a class="cmt-name">幸福	</a>
+					                        </div>
+					                        <div class="cmt-title">
+					                            <time class="time">1小时前</time>  			                            
+					                            <span class="btn-report-2 j-ToggleReport">				                    
+					                            	645</span>
+					                        </div>				                        
+					                        <div class="cmt-content">加强！人民富上更富！为习主席的现代军事思想点赞！为我们强大的中国点赞！</div>
+					                        <div class="cmt-bar">				                            
+					                            <em class="cmt-btn2 btn-reply j-ToggleReply">回复</em>
+					                            <span class="za-jubao-font">举报</span>
+					                        </div>				                        
+					                    </div>
+					                </li>
+					                <li data-id="6403044741606858666">
+					                    <span class="u-img">
+					                        <img src="//thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epxv2JmfC6wKZXvt9Nia0b3NMtAbnCN0BOfucr7QibiaMJeQzyiaCjmZwv63FvbhVm71AQJkGvahauJnQ/132" class="img">
+					                    </span>
+					                    <div class="detail">
+					                        <div class="cmt-name-wrap">
+					                            <a class="cmt-name">幸福	</a>
+					                        </div>
+					                        <div class="cmt-title">
+					                            <time class="time">1小时前</time>  			                            
+					                            <span class="btn-report j-ToggleReport">				                    
+					                            	645</span>
+					                            <span class="btn-report-2 j-ToggleReport" style="display: none;">				                    
+					                            	645</span>
+					                        </div>				                        
+					                        <div class="cmt-content">军事强大就是一个大国走向强大的最根本保证！军事科研创新的强大引攀！决定了祖国未来强上加强！人民富上更富！为习主席的现代军事思想点赞！为我们强大的中国点赞！</div>
+					                        <div class="cmt-bar">				                            
+					                            <em class="cmt-btn2 btn-reply j-ToggleReply">回复</em>
+					                            <span class="za-jubao-font">举报</span>
+					                        </div>				                        
+					                    </div>
+					                </li>
+									<li data-id="6403044741606858666">
+					                    <span class="u-img">
+					                        <img src="//thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epxv2JmfC6wKZXvt9Nia0b3NMtAbnCN0BOfucr7QibiaMJeQzyiaCjmZwv63FvbhVm71AQJkGvahauJnQ/132" class="img">
+					                    </span>
+					                    <div class="detail">
+					                        <div class="cmt-name-wrap">
+					                            <a class="cmt-name">幸福	</a>
+					                        </div>
+					                        <div class="cmt-title">
+					                            <time class="time">1小时前</time>  			                            
+					                            <span class="btn-report-2 j-ToggleReport">				                    
+					                            	645</span>
+					                        </div>				                        
+					                        <div class="cmt-content">加强！人民富上更富！为习主席的现代军事思想点赞！为我们强大的中国点赞！</div>
+					                        <div class="cmt-bar">				                            
+					                            <em class="cmt-btn2 btn-reply j-ToggleReply">回复</em>
+					                            <span class="za-jubao-font">举报</span>
+					                        </div>				                        
+					                    </div>
+					                </li>					                -->
+								</ul>
+							</div>
+						</div>
+						<!-- 加个icp -->
+						<p class="hc-text-center icp hide">
+							<a class="hc-color-ac" href="http://www.miitbeian.gov.cn/">粤ICP备17077541号-2</a>
+						</p>
+					</div>
+					<div class="loading" style="display: none;">
+						<div class="loading_bar"></div>
+						<div class="loading_ball"></div>
+						<div class="shuju">数据加载中...</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="commetSuccess">
+			<div>
+				<img src="/Static/images/v1.0/common/replaySuccess.png" />
+				<p> 发表成功!</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/zixun/mui.min.js?v=2581360193"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/user_util.js?v=2c498ee3f6"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/text_overflow.js?v=b85f0ff243"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/comment.js?v=18f6018775e442332231"></script>
+		<script>
+			var width = document.documentElement.clientWidth;
+			var textareaWidth = width * 0.787;
+			$(".eidt_warp textarea").css("width", textareaWidth + "px");
+			var buttonWidth = (width - textareaWidth - 8 - 3) * 0.869;
+			$(".eidt_warp button").css("width", buttonWidth + "px");
+			//窗体宽度发生变化
+			window.onresize = function() {
+				var width = document.documentElement.clientWidth;
+				var textareaWidth = width * 0.787;
+				$(".eidt_warp textarea").css("width", textareaWidth + "px");
+				var buttonWidth = (width - textareaWidth - 8 - 3) * 0.869;
+				$(".eidt_warp button").css("width", buttonWidth + "px");
+			}
+		</script>
+		<style>
+			body .layui-m-layer .layui-m-layer-demo-css {
+				bottom: 10px;
+				background-color: rgba(0, 0, 0, .5);
+			}
+			
+			.layui-m-layerchild {
+				border-radius: 4px;
+			}
+			
+			.layui-m-layer-demo-css .layui-m-layercont {
+				padding: 25px 67px;
+				color: #fff;
+				font-family: "PingFangSC-Medium";
+				font-size: 18px;
+			}
+			
+			.layui-m-layer0 .layui-m-layerchild {
+				width: auto;
+			}
+			
+			.layui-m-layershade {
+				background-color: rgba(0, 0, 0, 0);
+			}
+		</style>
+	</body>
+
+</html>

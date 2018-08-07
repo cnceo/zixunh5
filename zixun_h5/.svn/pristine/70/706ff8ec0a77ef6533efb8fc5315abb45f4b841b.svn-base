@@ -1,0 +1,534 @@
+/*今日好彩公共样式*/
+body{
+    font-family: "Source Han Sans CN","Microsoft YaHei","Helvetica",simsun;
+}
+.hc-h5-wrap>header{
+    background-color: #FD8237 ;
+}
+.hc-h5-wrap .header-right {
+    color: #fff;
+}
+.hc-h5-wrap .header-title {
+    /* text-align: left; */
+    width: 0.92rem;
+    background: url(/Static/images/v1.0/info/zixun/logo2.png) no-repeat center;
+    background-size: contain;
+}
+/*今日好彩公共样式*/
+body{
+    position: relative;
+    overflow:hidden;
+}
+img {
+    width: 100%;
+    height: 100%
+}
+
+.hc-h5-wrap {
+    padding-top: 0.44rem;
+    
+}
+
+.wraper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff
+}
+
+.content_wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+.content_inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.tip_footer {
+    width: 100%;
+    height: 0.26rem;
+    line-height: 0.32rem;
+    font-size: 0.13rem;
+    text-align: center;
+    color: #acacac
+}
+
+[class^=id] {
+    overflow: auto;
+    width: 100%;
+}
+
+
+
+.item {
+    width: 100%;
+    padding: 0.09rem 0.10rem;
+    border-bottom: 1px solid #f0f0f2
+}
+
+.item_con {
+    height: 0.75rem;
+    width: 100%;
+}
+
+.item_con_big {
+    width: 100%;
+}
+
+.item_con_big .big_title {
+    height: 0.30rem;
+    line-height: 0.20rem;
+    font-size: 0.17rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.item_con_big .back_content {
+    width: 100%;
+    height: 1.66rem;
+    position: relative;
+}
+
+.s_back_content {
+    width: 29.58%;
+    height: 100%;
+    float: left;
+    border-radius: 3px
+}
+
+.item_text {
+    float: left;
+    width: 70.42%;
+    height: 100%;
+    padding-left: 0.12rem;
+    position: relative;
+}
+
+.title {
+    font-size: 0.17rem;
+    height: 0.50rem;
+    line-height: 0.25rem;
+    color: #1a1a1a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.title_ {
+    font-size: 0.17rem;
+    line-height: 0.24rem;
+    padding-top: 0.04rem;
+    color: #1a1a1a;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+}
+.item.c_af .big_title,
+.item.c_af .title_,
+.item.c_af .title{
+    color: #afafaf
+}
+.empty_p {
+    height: 0.10rem;
+}
+
+.tip_ {
+    font-size: 0.11rem;
+    color: #999999;
+    height: 0.30rem;
+    line-height: 0.15rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.wrap_tag {
+    width: 100%;
+    height: 0.15rem;
+    line-height: 0.15rem;
+}
+
+.wrap_tag span {
+    display: inline-block;
+    text-align: center;
+    height: 0.15rem;
+    line-height: 0.15rem;
+    font-size: 0.11rem;
+    float: right;
+}
+.zdTag{
+    width: 0.31rem;
+    margin-left: 0.07rem;
+    background-color: #4580d8;
+    color: #f3f7fc;
+    border-radius: 2px
+}
+
+.redTag {
+    height: 100%;
+    color: #acacac;
+    padding: 0 0.05rem;
+    color: #828282;
+    border-radius: 6px;
+    float: left !important;
+}
+.redTag span:nth-child(1){
+	margin-right: 0.05rem;
+	width: 0.19rem;
+	height: 0.11rem;
+	background: url("/Static/images/v1.0/info/zixun/readNum.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: inline-block;
+	position: relative;
+	top: 0.02rem;
+	float: left;
+}
+/* 加载动画*/
+
+.loading {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.loading_bar {
+    width: 30%;
+    height: 0.10rem;
+    background: url("/Static/images/v1.0/loading_bg.png") no-repeat center;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 50%;
+    top: -0.3rem;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.loading_ball {
+    width: 0.30rem;
+    height: 0.30rem;
+    background: url("/Static/images/v1.0/loading.png") no-repeat center;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 30%;
+    top: -0.38rem;
+    animation: myfirst 2s;
+    -webkit-animation: myfirst 2s;
+    /* Safari and Chrome */
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    /*Safari and Chrome*/
+}
+
+.shuju {
+    text-align: center;
+}
+
+@keyframes myfirst {
+    from {
+        left: 30%;
+    }
+    to {
+        left: 60%;
+    }
+}
+
+@-webkit-keyframes myfirst
+/* Safari and Chrome */
+
+{
+    from {
+        left: 30%;
+    }
+    to {
+        left: 60%;
+    }
+}
+
+
+/* 暂无数据*/
+
+.no_data {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    padding-top: 1.3rem;
+    background-color: #fff
+}
+
+.empty_data {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 3rem;
+    z-index: 9;
+    background-color: #fff;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.no_img {
+    background: url("/Static/images/v1.0/loaderror.png") no-repeat center;
+    background-size: 0.83rem 1.20rem;
+    height: 1.5rem;
+    width: 100%
+}
+
+.no_tip {
+    text-align: center;
+    color: #7f7f7f
+}
+
+.no_tip p:first-child {
+    font-size: 0.17rem
+}
+
+.re_load {
+    width: 100%;
+    text-align: center;
+}
+
+.re_load_ {
+    width: 100%;
+    text-align: center;
+}
+
+.re_btn {
+    display: inline-block;
+    width: 2.37rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    margin-top: 0.1rem;
+    font-size: 0.17rem;
+    border: 1px solid #dcdbdc;
+    color: #383838
+}
+
+/*上拉记载样式*/
+.load_wrap li.more a{
+    color: #689652;
+    display: inline-block;
+    line-height: 0.16rem;
+    padding-left: 0.20rem;
+    background: url(//static.letoula.com/images/v1.0/trade/sports/jczq/kj_icon2.png) no-repeat left center;
+    -webkit-background-size: 0.15rem 0.15rem;
+    background-size: 0.15rem 0.15rem;
+    white-space: nowrap;
+}
+.load_wrap li.loading_info{
+    height: 0.26rem;
+}
+.load_wrap li.loading_info .spinner{
+    height: 0.26rem;
+    line-height: 0.26rem;
+}
+.load_wrap li.loading_info .spinner i{
+    background-color: #FD8237 ;
+}
+/*公众号*/
+#gzh{
+    height: auto;
+}
+#gzh .gzh_main{
+    width: 100%;
+    height: 0.86rem;
+    padding: 0.19rem 0.10rem 0.09rem 0.10rem;
+}
+#gzh .img_wrap{
+    float: left;
+    display: inline-block;
+    width: 14.4%;
+    height: 0.58rem;
+    background-image: url("/Static/images/v1.0/info/zixun/country/Russia.jpg");
+    background-size:0.51rem 0.51rem;
+    background-repeat: no-repeat;
+    background-position: center top;
+    border-radius: 50%;
+
+}
+#gzh .text_wrap{
+    display: inline-block;
+    float: left;
+    height:0.58rem;
+    width: 85.6%;
+    padding-left: 0.12rem
+}
+#gzh .text_descript{
+    font-size: 0.14rem;
+    height: 0.40rem;
+    line-height: 0.20rem;
+    color: #1a1a1a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.text_main{
+    position: relative;
+    height: 0.18rem;
+    line-height: 0.18rem;
+    font-size: 0.12rem;
+}
+.text_main span{
+    display: inline-block;
+}
+.z_top{
+    position: absolute;
+    right:0;
+    display: inline-block;
+    height: 0.18rem;
+    line-height: 0.18rem;
+    background: #fff;
+    z-index: 99
+}
+.part_2,.part_1{
+    float: right;
+    font-size: 0
+}
+.part_1>span:first-child{
+    color: #8c8c8c;
+    font-size: 0.12rem;
+}
+.part_1 .target{
+    color: #FD8237 ;
+    font-size: 0.12rem;
+}
+.part_2{
+    color: #588adb;
+    margin-left: 0.07rem;
+    font-size: 0.12rem;
+    background-color: #fff;
+}
+
+#gzh .color_bar {
+    height: 0.10rem;
+    width: 100%;
+    background-color: #edeff3;
+}
+/*公众号复制*/
+/*成功*/
+.layer_gzh{
+    background-color: rgba(0,0,0,.8) !important;
+    border-radius: 5px !important;
+}
+.layer_gzh>div{
+    padding:0;
+    height: 0.49rem;
+    line-height: 0.49rem;
+    color: #fff
+}
+.layui-m-layershade {
+    background-color: transparent !important;
+}
+.part_3 {
+    height: 0.18rem;
+    font-size: 0;
+    position: absolute;
+    z-index: -1;
+    right: 0
+}
+.part_3 input{
+    vertical-align: top;
+    color: #000;
+    font-size: 0.12rem;
+    width: 0.70rem;
+    height: 0.18rem;
+    background:none;  
+    outline:none;  
+    border:0px; 
+}
+/*失败*/
+/*失败分享*/
+.gzh_modal_defeats{
+    color: #fff;
+    padding:0.07rem;
+    height: 0.99rem;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.8)
+}
+.input_wrap{
+    margin-top: 0.05rem;
+}
+.gzh_modal_defeats input{
+    border:0;
+    outline: none
+}
+.layer_gzh_defeats .layui-m-layercont{
+    padding: 0
+}
+.gzh_modal_defeats .gzh_title{
+    height: 0.25rem;
+    line-height: 0.25rem;
+    font-size: 0.12rem;
+    text-align: center;
+
+}
+.gzh_modal_defeats .gzh_btn_wrap{
+    margin-top: 0.10rem;
+    height:0.35rem;
+    line-height:0.33rem;
+    text-align: center;
+}
+.gzh_modal_defeats .gzh_btn_wrap .share_copy{
+    margin-top: 0.12rem;
+    display: inline-block;
+    font-size: 0.15rem;
+    padding: 0 0.25rem;
+    border:1px solid #d9d9d9;
+    border-radius: 5px;
+}
+/*下拉图标更换*/
+.pull_logo {
+    background: url(/Static/images/v1.0/info/zixun/refresh_img.png) no-repeat center center;
+    background-size: .9rem 0.35rem;
+    height: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

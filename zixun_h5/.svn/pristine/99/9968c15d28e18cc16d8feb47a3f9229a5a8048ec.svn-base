@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords"  content="联赛,西甲,德甲,英超,法甲,意甲,欧冠">
+		<meta name="description" id="description" content="五大联赛,西甲,德甲,英超,法甲,意甲,欧冠">
+		<title>五大联赛</title>
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/mui.min.css?v=4375b1e6e6" />
+		<script>		
+			(function(doc, win) {
+				var docEl = doc.documentElement, //根元素html
+					//判断窗口有没有orientationchange这个方法，有就赋值给一个变量，没有就返回resize方法。
+					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+					recalc = function() {
+						var clientWidth = docEl.clientWidth;
+						if(!clientWidth) return;
+						//把document的fontSize大小设置成跟窗口成一定比例的大小，从而实现响应式效果。
+						if(clientWidth >= 640) {
+							clientWidth = 640;
+						}
+						docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+					};
+				recalc();
+				
+				if(!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false); //addEventListener事件方法接受三个参数：第一个是事件名称比如点击事件onclick，第二个是要执行的函数，第三个是布尔值
+				doc.addEventListener('DOMContentLoaded', recalc, false) //绑定浏览器缩放与加载时间
+			})(document, window);
+		</script>
+		<style>
+			/*底部菜单*/
+			.mui-bar {
+				-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+				box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+			}			
+			.mui-bar-nav {background: #d31a1a;}			
+			.mui-title {color: #fff;}			
+			.mui-bar .mui-btn-link {color: #fff;}			
+			.mui-bar-tab {border-top: 1px solid #E5E5E5;background: #fff;height: 0.49rem;}			
+			.mui-bar-tab .mui-tab-item.mui-active {color: #FF6C00;}
+			.go_match {
+				background-image: url(/Static/images/v1.0/match/i_menu.png?v=2132dq32132);
+				background-size: 100% 100%;background-repeat: no-repeat;
+				width: 100%;height: 0.22rem;
+			}	
+			.go_index {
+				background-image: url(/Static/images/v1.0/info/zixun/index_unselect.png?v=23e432423);
+				background-size: 100% 100%;background-repeat: no-repeat;
+				width: 100%;height: 0.22rem;
+			}			
+			.go_live {
+				background-image: url(/Static/images/v1.0/info/zixun/live_unselect.png?v=23e432423);
+				background-size: 100% 100%;background-repeat: no-repeat;
+				width: 100%;height: 0.22rem;
+			}			
+			.go_my {
+				background-image: url(/Static/images/v1.0/info/user/user_unselect.png?v=23e432423);
+				background-size: 100% 100%;background-repeat: no-repeat;
+				width: 100%;height: 0.22rem;
+			}
+		</style>
+		<style>
+			/*body部分*/
+			.za-content-bg{
+				background-image: url(/Static/images/v1.0/match/bg.png?v=23423e34e2);
+				background-size: cover;
+				background-repeat: no-repeat;background-position: center;
+				display: block;
+				width: 100%;
+				z-index: -11;
+			}
+			.menuwarp{width: 100%;position: absolute;padding: 0 0.23rem;margin-top: 1.85rem;}
+			.menuname{position: absolute;bottom: -0.13rem;left: 0;width: 0.52rem;height: 0.52rem;}
+			.menuright{position: absolute;bottom: -0.08rem;right: -0.04rem;width: 0.62rem;height: 0.16rem;}
+			
+			.menu-1,.menu-2,.menu-3,.menu-4,.menu-5{
+				position: relative;float: left;
+				height: 1.05rem;border-radius: 0.1rem;
+				background-size: cover;
+				background-repeat: no-repeat;background-position: center;
+				border: 2px solid rgba(159,130,141,0.5);
+				/*border-image: -webkit-linear-gradient(#04d8ff,#00f6cb) 30 30;
+			    border-image: -moz-linear-gradient(#04d8ff,#00f6cb) 30 30;
+			    border-image: linear-gradient(#04d8ff,#00f6cb) 30 30;*/
+			    border-radius: 0.1rem;
+			}	
+			.menu-3,.menu-4,.menu-5{margin-top: 0.1rem;}
+			.menu-1::before,.menu-2::before,.menu-3::before,.menu-4::before,.menu-5::before,.menu-5::after{
+				position: absolute;content: '';
+				background-size: cover;
+				background-repeat: no-repeat;background-position: center;
+			    /*border-radius: 180px/40px;
+			    background: rgba(255, 255, 255, 1);
+			    filter: blur(0.11em);*/
+			}
+			/*.menu-1::after,.menu-2::after,.menu-3::after,.menu-4::after,.menu-5::after{
+				position: absolute;
+			    top: -0.02rem;
+			    bottom: -0.015rem;
+			    left: -0.02rem;
+			    right: -0.02rem;
+			    background: linear-gradient( #04d8ff,#00f6cb);
+			    content: '';
+			    z-index: -1;
+			    border-radius: 0.1rem;
+			}								*/
+			.menu-1{				
+			  	width: 57.75%;margin-right: 0.1rem;			    
+			    background-image: url(/Static/images/v1.0/match/1.png?v=23423e34e2);				
+			}
+			.menu-1::before{				
+			    top: -0.09rem;left: 0;width: 0.8rem;height: 0.2rem;
+			    background-image: url(/Static/images/v1.0/match/line_h.png?v=erew2324id);			    
+			}
+			.menu-2{
+			  	width: 39.1%;
+			    background-image: url(/Static/images/v1.0/match/2.png?v=23423e34e2);
+			}
+			.menu-2::before{				
+			    top: 0;right: -0.12rem;width: 0.18rem;height: 0.8rem;
+			    background-image: url(/Static/images/v1.0/match/line_v.png?v=erew2324id);			   
+			}
+			.menu-3{			
+			  	width: 38%;margin-right: 0.1rem;
+			    background-image: url(/Static/images/v1.0/match/3.png?v=23423e34e2);				
+			}
+			.menu-3::before{
+				top: 0.1rem;right: -0.12rem;width: 0.18rem;height: 0.8rem;
+			    background-image: url(/Static/images/v1.0/match/line_v.png?v=erew2324id);
+			}
+			.menu-4{				
+			  	width: 58.75%;			   
+			    background-image: url(/Static/images/v1.0/match/4.png?v=23423e34e2);				
+			}
+			.menu-4::before{			
+			    top: -0.09rem;right: 0;width: 0.8rem;height: 0.2rem;
+			    background-image: url(/Static/images/v1.0/match/line_h.png?v=erew2324id);
+			}
+			.menu-5{				
+			  	width: 99.8%;
+			    background-image: url(/Static/images/v1.0/match/5.png?v=23423e34e2);				
+			}
+			.menu-5::before{			
+			    top: -0.09rem;left: 0;width: 0.8rem;height: 0.2rem;
+			    background-image: url(/Static/images/v1.0/match/line_h.png?v=erew2324id);
+			}
+			.menu-5::after{			
+			    top: 0;right: -0.12rem;width: 0.18rem;height: 0.8rem;
+			    background-image: url(/Static/images/v1.0/match/line_v.png?v=erew2324id);
+			}
+			.div-more{width: 100%;height: 150px;background: #000000;position: relative;z-index: -1;margin-top: -0.1rem;}			
+			.not-start-warp{
+				position: fixed;top: 0;height: 100%;width: 100%;background: rgba(0,0,0,0.5);z-index: 999;
+			}
+			.inner-warp{width: 2.65rem;height: 1.4rem;background: #FFFFFF;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;border-radius: 5px;}
+			.inner-warp h4{width:100%;position: relative;text-align: center;font-size:16px;color:rgba(42,42,42,1);line-height:1;font-weight: 500;margin-top: -0.2rem;}
+			.i-header{width: 1.64rem;height: 1.64rem;margin-top: -0.75rem;margin-left: 0.505rem;}
+			.i-close{width: 0.13rem;height: 0.13rem;position: absolute;top: 0.05rem;right: 0.05rem;}
+		</style>
+		<style>
+			/*iPhone5 样式*/
+			@media only screen and (min-width: 320px) and (max-width: 320px) {
+				
+			}
+			/*iPhoneX 等全屏幕手机 样式*/
+			@media only screen and (min-width: 375px) and (min-height: 812px){
+		  		.menuwarp{margin-top: 2.65rem;}
+		    }
+		</style>
+	</head>
+	<body>		
+		<div class="za-content-bg">
+			<div class="menuwarp">
+				<div class="menu-1" is_show='1'>
+					<img class="menuname" src="/Static/images/v1.0/match/m1_name.png" />
+					<img class="menuright" src="/Static/images/v1.0/match/right.png" />
+				</div>
+				<div class="menu-2" is_show='1'>
+					<img class="menuname" src="/Static/images/v1.0/match/m2_name.png" />
+					<img class="menuright" src="/Static/images/v1.0/match/right.png" />
+				</div>
+				<div class="menu-3" is_show='1'>
+					<img class="menuname" src="/Static/images/v1.0/match/m3_name.png" />
+					<img class="menuright" src="/Static/images/v1.0/match/right.png" />
+				</div>
+				<div class="menu-4" is_show='1'>
+					<img class="menuname" src="/Static/images/v1.0/match/m4_name.png" />
+					<img class="menuright" src="/Static/images/v1.0/match/right.png" />
+				</div>
+				<div class="menu-5" is_show='1'>
+					<img class="menuname" src="/Static/images/v1.0/match/m5_name.png" />
+					<img class="menuright" src="/Static/images/v1.0/match/right.png" />
+				</div>
+			</div>
+		</div>		
+		<div class="div-more"></div>
+		<div class="not-start-warp" style="display: none;">
+			<div class="inner-warp">
+				<img class="i-header" src="/Static/images/v1.0/match/i_no.png" />					
+				<h4>联赛尚未开始，敬请期待</h4>
+				<img class="i-close" src="/Static/images/v1.0/match/i_close.png" />
+			</div>
+		</div>		
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item">
+				<span class="mui-icon go_index"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item mui-active">
+				<span class="mui-icon go_match"></span>
+				<span class="mui-tab-label">五大联赛</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon go_live"></span>
+				<span class="mui-tab-label">直播</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon go_my"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		
+		
+		<script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+		<script>
+			var c_width = document.documentElement.clientWidth;
+			var bg_height = c_width*562/375;
+			//窗体宽度发生变化
+			window.onresize = function() {
+				//背景图片 比例 667*375  	要根据
+				c_width = document.documentElement.clientWidth;
+				bg_height = c_width*562/375;
+				$(".za-content-bg").css("height", bg_height+ "px")
+				if(document.documentElement.clientHeight > bg_height){
+//					$(".div-more").css("height",document.documentElement.clientHeight - bg_height +50+ "px")
+					$(".div-more").css("height",0+ "px")
+				}
+			}
+			$(".za-content-bg").css("height",bg_height + "px")
+			if(document.documentElement.clientHeight > bg_height){
+//				$(".div-more").css("height",document.documentElement.clientHeight - bg_height+50 + "px")
+				$(".div-more").css("height",0+ "px")
+			}
+			initEvent();	
+			window.onload = function(){
+				initIndex();	
+			}
+			function initEvent(){
+				//底部菜单点击
+				$(".mui-bar-tab a").click(function(e) {
+					var index = $(this).index();
+					switch(index) {
+						case 0:
+							window.location.href = "../info/zixun/zixun.html";
+							break;
+						case 1:
+							window.location.reload();
+							break;
+						case 2:
+							window.location.href = "../info/zixun/zixun_live.html";
+							break;
+						case 3:
+							window.location.href = "../user/user_index.html";
+							break;
+						default:
+							break;
+					}
+				})
+				$("div[class^='menu-']").click(function(){
+					if($(this).attr('is_show') == '1'){
+						$('.not-start-warp').fadeIn(300);
+						setTimeout(function(){
+							$('.not-start-warp').fadeOut(300);
+						},2000)
+						return;
+					}
+					var index = $(this).index();
+					var league_id = $(this).attr('id');
+					switch(index) {
+						case 0:
+							window.location.href = "xijia.html?league_id="+league_id;
+							break;
+						case 1:
+							window.location.href = "yingchao.html?league_id="+league_id;
+							break;
+						case 2:
+							window.location.href = "fajia.html?league_id="+league_id;
+							break;
+						case 3:
+							window.location.href = "dejia.html?league_id="+league_id;
+							break;
+						case 4:
+							window.location.href = "yijia.html?league_id="+league_id;
+							break;
+						default:
+							break;
+					}
+				})
+				$('.i-close').click(function(){
+					$('.not-start-warp').fadeOut(300)
+				})
+			}
+			function initIndex(){
+				var res = HCCP.ajax.get("/iation/league/index")
+				console.log(JSON.stringify(res));
+				if(res && res.data){
+					var obj = res.data;
+					for(var el in obj){
+						fiflterName(obj[el].league_name,obj[el].is_show,obj[el].league_id);
+					}
+				}
+			}
+			function fiflterName(nameStr,value,_id){
+				switch (nameStr){
+					case '西甲':
+						$('.menu-1').attr('is_show',value);
+						$('.menu-1').attr('id',_id);
+						break;
+					case '英超':
+						$('.menu-2').attr('is_show',value);
+						$('.menu-2').attr('id',_id);
+						break;
+					case '法甲':
+						$('.menu-3').attr('is_show',value);
+						$('.menu-3').attr('id',_id);
+						break;
+					case '德甲':
+						$('.menu-4').attr('is_show',value);
+						$('.menu-4').attr('id',_id);
+						break;
+					case '意甲':
+						$('.menu-5').attr('is_show',value);
+						$('.menu-5').attr('id',_id);
+						break;
+					default:
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>

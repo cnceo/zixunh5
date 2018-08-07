@@ -1,0 +1,260 @@
+.clearfix:after{
+    display:block;
+    height:0px;
+    content:'';
+    clear: both;
+}
+body{
+	background: #FFF;
+	overflow:hidden;
+	height: 100%;
+}
+.am-g{
+	padding-top: .44rem;
+    overflow-y: auto;
+    height: 100%;
+}
+.max-width{
+	max-width: 640px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.download-wrap{
+	height: .72rem;
+}
+.download{
+	position: fixed;
+	width: 100%;
+	height: .72rem;
+	top: .44rem;
+}
+.download img{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+}
+
+/****content*****/
+.kj_content ul li{
+	height: 0.93rem;
+	border-bottom: 1px solid #D9D9D9;
+	padding: 0rem 0.13rem;
+	font-size: .15rem;
+}
+.kj_content ul li.kj-ball{
+	padding: 0.04rem 0.13rem;
+}
+.kj_title{
+	height: 0.34rem;
+	line-height:0.34rem;
+	box-sizing: border-box;
+}
+.kj_title .kj_name{
+	margin-right:.1rem;
+	font-weight:500;
+	color:#383838;
+}
+.kj_title .kj_date,
+.kj_title .kj_week,
+.kj_title .kj_qihao
+{
+	font-weight: 500;
+	font-size: .14rem;
+	color:#7f7f7f;	
+}
+.am-arrow-left{
+	width:94%;
+}
+.am-arrow-right{
+	width:6%;
+	background: url(/Static/images/v1.0/info/award/arrow_r.png) no-repeat right center;
+}
+.am-arrow-left,
+.am-arrow-right
+{
+	height: 100%;
+	float: left;
+}
+.kj_item{
+	overflow: hidden;
+	font-size: 0px;
+}
+.kj_item .am-padding-left-sm{
+	margin-left:.18rem;
+	width: auto;
+	font-weight: normal;
+}
+
+label.jczq_bf{
+	margin: 0 0.18rem;
+}
+.kj-digit-ball .kj_title{
+	height: 0.42rem;
+	line-height: 0.43rem;
+}
+/***球****/
+.kj_item span {
+	float: left;
+	display: inline-block;
+	width: .36rem;
+	height: .36rem;
+	border-radius: .18rem;
+	text-align: center;
+	vertical-align: middle;
+	line-height: .36rem;
+	font-size: .16rem;
+	font-weight: 500;
+}
+.gxk3_item div,.jxk3_item div,.jlk3_item div{
+	width: 1.3rem;
+	float: left;
+	height: .36rem;
+	background: #56a81f;
+	border-radius: .18rem;
+	padding-left:.08rem;
+	padding-right:.08rem;
+}
+.gxk3_item div span,.jxk3_item div span,.jlk3_item div span{
+	background-image: url(//static.letoula.com/images/v1.0/trade/kuaiping/k3/dicekj.png);
+	background-repeat: no-repeat;
+	background-position: 2.1rem center;
+	background-size: 2.1rem 0.29rem;
+}
+.gxk3_item div span.awardnum-1,.jxk3_item div span.awardnum-1,.jlk3_item div span.awardnum-1{
+	background-position: left center;
+}
+.gxk3_item div span.awardnum-2,.jxk3_item div span.awardnum-2,.jlk3_item div span.awardnum-2{
+	background-position: -0.35rem center;
+}
+.gxk3_item div span.awardnum-3,.jxk3_item div span.awardnum-3,.jlk3_item div span.awardnum-3{
+	background-position: -0.7rem center;
+}
+.gxk3_item div span.awardnum-4,.jxk3_item div span.awardnum-4,.jlk3_item div span.awardnum-4{
+	background-position: -1.05rem center;
+}
+.gxk3_item div span.awardnum-5,.jxk3_item div span.awardnum-5,.jlk3_item div span.awardnum-5{
+	background-position: -1.4rem center;
+}
+.gxk3_item div span.awardnum-6,.jxk3_item div span.awardnum-6,.jlk3_item div span.awardnum-6{
+	background-position: -1.75rem center;
+}
+.kj_item span + span{
+	margin-left:.03rem;
+}
+.am-lott-ball-red {
+	background: #E12D3E;
+	color: #FFFFFF;
+}
+.am-lott-ball-blue {
+	display: inline-block;
+	background: #1C88F7;
+	color: #FFFFFF;
+}
+.kj_item .am-lott-ball-green {
+	width: .17rem;
+	height: .25rem;
+	border-radius: .03rem;
+	display: inline-block;
+	background: #56a81f;
+	color: #FFFFFF;
+	font-weight:500;
+	line-height: .25rem;
+	font-size: .16rem;
+}
+
+/****福彩3D****/
+
+.fc3d_item label,
+.gxk3_item label,
+.jxk3_item label,
+.jlk3_item label
+{
+	display:inline-block; 
+	height: .36rem;
+	line-height:.36rem;
+	color:#383838;
+	font-weight: normal;
+	font-size:.15rem;
+	margin-left:.22rem;
+}
+.am-arrow-r{
+	display: inline-block;
+	height: .110rem;
+	width: 20rem;
+	background: url(/Static/images/v1.0/info/award/arrow_r.png) no-repeat right center;
+	background-size:.10rem !important ;
+}
+.kj_title label{
+	display: inline-block;
+}
+.kj_name{
+	color: #383838;
+}
+.kj_date,
+.kj_week,
+.kj_qihao{
+	font-size:.16rem;
+	color:#7F7F7F;
+}
+
+
+/**********竞彩足球***********/
+.jczq_dt{
+	height: .4rem;
+	line-height: .4rem;
+	width: 100%;
+	border-radius: .2rem;
+	background: #56a81f url(/Static/images/v1.0/logo/logo_jczq.png) no-repeat 0.04rem center;
+	background-size:.35rem;
+	padding-left: .46rem;
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: middle;
+	overflow: hidden;
+}
+/**********竞彩篮球***********/
+
+.jclq_dt{
+	height: .4rem;
+	line-height: .4rem;
+	width: 100%;
+	border-radius: .2rem;
+	background: #f19e00 url(/Static/images/v1.0/logo/logo_jclq.png) no-repeat 0.04rem center;
+	background-size:.35rem;
+	padding-left: .46rem;
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: middle;
+	overflow: hidden;
+}
+label.jclq_bf{
+	margin: 0 .1rem;
+}
+/**********北京单场***********/
+.zqdc_item,
+.jczq_item,
+.jclq_item
+ {
+	font-size:0.16rem;
+	color: #FFFFFF;
+}
+.zqdc_dt{
+	height: .4rem;
+	line-height: .4rem;
+	width: 100%;
+	border-radius: .2rem;
+	background: #56a81f url(/Static/images/v1.0/logo/logo_zqdc.png) no-repeat 4px center;
+	background-size:.35rem;
+	padding-left: .46rem;
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: middle;
+	overflow: hidden;
+}
+label.zqdc_bf{
+	margin: 0 .1rem;
+}
+

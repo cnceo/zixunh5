@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+        <meta http-equiv="Expires" content="0">
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <title>11选5</title>
+        <script type="text/javascript" src="	
+https:/Static/js/v1.0/	
+common/allcss.js"></script>
+        <link rel="stylesheet" href="	
+https:/Static/css/v1.0/info/draw/chart/x5.css?v=0fb5efda76" />
+    </head>
+    <body class="hc-bg">
+    <!--筛选期数-->
+        <div class="set-wrap hide">
+            <div>
+                <div class="set-con hc-padding-sm">
+                    <div class='clearfix set-title'>
+                        <span><label></label></span>
+                        <span>走势图设置</span>
+                        <span><label></label></span>
+                    </div>
+                    <ul class="clearfix set-qs hc-margin-top-sm">
+                        <li data-numissue="30" class="active">近30期</li>
+                        <li data-numissue="50">近50期</li>
+                        <li data-numissue="100">近100期</li>
+                    </ul>
+                    <div class="clearfix set-display hc-margin-top-sm hc-padding-horizontal-lg">
+                        <ul class="hc-avg-2 set-yl">
+                            <li class="active">显示遗漏</li>
+                            <li>隐藏遗漏</li>
+                        </ul>
+                        <ul class="hc-avg-2 set-zx">
+                            <li class="active">显示折线</li>
+                            <li>隐藏折线</li>
+                        </ul>
+                        <ul class="hc-avg-2 set-tj">
+                            <li class="active">显示统计</li>
+                            <li>隐藏统计</li>
+                        </ul>
+                    </div>
+                    <div class="clearfix hc-margin-top-lg">
+                        <span class="set-btn set-cancel">取消</span>
+                        <span class="set-btn set-sure">确认</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="k3" class="hc-h5-wrap">
+            <header>
+                <div class="header-left"><span class="hc-block back"></span></div>
+                <div class="header-title"><span class="header-drop"></span></div>
+                <div class="header-right hc-cf"><span class="hc-block header-icon chartSetting hc-fl"></span></div>
+            </header>
+            <!--导航-->
+            <div class="hc-g hc-nav hc-animation-slide-top am-bg-ff hide">
+                <div class="hc-hr"><span class="hc-line"></span><span class="hc-text-center hc-block">普通投注</span></div>
+                <ul class="hc-avg-4 am-nav-normal hc-padding-right-13 hc-padding-bottom-lg hc-padding-top-sm">
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                        <span></span>
+                        <a playname="1" data-pid="1" class="hc-btn hc-block hc-btn-block hc-radius-xs">前一</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="2" data-pid="2" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选二</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="3" data-pid="3" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选三</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="4" data-pid="4" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选四</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="5" data-pid="5" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选五</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="6" data-pid="6" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选六</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="7" data-pid="7" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选七</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="8" data-pid="8" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选八</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="9" data-pid="9" class="hc-btn hc-block hc-btn-block hc-radius-xs">前二组选</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="10" data-pid="10" class="hc-btn hc-block hc-btn-block hc-radius-xs">前三组选</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="11" data-pid="11" class="hc-btn hc-block hc-btn-block hc-radius-xs">前二直选</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="12" data-pid="12" class="hc-btn hc-block hc-btn-block hc-radius-xs">前三直选</a>
+                    </li>
+                </ul>
+                <div class="hc-hr"><span class="hc-line"></span><span class="hc-text-center hc-block">胆拖投注</span></div>
+                <ul class="hc-avg-4 am-nav-dan hc-padding-right-13 hc-padding-top-sm hc-padding-bottom-lg">
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="17" data-pid="2" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选二</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="18" data-pid="3" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选三</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="19" data-pid="4" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选四</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="20" data-pid="5" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选五</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="21" data-pid="6" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选六</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="22" data-pid="7" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选七</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="23" data-pid="8" class="hc-btn hc-block hc-btn-block hc-radius-xs">任选八</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="24" data-pid="9" class="hc-btn hc-block hc-btn-block hc-radius-xs">前二组选</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                    <span></span>
+                        <a playname="25" data-pid="10" class="hc-btn hc-block hc-btn-block hc-radius-xs">前三组选</a>
+                    </li>
+                </ul>
+                <div class="hc-hr happyselect hide"><span class="hc-line"></span><span class="hc-text-center hc-block">乐选投注</span></div>
+                <ul class="hc-avg-4 am-nav-happySelect hc-padding-right-13 hide hc-padding-top-sm">
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                        <span></span>
+                        <a playname="16"  data-pid="16" class="hc-btn hc-block hc-btn-block hc-radius-xs">乐选二</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                        <span></span>
+                        <a playname="13"  data-pid="13" class="hc-btn hc-block hc-btn-block hc-radius-xs">乐选三</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                        <span></span>
+                        <a playname="14" data-pid="14" class="hc-btn hc-block hc-btn-block hc-radius-xs">乐选四</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-13">
+                        <span></span>
+                        <a playname="15" data-pid="15" class="hc-btn hc-block hc-btn-block hc-radius-xs">乐选五</a>
+                    </li>
+                </ul>
+            </div>
+            <section id="hc-bet-play">
+                <!-- 前一直选 -->
+                <div class="bet-play-1  hide">
+                    <nav class="hc-avg-3">
+                        <li>近期开奖</li>
+                        <li>走势</li>
+                        <li>冷热</li>
+                    </nav>    
+                    <ul class="chart-main">
+                        <li class="hide"></li>   
+                        <li class="hide"></li>
+                        <li class="hide"></li>
+                    </ul>
+                    <foot class="table-fixed-bottom">
+                        <dl class="hc-dl hc-cf select_numb">
+                            <dt>   
+                                选号
+                            </dt>
+                            <dd class="scroll_b1 scroll_bar">
+                                <ul class="hc-scroll">
+                                    <li x5val="1" x5val1="01">01</li>
+                                    <li x5val="2" x5val1="02">02</li>
+                                    <li x5val="3" x5val1="03">03</li>
+                                    <li x5val="4" x5val1="04">04</li>
+                                    <li x5val="5" x5val1="05">05</li>
+                                    <li x5val="6" x5val1="06">06</li>
+                                    <li x5val="7" x5val1="07">07</li>
+                                    <li x5val="8" x5val1="08">08</li>
+                                    <li x5val="9" x5val1="09">09</li>
+                                    <li x5val="10" x5val1="10">10</li>
+                                    <li x5val="11" x5val1="11">11</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </foot>
+                </div>
+                 <!-- 任选 -->
+                <div class="bet-play-2 bet-play-3 bet-play-4 bet-play-5 bet-play-6 bet-play-7 bet-play-8">
+                    <nav class="hc-avg-4">
+                        <li>近期开奖</li>
+                        <li>走势</li>
+                        <li>冷热</li>
+                    </nav>    
+                    <ul class="chart-main">
+                        <li class="hide"></li>   
+                        <li class="hide"></li>
+                        <li class="hide"></li>
+                    </ul>
+                    <foot class="table-fixed-bottom">
+                        <dl class="hc-dl hc-cf select_numb">
+                            <dt>   
+                                选号
+                            </dt>
+                            <dd class="scroll_b1 scroll_bar">
+                                <ul class="hc-scroll">
+                                    <li x5val="1" x5val1="01">01</li>
+                                    <li x5val="2" x5val1="02">02</li>
+                                    <li x5val="3" x5val1="03">03</li>
+                                    <li x5val="4" x5val1="04">04</li>
+                                    <li x5val="5" x5val1="05">05</li>
+                                    <li x5val="6" x5val1="06">06</li>
+                                    <li x5val="7" x5val1="07">07</li>
+                                    <li x5val="8" x5val1="08">08</li>
+                                    <li x5val="9" x5val1="09">09</li>
+                                    <li x5val="10" x5val1="10">10</li>
+                                    <li x5val="11" x5val1="11">11</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </foot>
+                </div>
+                <!-- 组选 -->
+                <div class="bet-play-9 bet-play-10 hide">
+                    <nav class="hc-avg-4">
+                        <li>近期开奖</li>
+                        <li>走势</li>
+                        <li>冷热</li>
+                    </nav>    
+                    <ul class="chart-main">
+                        <li class="hide"></li>   
+                        <li class="hide"></li>
+                        <li class="hide"></li>
+                    </ul>
+                    <foot class="table-fixed-bottom">
+                        <dl class="hc-dl hc-cf select_numb">
+                            <dt>   
+                                选号
+                            </dt>
+                            <dd class="scroll_b1 scroll_bar">
+                                <ul class="hc-scroll">
+                                    <li x5val="1" x5val1="01">01</li>
+                                    <li x5val="2" x5val1="02">02</li>
+                                    <li x5val="3" x5val1="03">03</li>
+                                    <li x5val="4" x5val1="04">04</li>
+                                    <li x5val="5" x5val1="05">05</li>
+                                    <li x5val="6" x5val1="06">06</li>
+                                    <li x5val="7" x5val1="07">07</li>
+                                    <li x5val="8" x5val1="08">08</li>
+                                    <li x5val="9" x5val1="09">09</li>
+                                    <li x5val="10" x5val1="10">10</li>
+                                    <li x5val="11" x5val1="11">11</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </foot>
+                </div>
+                <!-- 前二直选 -->
+                <div class="bet-play-11 hide">
+                    <nav class="hc-avg-3">
+                        <li>近期开奖</li>
+                        <li>万位走势</li>
+                        <li>千位走势</li>
+                    </nav>    
+                    <ul class="chart-main">
+                        <li class="hide"></li>   
+                        <li class="hide">
+                            <foot class="table-fixed-bottom">
+                                <dl class="hc-dl hc-cf select_numb">
+                                    <dt>   
+                                        选号
+                                    </dt>
+                                    <dd class="scroll_b1 scroll_bar">
+                                        <ul class="hc-scroll">
+                                            <li x5val="1" x5val1="01">01</li>
+                                            <li x5val="2" x5val1="02">02</li>
+                                            <li x5val="3" x5val1="03">03</li>
+                                            <li x5val="4" x5val1="04">04</li>
+                                            <li x5val="5" x5val1="05">05</li>
+                                            <li x5val="6" x5val1="06">06</li>
+                                            <li x5val="7" x5val1="07">07</li>
+                                            <li x5val="8" x5val1="08">08</li>
+                                            <li x5val="9" x5val1="09">09</li>
+                                            <li x5val="10" x5val1="10">10</li>
+                                            <li x5val="11" x5val1="11">11</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </foot>
+                        </li>
+                        <li class="hide">
+                            <foot class="table-fixed-bottom">
+                                <dl class="hc-dl hc-cf select_numb">
+                                    <dt>   
+                                        选号
+                                    </dt>
+                                    <dd class="scroll_b1 scroll_bar">
+                                        <ul class="hc-scroll">
+                                            <li x5val="1" x5val1="01">01</li>
+                                            <li x5val="2" x5val1="02">02</li>
+                                            <li x5val="3" x5val1="03">03</li>
+                                            <li x5val="4" x5val1="04">04</li>
+                                            <li x5val="5" x5val1="05">05</li>
+                                            <li x5val="6" x5val1="06">06</li>
+                                            <li x5val="7" x5val1="07">07</li>
+                                            <li x5val="8" x5val1="08">08</li>
+                                            <li x5val="9" x5val1="09">09</li>
+                                            <li x5val="10" x5val1="10">10</li>
+                                            <li x5val="11" x5val1="11">11</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </foot>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 前三直选 -->
+                <div class="bet-play-12 hide">
+                    <nav class="hc-avg-4">
+                        <li>近期开奖</li>
+                        <li>万位走势</li>
+                        <li>千位走势</li>
+                        <li>百位走势</li>
+                    </nav>    
+                    <ul class="chart-main">
+                        <li class="hide"></li>   
+                        <li class="hide">
+                            <foot class="table-fixed-bottom">
+                                <dl class="hc-dl hc-cf select_numb">
+                                    <dt>   
+                                        选号
+                                    </dt>
+                                    <dd class="scroll_b1 scroll_bar">
+                                        <ul class="hc-scroll">
+                                           <li x5val="1" x5val1="01">01</li>
+                                            <li x5val="2" x5val1="02">02</li>
+                                            <li x5val="3" x5val1="03">03</li>
+                                            <li x5val="4" x5val1="04">04</li>
+                                            <li x5val="5" x5val1="05">05</li>
+                                            <li x5val="6" x5val1="06">06</li>
+                                            <li x5val="7" x5val1="07">07</li>
+                                            <li x5val="8" x5val1="08">08</li>
+                                            <li x5val="9" x5val1="09">09</li>
+                                            <li x5val="10" x5val1="10">10</li>
+                                            <li x5val="11" x5val1="11">11</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </foot>
+                        </li>
+                        <li class="hide">
+                            <foot class="table-fixed-bottom">
+                                <dl class="hc-dl hc-cf select_numb">
+                                    <dt>   
+                                        选号
+                                    </dt>
+                                    <dd class="scroll_b1 scroll_bar">
+                                        <ul class="hc-scroll">
+                                            <li x5val="1" x5val1="01">01</li>
+                                            <li x5val="2" x5val1="02">02</li>
+                                            <li x5val="3" x5val1="03">03</li>
+                                            <li x5val="4" x5val1="04">04</li>
+                                            <li x5val="5" x5val1="05">05</li>
+                                            <li x5val="6" x5val1="06">06</li>
+                                            <li x5val="7" x5val1="07">07</li>
+                                            <li x5val="8" x5val1="08">08</li>
+                                            <li x5val="9" x5val1="09">09</li>
+                                            <li x5val="10" x5val1="10">10</li>
+                                            <li x5val="11" x5val1="11">11</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </foot>
+                        </li>
+                        <li class="hide">
+                            <foot class="table-fixed-bottom">
+                                <dl class="hc-dl hc-cf select_numb">
+                                    <dt>   
+                                        选号
+                                    </dt>
+                                    <dd class="scroll_b1 scroll_bar">
+                                        <ul class="hc-scroll">
+                                           <li x5val="1" x5val1="01">01</li>
+                                            <li x5val="2" x5val1="02">02</li>
+                                            <li x5val="3" x5val1="03">03</li>
+                                            <li x5val="4" x5val1="04">04</li>
+                                            <li x5val="5" x5val1="05">05</li>
+                                            <li x5val="6" x5val1="06">06</li>
+                                            <li x5val="7" x5val1="07">07</li>
+                                            <li x5val="8" x5val1="08">08</li>
+                                            <li x5val="9" x5val1="09">09</li>
+                                            <li x5val="10" x5val1="10">10</li>
+                                            <li x5val="11" x5val1="11">11</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </foot>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <footer>
+                <div id="jqkjFoot" class="hide">
+                    <p class="hc-x5-stop  nowrap"></p>
+                </div>
+                <div id="allFoot" class="hide">
+                    <div class="footer_left"></div>
+                    <div class="footer_message">
+                        <p class="fm_p1 nowrap"><span class="selectTitle">若中奖：奖金<em class="award-money">540</em>元</span><span class="p_total hide">(已选<em class="zs">0</em>注 <em class="money">0</em>元)</span></p>
+                        <p class="fm_p2 hc-x5-stop nowrap">正在获取期号中...</p>
+                    </div>
+                    <div class="footer_right"><span class="f_btn submit hc-text-center">确定</span></div>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="	
+https:/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+        <script type="text/javascript" src="	
+https:/Static/js/v1.0/info/draw/chart/x5.js?v=fe56eac2dd"></script>
+    </body>
+</html>

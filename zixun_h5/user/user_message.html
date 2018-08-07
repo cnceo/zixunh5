@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+		<meta http-equiv="Expires" content="0">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>消息通知</title>
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/mui.min.css?v=4375b1e6e6" />
+		<!--<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>-->
+		<link rel="stylesheet" href="/Static/css/v1.0/common/reset.css?v=ed0ec998e6" />
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/zixun.css?v=5288ab0b49" />
+		<style>
+			body {
+				font-family: 'PingFangSC-Medium', "Source Han Sans CN", "Microsoft YaHei", "Helvetica", simsun;
+			}
+			
+			.hc-h5-wrap>header {
+				height: 44px;
+			}
+			
+			.hc-h5-wrap {
+				padding-top: 44px;
+			}
+			
+			.mui-icon-back:before,
+			.mui-icon-left-nav:before {
+				color: #fff;
+			}
+			
+			.mui-bar .mui-title {
+				color: #fff;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item {
+				font-size: 15px;
+				color: #333;
+			}
+			
+			.wraper {
+				padding-top: 0;
+				background: #edeff3;
+				padding-bottom: 0;
+				overflow: scroll;
+			}
+			
+			.mui-slider {
+				margin-top: 9px;
+			}
+			
+			.mui-slider-indicator.mui-segmented-control {
+				background: #fff;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				color: #FD8237;
+				font-size: 16px;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar {
+				background-color: #FD8237 ;
+			}
+			
+			.mui-scroll-wrapper {
+				overflow: scroll;
+			}
+			
+			.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {
+				border-top: 1px solid #edeff3;
+				border-bottom: 0;
+				background: #edeff3;
+			}
+			
+			.mui-control-content {
+				background-color: white;
+				min-height: 736px;
+			}
+			
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			
+			.mui-col-xs-4 {
+				width: 18px;
+			}
+			
+			.mui-slider .mui-slider-group .mui-slider-item img {
+				width: 1.35rem;
+			}
+			
+			.za-no-msg-img {
+				height: 1.1rem;
+				margin-top: 1.16rem;
+				margin-bottom: 0.42rem;
+			}
+			
+			.za-no-pinglun-img {
+				height: 1.1rem;
+				margin-top: 0.94rem;
+				margin-bottom: 0.42rem;
+			}
+			
+			.za-no-zan-img {
+				height: 1.1rem;
+				margin-top: 0.94rem;
+				margin-bottom: 0.42rem;
+			}
+			
+			.za-bottom-red-line {
+				position: relative;
+				width: 100%;
+				height: 1px;
+				text-align: center;
+			}
+			
+			.za-bottom-red-line span {
+				height: 1px;
+				position: absolute;
+				width: 18px;
+				background: #FD8237;
+				margin: auto;
+				left: 0;
+				right: 0;
+			}
+			
+			.mui-table-view-cell {
+				height: 67px;
+				background: #fff;
+				margin-bottom: 9px;
+			}
+			
+			.mui-table-view-cell:after {
+				height: 0;
+			}
+			
+			.mui-table-view {
+				background-color: transparent;
+			}
+			
+			.mui-table-view .mui-media-object {
+				line-height: 37px;
+				max-width: 37px;
+				height: 37px;
+				margin-top: 4px;
+				border-radius: 50%;
+			}
+			
+			.mui-media-body h4 {
+				margin-top: 7px;
+				font-size: 14px;
+				color: #333;
+			}
+			
+			.mui-media-body p {
+				font-size: 12px;
+				margin-top: 2px;
+				font-family: "PingFangSC-Regular";
+			}
+			
+			.mui-media-body p>strong {
+				color: #FD8237 ;
+				font-weight: 400;
+				font-size: 12px;
+				font-family: "PingFangSC-Medium";
+			}
+			
+			.mui-media-body span {
+				position: absolute;
+				top: 16px;
+				right: 15px;
+				font-size: 10px;
+				color: #666;
+				font-family: "PingFangSC-Regular";
+			}
+			
+			#refresh {
+				-webkit-transform: translateY(-160%);
+			}
+			
+			.za-xt-li {
+				width: 100%;
+				background: #fff;
+				padding: 19px 15px;
+				margin-bottom: 9px;
+			}
+			
+			.za-xt-li h4 {
+				border-left: solid 2px #FD8237 ;
+				padding-left: 5px;
+				font-size: 14px;
+				color: #333;
+				font-weight: bold;
+			}
+			
+			.za-xt-li span {
+				position: relative;
+				float: right;
+				top: -17px;
+				font-size: 10px;
+				color: #666;
+				z-index: 99999;
+			}
+			
+			.za-xt-li-body {
+				width: 100%;
+				margin-top: 5px;
+			}
+			
+			.za-xt-li-body p {
+				color: #333;
+				font-size: 12px;
+			}
+			
+			.za-massage-badge-1 {
+				position: absolute;
+				width: 14px;
+				height: 14px;
+				background: #FD8237 ;
+				border-radius: 50%;
+				font-size: 10px;
+				color: #fff;
+				text-align: center;
+				line-height: 14px;
+				margin-left: 2px;
+				font-size: 10px;
+				margin-top: 11px;
+			}
+			
+			.za-massage-badge-2 {
+				position: absolute;
+				width: 36px;
+				height: 14px;
+				background: #FD8237 ;
+				border-radius: 10px;
+				font-size: 10px;
+				color: #fff;
+				text-align: center;
+				line-height: 14px;
+				margin-left: 2px;
+				margin-top: 11px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="hc-h5-wrap">
+			<header id="header" class="mui-bar mui-bar-nav back_gradient">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">消息通知</h1>
+			</header>
+			<div class="wraper">
+				<div id="slider" class="mui-slider">
+					<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<a class="mui-control-item mui-active" href="#item1mobile">
+							赞
+							<div class="za-bottom-red-line">
+								<span></span>
+							</div>
+						</a>
+						<a class="mui-control-item" href="#item2mobile">
+							评论
+							<span id="usermsg" style="display: none;" class="za-massage-badge-1">0</span>
+						</a>
+						<a class="mui-control-item" href="#item3mobile">
+							系统消息
+						</a>
+					</div>
+					<div class="mui-slider-group">
+						<div id="refresh" class="hc-bg-ff hc-size-14 hc-text-center">
+							<div class="refresh">
+								<div class="pull_logo hc-g"></div>
+								<div class="pull_txt hc-g hc-line-16 hc-color-7f">下拉即可刷新</div>
+								<div class="pull_time hc-g hc-size-11 hc-line-16 hc-color-ac">暂未更新</div>
+							</div>
+						</div>
+						<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+							<div id="refresh" class="hc-bg-ff hc-size-14 hc-text-center">
+								<div class="refresh">
+									<div class="pull_logo hc-g"></div>
+									<div class="pull_txt hc-g hc-line-16 hc-color-7f">下拉即可刷新</div>
+									<div class="pull_time hc-g hc-size-11 hc-line-16 hc-color-ac">暂未更新</div>
+								</div>
+							</div>
+							<div id="scroll1" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<center style="display: none;">
+										<img class="za-no-zan-img" src="/Static/images/v1.0/info/user/user_nozan.png" />
+										<p>快去发布精彩评论吧!</p>
+									</center>
+									<ul class="mui-table-view" id="zan-content">
+										<!--<li class="mui-table-view-cell mui-media">
+												<a >
+													<img class="mui-media-object mui-pull-left" src="/Static/images/v1.0/info/zixun/country/Spain.jpg">
+													<div class="mui-media-body">										
+														<h4 class='mui-ellipsis'>能和心爱的人</h4>
+														<p class='mui-ellipsis'><strong>赞了您的评论：</strong>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>													
+														<span >15:20</span>
+													</div>
+												</a>
+											</li>
+											<li class="mui-table-view-cell mui-media">
+												<a >
+													<img class="mui-media-object mui-pull-left" src="/Static/images/v1.0/info/zixun/country/Spain.jpg">
+													<div class="mui-media-body">										
+														<h4 class='mui-ellipsis'>能和心爱的人</h4>
+														<p class='mui-ellipsis'><strong>赞了您的评论：</strong>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>													
+														<span >15:20</span>
+													</div>
+												</a>
+											</li>
+											<li class="mui-table-view-cell mui-media">
+												<a >
+													<img class="mui-media-object mui-pull-left" src="/Static/images/v1.0/info/zixun/country/Spain.jpg">
+													<div class="mui-media-body">										
+														<h4 class='mui-ellipsis'>能和心爱的人</h4>
+														<p class='mui-ellipsis'><strong>赞了您的评论：</strong>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>													
+														<span >15:20</span>
+													</div>
+												</a>
+											</li>-->
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div id="item2mobile" class="mui-slider-item mui-control-content">
+							<div id="refresh" class="hc-bg-ff hc-size-14 hc-text-center">
+								<div class="refresh">
+									<div class="pull_logo hc-g"></div>
+									<div class="pull_txt hc-g hc-line-16 hc-color-7f">下拉即可刷新</div>
+									<div class="pull_time hc-g hc-size-11 hc-line-16 hc-color-ac">暂未更新</div>
+								</div>
+							</div>
+							<div id="scroll2" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<center style="display: none;">
+										<img class="za-no-pinglun-img" src="/Static/images/v1.0/info/user/user_pinglun.png" />
+										<p>快去发布精彩评论吧!</p>
+									</center>
+									<ul class="mui-table-view" id="pl-content">
+										<!--<li class="mui-table-view-cell mui-media">
+												<a >
+													<img class="mui-media-object mui-pull-left" src="/Static/images/v1.0/info/zixun/country/Spain.jpg">
+													<div class="mui-media-body">										
+														<h4 class='mui-ellipsis'>能和心爱的人</h4>
+														<p class='mui-ellipsis'><strong>回复了您的评论：</strong>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>													
+														<span >15:20</span>
+													</div>
+												</a>
+											</li>
+											<li class="mui-table-view-cell mui-media">
+												<a >
+													<img class="mui-media-object mui-pull-left" src="/Static/images/v1.0/info/zixun/country/Spain.jpg">
+													<div class="mui-media-body">										
+														<h4 class='mui-ellipsis'>能和心爱的人</h4>
+														<p class='mui-ellipsis'><strong>回复了您的评论：</strong>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>													
+														<span >15:20</span>
+													</div>
+												</a>
+											</li>-->
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div id="item3mobile" class="mui-slider-item mui-control-content">
+							<div id="refresh" class="hc-bg-ff hc-size-14 hc-text-center">
+								<div class="refresh">
+									<div class="pull_logo hc-g"></div>
+									<div class="pull_txt hc-g hc-line-16 hc-color-7f">下拉即可刷新</div>
+									<div class="pull_time hc-g hc-size-11 hc-line-16 hc-color-ac">暂未更新</div>
+								</div>
+							</div>
+							<div id="scroll3" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<center style="display: none;">
+										<img class="za-no-msg-img" src="/Static/images/v1.0/info/user/user_nomsg.png" />
+										<p>还没有收到系统通知!</p>
+									</center>
+									<div style="width: 100%;" id="xt-content">
+										<!--<div class="za-xt-li">
+												<h4>低倍投注中奖</h4>
+												<span>16:20</span>
+												<div class="za-xt-li-body">
+													<p>收到点击发送发票收到否发送到发送到发送到发票上发送到你就发了华盛顿防守打法his老地方</p>
+													<img src="/Static/images/v1.0/info/user/user_nozan.png" />											
+												</div>
+											</div>
+											<div class="za-xt-li">
+												<h4>低倍投注中奖</h4>
+												<span>16:20</span>
+												<div class="za-xt-li-body">
+													<p>收到点击发送发票收到否发送到发送到发送到发票上发送到你就发了华盛顿防守打法his老地方</p>
+													<img src="/Static/images/v1.0/info/user/user_nozan.png" />											
+												</div>
+											</div>-->
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/zixun/mui.min.js?v=2581360193"></script>
+		<script>
+			mui.init({
+				swipeBack: false
+			});
+		</script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/user_util.js?v=2c498ee3f6"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/user_message.js?v=ac10f00f63"></script>
+
+	</body>
+
+</html>

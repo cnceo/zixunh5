@@ -1,0 +1,6 @@
+
+sitemap:https://m.lottery666.com/sitemap.xml
+
+User-agent: *
+Disallow: /Static/
+Disallow: /includes/

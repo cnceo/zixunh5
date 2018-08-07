@@ -1,0 +1,398 @@
+/***/
+body{
+	background: #ffffff;
+	overflow: hidden;
+	height:100%;
+}
+.wraper{
+	padding-bottom:.72rem;
+	padding-top:.44rem;
+	height:100%;
+	overflow-y: auto;
+}
+.no_padding_wraper{
+	padding-bottom:0
+}
+.wraper .sfc_items{
+	height:100%;
+	overflow-y: auto;
+}
+/**底部按钮**/
+.hc-h5-wrap>footer::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.3);
+}
+.hc-h5-wrap>footer {
+    width: 100%;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    border-top:1px solid #D9D9D9;
+    background:#ffffff !important; 
+    padding:0.1rem 0.13rem;
+}
+footer .footer_btn {
+	width:48%;
+	height:100%;
+	background: -webkit-linear-gradient(left,#FF1E00, #FFC100) !important; /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(left,#FF1E00, #FFC100) !important; /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(left,#FF1E00, #FFC100) !important; /* Firefox 3.6 - 15 */
+	background: linear-gradient(left,#FF1E00, #FFC100) !important; /* 标准的语法 */
+	border-radius: 0.03rem;
+	position: relative;
+}
+footer button.btn_red {
+	position: absolute;
+	top:50%;
+	width:100%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-family: "微软雅黑";
+	font-size: .19rem;
+	background-color:transparent;
+	width: 100%;
+	border: 0;
+	color: #FFFFFF;
+	border-radius: 3px;
+	vertical-align: middle;
+	outline: none !important;
+	cursor: pointer;
+}
+
+
+
+
+span.sfc_money{
+	display: block;
+	font-size: .18rem;
+	color: #E12D3E;
+	font-weight: bold;
+}
+.sfc_items ul li{
+	box-sizing: border-box;
+	margin: 0 .1rem;
+	height: .88rem;
+	border-bottom: 1px solid #D9D9D9;
+	text-align: left;
+	background: url(//static.letoula.com/images/v1.0/info/award/arrow_r.png) no-repeat right center;
+	font-size: .13rem;
+}
+.sfc_items ul li.latest{
+	height: .94rem;
+	background: #FFF8F1;
+	margin: 0;
+	padding: 0 .1rem;
+	box-sizing: border-box;
+}
+.arrow_r{
+	display: inline-block;
+	float: right;
+	width: .2rem;
+	height: 100%;
+	background: url(//static.letoula.com/images/v1.0/info/award/arrow_r.png) no-repeat right center;
+}
+
+
+.sfc_items ul li p{
+	padding: 0px;
+	margin: 0px;
+	height: .44rem;
+	line-height: .44rem;
+	font-size:.16rem;
+	color: #383838;
+}
+.sfc_items ul li p span{
+	font-size:.13rem;	
+}
+
+.latest_sign{
+	display: inline-block;
+	background: #ff850e;
+	border-radius: .03rem;
+	padding: 0 0.03rem;
+	text-align: center;
+	line-height: .14rem;
+	color: #fff;
+	box-sizing: border-box;
+	font-size:.12rem !important;
+}
+.sfc_items {
+	font-size: 0px;
+}
+.sfc_items ul li .sfc_item{
+	height: .4rem;
+}
+.sfc_items ul li.latest .sfc_item{
+	height: .5rem;
+}
+.sfc_items ul li.latest .sfc_item span,
+.sfc_header .sfc_item span{
+	display: inline-block;
+	width: .17rem;
+	height: .25rem;
+	border-radius: .03rem;
+	background:#56a81f;
+	color: #FFFFFF;
+	line-height: .25rem;
+	text-align: center;
+	font-size:.16rem;
+	font-weight: 500;
+}
+.sfc_items ul li p span.date,
+.sfc_header p span.date{
+	color: #ACACAC;
+	margin: 0 .1rem;
+}
+.sfc_item span{
+	color:#E12D3E;
+	font-size:.16rem;
+	font-weight: bold;
+	margin: 0 .14rem 0 0;
+}
+.sfc_items ul li.latest span{
+	margin: 0 .05rem 0 0;
+}
+.sfc_items ul li p span.issue{
+	font-family: 微软雅黑
+}
+.sfc_items ul .latest p span.issue{
+	font-weight: bold;
+}
+
+
+
+
+/*************详情*************/
+.sfc_header{
+	margin:0;
+	padding: 0 .1rem;
+	text-align: left;
+	background: #FFFFFF;
+	border-bottom: 1px solid #D9D9D9;
+}
+.sfc_header p{
+	margin: 0;
+	padding:0;
+	height: .44rem;
+	line-height: .44rem;
+	font-size:.13rem;
+}
+.sfc_header p span.issue{
+	font-family: 微软雅黑;
+	font-weight: bold;
+}
+.sfc_header .sfc_item{
+	height: .8rem;
+	line-height: .7rem;
+	border-bottom: 1px solid #D9D9D9;
+}
+
+.sfc_detail_content,.sfc_detail_content2,.sfc_detail_content3{
+	width: 100%;
+	height: auto;
+	background: #FFFFFF;
+	margin: .12rem 0;
+}
+.sfc_detail_content table,.sfc_detail_content2 table,.sfc_detail_content3 table{
+	width: 100%;
+	border-collapse: collapse;
+	font-size:.13rem;
+	color: #383838;
+}
+.sfc_detail_content table td,.sfc_detail_content2 table td,.sfc_detail_content3 table td{
+	border:1px solid #D9D9D9;
+	height: .35rem;
+	text-align: center;
+	box-sizing: border-box;
+}
+.sfc_detail_content table td.bonus,.sfc_detail_content2 table td.bonus,.sfc_detail_content3 table td.bonus{
+	color: #E12D3E;
+}
+.sfc_detail_content table td.title,.sfc_detail_content2 table td.title,.sfc_detail_content3 table td.title{
+	color: #7F7F7F;
+}
+.sfc_detail_content table tr td:first-child,.sfc_detail_content2 table tr td:first-child,.sfc_detail_content3 table tr td:first-child{
+	border-left:0;
+}
+.sfc_detail_content table tr td:last-child,.sfc_detail_content2 table tr td:last-child,.sfc_detail_content3 table tr td:first-child{
+	border-right:0;
+}
+.xlgc{
+	height: .6rem;
+	box-sizing: border-box;
+}
+.sfc_xl,
+.sfc_gc{
+	width: 50%;
+	float: left;
+	display: inline-block;
+	padding-left:.05rem;
+	box-sizing: border-box;
+}
+.sfc_xl span,
+.sfc_gc span{
+	font-size:.12rem;
+}
+span.sfc_money{
+	font-size:.15rem;
+	color: #E12D3E;
+	font-weight: bold;
+	padding-top:.05rem
+}
+.sfc_load_wrap{
+	width: 100%;
+	position: absolute;
+	top: 47%;
+	left:0px;
+	-webkit-transform: translateY(-50%);
+  	-moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.sfc_load{
+	width: 100px;
+	height: auto;
+	margin:0px auto;
+}
+.sfc_text{
+	text-align: center;
+	color:#898989;
+}
+.sfc_text2{
+	font-size: .14rem;
+}
+.sfc_again_load{
+	width:50%;
+	border: 1px solid #e5e5e5;
+	border-radius: .03rem;
+	padding: .05rem 0px;
+	background: white;
+	color: black;
+	text-align: center;
+	margin: .1rem auto;
+	color:black;
+}
+.hc-padding{
+	padding: .1rem !important;
+	color: #acacac;
+	font-size: .13rem !important;
+}
+/* 开奖查询优化 */
+.kj_issue_search{
+	width: 100%;
+	height: .46rem;
+	padding: .06rem .1rem;
+	position: relative;
+	z-index: 9999;
+}
+.kj_issue_search .search-issue{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: .34rem;
+	background-color: #e7e8ea;
+	color: #919191;
+	border: 0;
+	border-radius: .05rem;
+	text-indent: .1rem;
+	font-size: .15rem;
+	
+}
+.kj_issue_search .search-issue.add-search-logo{
+	color: #000;
+	padding-left: 42%;
+	background:#e7e8ea url(//static.letoula.com/images/v1.0/info/award/search-logo.png) no-repeat 40% center;
+	background-size: .15rem .15rem;
+}
+.issue-search-close{
+	width: .3rem;
+	height: 100%;
+	display: block;
+	position: absolute;
+	right: .1rem;
+	top: 0px;
+	background: url(//static.letoula.com/images/v1.0/info/award/search-start.png) no-repeat  center;
+	background-size: 50%;
+}
+.issue-search-close.bg-change{
+	background: url(//static.letoula.com/images/v1.0/info/award/search-issue.png) no-repeat  center;
+	background-size: 50%;
+}
+/* 键盘 */
+.inner_val{
+	font-style: normal;
+	background-color: #78a7e6;
+}
+.keyboard{
+  width: 100%;
+  background-color: #fff;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1111;
+}
+.keyboard td{
+  border: 1px solid #D9D9D9;
+}
+.keyboard thead td{
+  height: 0.5rem;
+  text-align: center;
+  color: #383838;
+  font-size: 0.18rem;
+  font-weight: normal;
+}
+.keyboard thead td p{
+	font-size: 0.13rem;
+	line-height: 0.16rem;
+	color: #59a7e0;
+}
+.keyboard thead td.active{
+    color: #ffb10b;
+}
+.keyboard tbody td{
+  height: 0.62rem;
+  width: 33.3333333%;
+  color: #383838;
+  font-size: 0.32rem;
+}
+.keyboard thead td:empty{
+	height: 0;
+	border: 0; 
+}
+.keyboard tbody .sure{
+  color: #fff;
+  font-size: .22rem;
+  background-color: #e12d3e;
+}
+.keyboard tbody .del{
+  font-size: 0;
+  background-image: url('//static.letoula.com/images/v1.0/trade/sports/zqdc/del.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: 0.35rem 0.23rem;
+  background-size: 0.35rem 0.23rem;
+  background-color: #f0f0f0;
+}
+.keyboard tbody .ctrl_key:active{
+	background-color:rgba(0,0,0,0.2)
+}
+.del_line:active{
+	background-color:rgba(0,0,0,0.2)
+}

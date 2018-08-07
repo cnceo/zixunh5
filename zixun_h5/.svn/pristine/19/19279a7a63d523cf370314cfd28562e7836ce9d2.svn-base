@@ -1,0 +1,245 @@
+body {
+	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+	color: #333333;
+	font-size: 17px;
+	letter-spacing: 1px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    padding-bottom: 0.6rem;
+}
+
+.wrap {
+	margin: 18px;
+	word-wrap : break-word;
+	overflow: hidden;
+}
+
+.title {
+	margin-top: 18px;
+	width: 100%;
+	font-size: 23px;
+	line-height: 32px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #1a1a1a;
+}
+
+.date {
+	display: block;
+	color: #8c8c8c;
+	font-size: 12px;
+	line-height: 2;
+	margin: 5px 0;
+}
+.date .author{
+	margin-right: 15px;
+}
+.date .time{
+	font-family: arial;
+}
+
+.content {
+	display: block;
+	padding-top: 19px;
+}
+
+.content p {
+	margin: 0 0 28px 0 !important;
+}
+.content p,
+.content span{
+	font-size: 17px;
+	line-height: 29px;
+	color: #333333;
+	text-align: justify;
+}
+.content img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	vertical-align: middle;
+	border:0;
+	margin-bottom: 0 0 28px 0 !important;
+}
+.jumpUrl{
+	text-indent: 0;
+	box-sizing: border-box;
+	display: block;
+	margin: 28px auto 10px;
+	width: 200px;
+	height: 50px;
+	font-size: 17px;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 25px;
+	padding: 10px;
+	background-color: #db3647;
+	text-decoration: none;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+/*zsscode*/
+.main-comment-list{
+	padding-left: 0;
+}
+.lincoapp-comment .main-comment-list li {
+    background: #fff;list-style: none;
+    padding: 10px 0;padding-bottom: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+    list-style: none;
+    /*border-bottom: solid 1px #e5e5e5;*/
+    border-top: solid 1px #e5e5e5;
+    height: 116px;
+}
+.lincoapp-comment .main-comment-list li:last-child{
+	/*margin: 9px 0;*/
+}
+.lincoapp-comment .main-comment-list .u-img {
+    display: block;
+    float: left;
+    width: 37px;
+    height: 37px;
+    margin-right: 6px;
+}
+.lincoapp-comment .main-comment-list .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.lincoapp-comment .main-comment-list .detail {
+    overflow: hidden;
+    font-size: 14px;
+    color: #333;
+}
+.lincoapp-comment .main-comment-list .cmt-name-wrap {
+    position: relative;
+    font-size: 10px;
+    color: #888;
+}
+.lincoapp-comment .main-comment-list .cmt-name {
+    display: block;
+    -webkit-box-flex: 1;
+    margin-bottom: -2px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;margin-top: 9px;
+}
+.lincoapp-comment .main-comment-list .cmt-title {
+    position: relative;
+    display: box;
+    display: -webkit-box;
+    padding-right: .3rem;
+    font-size: 10px;
+    color: #888;
+}
+.lincoapp-comment .main-comment-list .cmt-title time, .lincoapp-comment .main-comment-list .cmt-title span {
+    margin-right: 0px;font-size: 10px;font-family: "PingFangSC-Regular";
+    position: absolute;right: 0;top: -16px;
+}			
+.lincoapp-comment .main-comment-list .cmt-title .btn-report {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #666;
+}
+.lincoapp-comment .main-comment-list .cmt-title .btn-report-2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #666;
+}
+.lincoapp-comment .main-comment-list .cmt-content {
+    margin: 3px 0;margin-top: 10px;
+    line-height: 1.5;
+    font-size: 12px;height: 35px;
+    color: #333;font-family: "PingFangSC-Regular";
+    display: -webkit-box;
+    overflow: hidden;
+
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.lincoapp-comment .main-comment-list .cmt-bar {
+    text-align: right;margin-bottom: 15px;font-family: "PingFangSC-Regular";
+}
+.lincoapp-comment .main-comment-list .cmt-btn2 {
+    display: inline-block;
+    color: #333;
+    font-size: 12px;margin-right: 15px;
+}
+.lincoapp-comment .main-comment-list .cmt-btn2:before {
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url(/Static/images/v1.0/info/user/icon_reply.png) no-repeat;
+    -webkit-background-size: 1.5rem auto;
+    background-size: 100% auto;
+    margin-right: 4px;
+    vertical-align: -5px;
+}
+.lincoapp-comment .main-comment-list .btn-report:before {
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url(/Static/images/v1.0/info/user/icon_unzan.png) no-repeat;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    vertical-align: -3px;
+}
+.lincoapp-comment .main-comment-list .btn-report-2:before {
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url(/Static/images/v1.0/info/user/icon_dozan.png) no-repeat;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    vertical-align: -3px;
+}
+/*//轮播*/
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 20px;
+    left: 0;
+    width: 100%;text-align: center;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+}
+.swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000;
+    opacity: .2;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #007aff;
+}
+

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+		<meta http-equiv="Expires" content="0">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>今日好彩-彩票新媒体资讯平台</title>
+		<meta name="keywords" content="彩票 足球 双色球 大乐透 中奖 开奖 奖池">
+		<meta name="description" content="更快、更好、更专业的彩票新媒体资讯平台,为您带来全面的购彩推荐,赛事分析与彩市新闻,让平凡的一天变得不平凡">
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/mui.min.css?v=4375b1e6e6" />
+		<link rel="apple-touch-icon" sizes="64x64" href="/Static/images/v1.0/favicon.ico?v=4375b231e6e6">
+		<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>
+		<script type="text/javascript">
+			document.domain = document.domain.slice(2);
+		</script>
+		<!---->
+		<style>
+			body {
+				background: #fff !important;
+				font-family: "Source Han Sans CN", "Microsoft YaHei", "H elvetica", simsun;
+			}
+			
+			.hc-h5-wrap>header {
+				background-color: #FD8237 ;
+			}
+			
+			.hc-h5-wrap .header-title {
+				/*text-align: left*/
+				width: 0.92rem;
+				background: url(/Static/images/v1.0/info/zixun/logo2.png) no-repeat center;
+				background-size: contain;
+			}
+			
+			.hc-h5-wrap .header-right {
+				color: #fff
+			}
+			
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			
+			section {
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				padding-top: 0.44rem;
+			}
+			
+			iframe {
+				width: 100%;
+				height: 100%
+			}
+			/*img{
+				width: 100% !important
+			}*/
+			/*//zsscode*/
+			
+			.mui-plus .plus {
+				display: inline;
+			}
+			
+			.plus {
+				display: none;
+			}
+			
+			#topPopover {
+				position: fixed;
+				right: 0px;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 280px;
+			}
+			
+			#topPopover .mui-popover-arrow {
+				left: auto;
+				right: 6px;
+			}
+			
+			.mui-popover .mui-popover-arrow:after {
+				top: 45px;
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			
+			p {
+				text-indent: 22px;
+			}
+			
+			span.mui-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			
+			.mui-popover {
+				height: 300px;
+			}
+			
+			.mui-content {
+				padding: 10px;
+			}
+			
+			.mui-icon {
+				margin-right: 0.1rem;
+				margin-top: 0.1rem;
+				color: #fff;
+				font-size: 0.24rem;
+			}
+			
+			.mui-table-view-cell:after {
+				height: 0px;
+			}
+			
+			.my-label-list {
+				background: #f3f4f9;
+				padding: 0.3rem 0px 0px 0.3rem;
+				height: auto;
+			}
+			
+			.my-label-list>label {
+				width: 0.75rem;
+				height: 0.3rem;
+				line-height: 0.3rem;
+				border-radius: 0.15rem;
+				text-align: center;
+				background: #ebecf1;
+				margin-bottom: 0.2rem;
+				margin-right: 0.1rem;
+				display: inline-block;
+				font-size: 15px;
+				color: #333;
+				overflow: hidden;
+			}
+			
+			.za_footer_wrap {
+				width: 100%;
+				height: 49px;
+				background: #FFF;
+				position: fixed;
+				bottom: 0;
+				border-top: 1px solid #d9d9d9;
+			}
+			
+			.za_footer_wrap .footer_item {
+				float: left;
+				width: 33.33%;
+				text-align: center;
+			}
+			
+			.za_footer_wrap .footer_item img {
+				height: 24px;
+				width: 25px;
+				position: relative;
+				margin-top: 12px;
+			}
+			
+			.footer_item span {
+				background: #FD8237 ;
+				height: 15px;
+				width: 15px;
+				line-height: 15px;
+				padding: 0px 4px;
+				font-size: 10px;
+				position: absolute;
+				float: right;
+				border-radius: 50%;
+				z-index: 5;
+				color: #fff;
+				margin-left: 14px;
+				margin-top: 6px;
+			}
+		</style>
+		<script type="text/javascript" charset="utf-8">
+			//取消浏览器的所有事件，使得active的样式在手机上正常生效
+			document.addEventListener('touchstart', function() {
+				return false;
+			}, true);
+			// 禁止选择
+			document.oncontextmenu = function() {
+				return false;
+			};
+		</script>
+	</head>
+
+	<body>
+		<div class="hc-h5-wrap">
+			<header>
+				<img id="shareImg" src="" style="display: none;" />
+				<div class="header-left back"></div>
+				<div class="header-title"></div>
+				<!--<div class="header-right">资讯</div>-->
+				<div class="header-right">
+					<a id="menu" class="mui-action-menu mui-icon mui-icon-bars mui-pull-right"></a>
+				</div>
+			</header>
+			<section>
+			</section>
+			
+			<!--zsscode-->
+			<div class="za_footer_wrap">
+				<a class="footer_item do-eidt">
+					<img src="/Static/images/v1.0/info/user/icon_eidt.png" />
+				</a>
+				<a class="footer_item do-hf">
+					<span id="msgtotal" style="display: none;"></span>
+					<img style="width: 26px;" src="/Static/images/v1.0/info/user/icon_hf.png" />
+				</a>
+				<a class="footer_item do-sc">
+					<img src="/Static/images/v1.0/info/user/icon_sc.png" />
+				</a>
+			</div>
+		</div>
+
+		<!--右上角弹出菜单-->
+		<div id="topPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a href="#">Item1</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="#">Item2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="#">Item3</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="#">Item4</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="#">Item5</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="#">Item6</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="#">Item7</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="#">Item8</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="#">Item9</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="#">Item10</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="nav_more_view" style="width: 100%;position: fixed;top: 0;z-index: 9999;display: none;">
+			<div style="height: 40px;width: 100%;background: #fff;">
+				<p style="margin: 0;padding: 11px 0px;float: left;font-size: 15px;color:#333;">切换栏目</p>
+				<img id="nav_more_close" src="/Static/images/v1.0/info/zixun/tab_close.png" style="width: 18px;height: 18px;float: right;margin: 12px 20px 10px 8px;" />
+			</div>
+			<div class="my-label-list">
+			</div>
+		</div>
+		<script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+		<script type="text/javascript" src="/Static/lib/share/nativeShare.js?v=324c999614"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/zixun/mui.min.js?v=2581360193"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/user_util.js?v=2c498ee3f6"></script>
+		<!--<script src="https://cdn.bootcss.com/eruda/1.4.3/eruda.min.js"></script>-->
+		<script type="text/javascript" src="/Static/js/v1.0/info/zixun/zixun_detail.js?v=bb8f0e5817"></script>
+		<script src="/Static/js/v1.0/stat.js?v=ebe3783aa3"></script>
+		<!--<script>eruda.init();</script>-->
+	</body>
+
+</html>

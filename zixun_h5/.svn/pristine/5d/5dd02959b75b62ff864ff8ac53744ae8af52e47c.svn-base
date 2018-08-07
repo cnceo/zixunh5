@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>今日好彩-俄罗斯世界杯</title>
+		<!--<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>-->
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/mui.min.css?v=4375b1e6e6" />
+		<!--<script type='text/javascript' src='/Static/lib/jquery/jquery-3.1.0.min.js?v=05e51b1db5'></script>-->
+
+		<style>
+			.za-body-bg {
+				background-image: url(/Static/images/v1.0/worldcup/bg.png?v=23e432423);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+			
+			.za-body-bg-more {
+				width: 100%;
+				height: auto;
+				background: #000;
+				margin-top: -2px;
+			}
+			
+			.za-menu-line {
+				float: left;
+				overflow: hidden;
+				position: absolute;
+				width: 100%;
+			}
+			
+			.za-menu-line a {
+				float: left;
+				width: 33%;
+				position: relative;
+			}
+			
+			.za-menu-line a img {
+				width: 99px;
+				height: 99px;
+			}
+			
+			.za-margin-top1 {
+				margin-top: 100px;
+				z-index: 2;
+			}
+			
+			.za-img-a {
+				position: absolute;
+				z-index: 3;
+				width: 99px;
+				height: 99px;
+			}
+			
+			.za-share-div {
+				position: absolute;
+				z-index: 4;
+				width: 24px;
+				height: 24px;
+				top: 15px;
+				right: 15px;
+				background-image: url(/Static/images/v1.0/worldcup/share.png?v=23e432423);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+			
+			.za-opemt {
+				position: absolute;
+				z-index: 9;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				background-image: url(/Static/images/v1.0/worldcup/bg_share_wx.png?v=23e432423);
+				background-size: 100%;
+				background-repeat: no-repeat;
+			}
+			
+			.za-opemt-weixin {
+				
+				position: absolute;
+				z-index: 9;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,0.4);
+			}
+			.za-opemt-weixin div {
+				height: 45%;
+				position: relative;
+			}
+			.za-opemt-weixin div img{
+				height: 100%;
+				display: block;
+				width: 80%;
+				margin: 0 auto;
+			}
+			.za-opemt-weixin div:nth-child(1) img{
+				position: absolute;
+				top: 0;
+                left: 10%;
+			}
+			.za-opemt-weixin div:nth-child(2) img{
+				position: absolute;
+				top: -30%;
+                left: 10%;
+			}
+			.mui-bar {
+				-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+				box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+			}
+			
+			.mui-bar-nav {
+				background: #FD8237 ;
+			}
+			
+			.mui-title {
+				color: #fff;
+			}
+			
+			.mui-bar .mui-btn-link {
+				color: #fff;
+			}
+			
+			.mui-bar-tab {
+				border-top: 1px solid #E5E5E5;
+				background: #fff;
+				height: 0.49rem;
+			}
+			
+			.mui-bar-tab .mui-tab-item.mui-active {
+				color: #FD8237 ;
+			}
+			
+			.go_world {
+				background-image: url(/Static/images/v1.0/worldcup/world_selected.png?v=23e432423);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 0.22rem;
+			}
+			
+			.go_index {
+				background-image: url(/Static/images/v1.0/info/zixun/index_unselect.png?v=23e432423);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 0.22rem;
+			}
+			
+			.go_live {
+				background-image: url(/Static/images/v1.0/info/zixun/live_unselect.png?v=23e432423);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 0.22rem;
+			}
+			
+			.go_my {
+				background-image: url(/Static/images/v1.0/info/user/user_unselect.png?v=23e432423);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 0.22rem;
+			}
+			
+			.mui-bar-tab .mui-tab-item .mui-icon {
+				width: 0.22rem;
+				height: 0.22rem;
+			}
+			
+			#img_44,
+			#img_33,
+			#img_22,
+			#img_11,
+			#img_00 {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="za-body-bg">
+			<div style="display: none; height: 300px;width: 300px;"><img src="/Static/images/v1.0/worldcup/shijiebei.png?v=23e4324220" style="height: 100%;width: 100%;display: block;" /></div>
+			<div class="za-menu-line za-margin-top1">
+				<a><img id="img_0" style="margin-left: 72px;margin-top: 234px;" src="/Static/images/v1.0/worldcup/0.png?v=23e432423" /></a>
+				<a><img id="img_00" style="margin-left: 72px;margin-top: 234px;" src="/Static/images/v1.0/worldcup/00.png?v=23e432423" /></a>
+				<a><img id="img_1" style="margin-left: 17px;margin-top: 183px;" src="/Static/images/v1.0/worldcup/1.png?v=23e432423" /></a>
+				<a><img id="img_11" style="margin-left: 17px;margin-top: 183px;" src="/Static/images/v1.0/worldcup/11.png" /></a>
+				<a><img id="img_2" style="margin-left: -43px;margin-top: 233px;" src="/Static/images/v1.0/worldcup/2.png" /></a>
+				<a><img id="img_22" style="margin-left: -43px;margin-top: 233px;" src="/Static/images/v1.0/worldcup/22.png" /></a>
+			</div>
+			<img class="za-img-a" id="img_4" style="margin-left: 99px;margin-top: 101px;" src="/Static/images/v1.0/worldcup/4.png" />
+			<img class="za-img-a" id="img_44" style="margin-left: 99px;margin-top: 101px;" src="/Static/images/v1.0/worldcup/44.png" />
+			<img class="za-img-a" id="img_3" style="margin-left: -69px;margin-top: 101px;" src="/Static/images/v1.0/worldcup/3.png" />
+			<img class="za-img-a" id="img_33" style="margin-left: -69px;margin-top: 101px;" src="/Static/images/v1.0/worldcup/33.png" />
+			<img class="za-img-a" id="img_rm" style="margin-left: 137px;margin-top: 358px;" src="/Static/images/v1.0/worldcup/rm.png" />
+		</div>
+		<div class="za-body-bg-more"></div>
+		<div id="share-btn" class="za-share-div"></div>
+		<div id="opemt"  class="za-opemt-weixin"  style="display: none;">
+			<div>	
+				<img src="/Static/images/v1.0/worldcup/shareWord.png?v=23e14324229"/>
+			</div>
+			<div>
+				<img src="/Static/images/v1.0/worldcup/shareArrow.png?v=23e4322423"/>
+			</div>
+		</div>
+		<div id="opemt1"  class="za-opemt" style="display: none;">
+			<!--<div>
+				<img src="/Static/images/v1.0/worldcup/shareWord.png"/>
+			</div>
+			<div>
+				<img src="/Static/images/v1.0/worldcup/shareArrow.png"/>
+			</div>-->
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item">
+				<span class="mui-icon go_index"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<!--<a class="mui-tab-item mui-active">
+				<span class="mui-icon go_world"></span>
+				<span class="mui-tab-label">世界杯</span>
+			</a>-->
+			<a class="mui-tab-item">
+				<span class="mui-icon go_live"></span>
+				<span class="mui-tab-label">直播</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon go_my"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>
+		<script type='text/javascript' src='/Static/lib/jquery/jquery-3.1.0.min.js?v=05e51b1db5'></script>
+		<script type="text/javascript" src="/Static/lib/share/nativeShare.js?v=324c999614"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/worldcup/cup_columnid.js?v=af31a967b1"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(function() {
+
+				//mui.init();
+				//窗体宽度发生变化
+				window.onresize = function() {
+					//背景图片 比例 667*375  	要根据
+					$(".za-body-bg").css("height", document.documentElement.clientWidth * 667 / 375 + "px")
+					$("#opemt").css("height", document.documentElement.clientWidth * 639 / 375 + "px")
+					var bg_height = parseInt($(".za-body-bg").css("height").substring(0, $(".za-body-bg").css("height").length - 2));
+					if(document.documentElement.clientHeight > bg_height) {
+						$(".za-body-bg-more").css("height", document.documentElement.clientHeight - bg_height + "px")
+					}
+					$(".za-margin-top1").css("margin-top", bg_height * (100 / 667) + "px")
+					//$(".za-margin-top2").css("margin-top",bg_height*(440/667)+"px")
+					$(".za-body-bg img").css("width", bg_height * (99 / 667) + "px")
+					$(".za-body-bg img").css("height", bg_height * (99 / 667) + "px")
+
+					$("#img_1").css("margin-left", bg_height * (17 / 667) + "px")
+					$("#img_1").css("margin-top", bg_height * (183 / 667) + "px")
+					$("#img_11").css("margin-left", bg_height * (17 / 667) + "px")
+					$("#img_11").css("margin-top", bg_height * (183 / 667) + "px")
+
+					$("#img_0").css("margin-left", bg_height * (72 / 667) + "px")
+					$("#img_0").css("margin-top", bg_height * (234 / 667) + "px")
+					$("#img_00").css("margin-left", bg_height * (72 / 667) + "px")
+					$("#img_00").css("margin-top", bg_height * (234 / 667) + "px")
+
+					$("#img_2").css("margin-left", '-' + bg_height * (43 / 667) + "px")
+					$("#img_2").css("margin-top", bg_height * (233 / 667) + "px")
+					$("#img_22").css("margin-left", '-' + bg_height * (43 / 667) + "px")
+					$("#img_22").css("margin-top", bg_height * (233 / 667) + "px")
+
+					$("#img_3").css("margin-left", bg_height * (179 / 667) + "px")
+					$("#img_3").css("margin-top", bg_height * (410 / 667) + "px")
+					$("#img_33").css("margin-left", bg_height * (179 / 667) + "px")
+					$("#img_33").css("margin-top", bg_height * (410 / 667) + "px")
+
+					$("#img_4").css("margin-left", bg_height * (99 / 667) + "px")
+					$("#img_4").css("margin-top", bg_height * (411 / 667) + "px")
+					$("#img_44").css("margin-left", bg_height * (99 / 667) + "px")
+					$("#img_44").css("margin-top", bg_height * (411 / 667) + "px")
+
+					$("#img_rm").css("margin-left", bg_height * (137 / 667) + "px")
+					$("#img_rm").css("margin-top", bg_height * (357 / 667) + "px")
+				}
+
+				//背景图片 比例 667*375  	要根据
+				$(".za-body-bg").css("height", document.documentElement.clientWidth * 667 / 375 + "px")
+				$("#opemt").css("height", document.documentElement.clientWidth * 639 / 375 + "px") //遮盖层 高度
+				var bg_height = parseInt($(".za-body-bg").css("height").substring(0, $(".za-body-bg").css("height").length - 2));
+				if(document.documentElement.clientHeight > bg_height) {
+					$(".za-body-bg-more").css("height", document.documentElement.clientHeight - bg_height + "px")
+				}
+				$(".za-margin-top1").css("margin-top", bg_height * (100 / 667) + "px")
+				$(".za-body-bg img").css("width", bg_height * (99 / 667) + "px")
+				$(".za-body-bg img").css("height", bg_height * (99 / 667) + "px")
+
+				$("#img_1").css("margin-left", bg_height * (17 / 667) + "px")
+				$("#img_1").css("margin-top", bg_height * (183 / 667) + "px")
+				$("#img_11").css("margin-left", bg_height * (17 / 667) + "px")
+				$("#img_11").css("margin-top", bg_height * (183 / 667) + "px")
+
+				$("#img_0").css("margin-left", bg_height * (72 / 667) + "px")
+				$("#img_0").css("margin-top", bg_height * (234 / 667) + "px")
+				$("#img_00").css("margin-left", bg_height * (72 / 667) + "px")
+				$("#img_00").css("margin-top", bg_height * (234 / 667) + "px")
+
+				$("#img_2").css("margin-left", '-' + bg_height * (43 / 667) + "px")
+				$("#img_2").css("margin-top", bg_height * (233 / 667) + "px")
+				$("#img_22").css("margin-left", '-' + bg_height * (43 / 667) + "px")
+				$("#img_22").css("margin-top", bg_height * (233 / 667) + "px")
+
+				$("#img_3").css("margin-left", bg_height * (179 / 667) + "px")
+				$("#img_3").css("margin-top", bg_height * (410 / 667) + "px")
+				$("#img_33").css("margin-left", bg_height * (179 / 667) + "px")
+				$("#img_33").css("margin-top", bg_height * (410 / 667) + "px")
+
+				$("#img_4").css("margin-left", bg_height * (99 / 667) + "px")
+				$("#img_4").css("margin-top", bg_height * (411 / 667) + "px")
+				$("#img_44").css("margin-left", bg_height * (99 / 667) + "px")
+				$("#img_44").css("margin-top", bg_height * (411 / 667) + "px")
+
+				$("#img_rm").css("margin-left", bg_height * (137 / 667) + "px")
+				$("#img_rm").css("margin-top", bg_height * (357 / 667) + "px")
+
+				//循环定时  动效
+				var i = -1;
+				var timer = window.setInterval(function() {
+					i++;
+					if(i == 5) {
+						i = 0;
+					}
+					var id = "#img_" + i,
+						id1 = "#img_" + i + i;
+					for(var j = 0; j < 5; j++) {
+						var hide = "#img_" + j,
+							hide1 = "#img_" + j + j;
+						$(hide).css({
+							"display": "block"
+						})
+						$(hide1).css({
+							"display": "none"
+						})
+
+					}
+					$(id).css({
+						"display": "none"
+					})
+					$(id1).css({
+						"display": "block"
+					})
+
+				}, 1000);
+
+				//足球菜单 点击
+				$("#img_0").click(function() { //赛事推荐
+					$('img[id^="img_"]').each(function(index, item) {
+						$("#img_" + index).attr("src", "/Static/images/v1.0/worldcup/" + index + "" + ".png?v=23e432423")
+					})
+					$("#img_0").attr("src", "/Static/images/v1.0/worldcup/00.png?v=23e432423")
+					window.clearTimeout(timer);
+					setTimeout(function() {
+						sessionStorage.cup_columnid = ZA_CUP_COLUMNID.sstj;
+						window.location.href = "worldcup.html";
+					}, 500)
+				})
+				$("#img_1").click(function() { //深度报道			
+					$('img[id^="img_"]').each(function(index, item) {
+						$("#img_" + index).attr("src", "/Static/images/v1.0/worldcup/" + index + "" + ".png?v=23e432423")
+					})
+					$("#img_1").attr("src", "/Static/images/v1.0/worldcup/11.png?v=23e432423")
+					window.clearTimeout(timer);
+					setTimeout(function() {
+						sessionStorage.cup_columnid = ZA_CUP_COLUMNID.sdbd;
+						window.location.href = "worldcup.html";
+					}, 500)
+				})
+				$("#img_2").click(function() { //游戏活动
+					$('img[id^="img_"]').each(function(index, item) {
+						$("#img_" + index).attr("src", "/Static/images/v1.0/worldcup/" + index + "" + ".png?v=23e432423")
+					})
+					$("#img_2").attr("src", "/Static/images/v1.0/worldcup/22.png?v=23e432423")
+					window.clearTimeout(timer);
+					setTimeout(function() {
+						sessionStorage.cup_columnid = ZA_CUP_COLUMNID.yxhd;
+						window.location.href = "worldcup.html";
+					}, 500)
+				})
+				$("#img_rm").click(function() { //热门
+					$('img[id^="img_"]').each(function(index, item) {
+						$("#img_" + index).attr("src", "/Static/images/v1.0/worldcup/" + index + "" + ".png?v=23e432423")
+					})
+					window.clearTimeout(timer);
+					setTimeout(function() {
+						sessionStorage.cup_columnid = ZA_CUP_COLUMNID.rm;
+						window.location.href = "worldcup.html";
+					}, 500)
+				})
+				$("#img_3").click(function() { //世界杯数据
+					$('img[id^="img_"]').each(function(index, item) {
+						$("#img_" + index).attr("src", "/Static/images/v1.0/worldcup/" + index + "" + ".png?v=23e432423")
+					})
+					$("#img_3").attr("src", "/Static/images/v1.0/worldcup/33.png?v=23e432423")
+					window.clearTimeout(timer);
+					setTimeout(function() {
+						window.location.href = "record.html";
+					}, 500)
+				})
+				$("#img_4").click(function() { //趣味世界杯
+					$('img[id^="img_"]').each(function(index, item) {
+						$("#img_" + index).attr("src", "/Static/images/v1.0/worldcup/" + index + "" + ".png?v=23e432423")
+					})
+					$("#img_4").attr("src", "/Static/images/v1.0/worldcup/44.png?v=23e432423")
+					window.clearTimeout(timer);
+					setTimeout(function() {
+						sessionStorage.cup_columnid = ZA_CUP_COLUMNID.qwsjb;
+						window.location.href = "worldcup.html";
+					}, 500)
+				})
+				//分享图标点击
+				$("#share-btn").click(function() {
+					var config = {};
+					config.title = document.title;
+					config.url = window.location.href;
+					config.desc = "为您提供有趣、有料的世界杯资讯和赛事推荐";
+					config.img = "https:/Static/images/v1.0/worldcup/bg.png?v=23e432423";
+                    //config.img = "/Static/images/v1.0/worldcup/bg.png?v=23e432423";
+					var share_obj = new nativeShare(config);
+					var modalBool = share_obj.bool;
+					if(modalBool) {
+						//layer.open({content:'浏览器暂不支持分享',skin:'msg',time:3})	
+						if(isWeiXin()) {
+							$("#opemt1").show();
+						} else {
+							$("#opemt").show();
+						}
+						
+					} else {
+						share_obj.share("weixin")
+					}
+				})
+
+				//遮盖层点击
+				$("#opemt").click(function() {
+					$("#opemt").hide()
+				})
+				$("#opemt1").click(function() {
+					$("#opemt1").hide()
+				})
+				//底部菜单点击
+				$(".mui-bar-tab a").click(function(e) {
+					var index = $(this).index();
+					switch(index) {
+						case 0:
+							window.location.href = "../info/zixun/zixun.html";
+							break;
+						case 1:
+							window.location.reload();
+							break;
+						case 2:
+							window.location.href = "../info/zixun/zixun_live.html";
+							break;
+						case 3:
+							window.location.href = "../user/user_index.html";
+							break;
+						default:
+							break;
+					}
+				})
+				//判断是否为微信内置浏览器
+				function isWeiXin() {
+					var ua = window.navigator.userAgent.toLowerCase();
+					console.log(ua); //mozilla/5.0 (iphone; cpu iphone os 9_1 like mac os x) applewebkit/601.1.46 (khtml, like gecko)version/9.0 mobile/13b143 safari/601.1
+					if(ua.match(/MicroMessenger/i) == 'micromessenger') {
+						return true;
+					} else {
+						return false;
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

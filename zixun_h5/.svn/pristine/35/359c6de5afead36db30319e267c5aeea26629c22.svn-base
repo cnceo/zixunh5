@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+        <meta http-equiv="Expires" content="0">
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <title>快乐十分</title>
+        <script type="text/javascript" src="	
+https:/Static/js/v1.0/	
+common/allcss.js"></script>
+        <link rel="stylesheet" href="	
+https:/Static/css/v1.0/info/draw/chart/klsf.css?v=3f8de2407d" />
+    </head>
+    <body>
+        <header class="hc-head-wrap">
+            <div class="hc-head">
+                <div class="hc-head-left"><span class="head-icon head-icon-back"></span></div>
+                <div class="hc-head-title"><span class="hc-head-drop">快乐十分</span></div>
+                <div class="hc-head-right"><span class="head-icon head-icon-setting" style="display: none"></span></div>
+            </div>
+        </header>
+        <!-- 导航 -->
+        <div id="hc-nav"></div>
+        <!-- 设置 -->
+        <div class="set-wrap hide">
+            <div>
+                <div class="set-con hc-padding-sm">
+                    <div class='clearfix set-title'>
+                        <span><label></label></span>
+                        <span>走势图设置</span>
+                        <span><label></label></span>
+                    </div>
+                    <ul class="clearfix set-qs hc-margin-top-sm">
+                        <li data-numissue="30" class="active">近30期</li>
+                        <li data-numissue="50">近50期</li>
+                        <li data-numissue="100">近100期</li>
+                    </ul>
+                    <div class="clearfix set-display hc-margin-top-sm hc-padding-horizontal-lg">
+                        <ul class="hc-avg-2 set-yl">
+                            <li class="active">显示遗漏</li>
+                            <li>隐藏遗漏</li>
+                        </ul>
+                        <ul class="hc-avg-2 set-zx">
+                            <li class="active">显示折线</li>
+                            <li>隐藏折线</li>
+                        </ul>
+                        <ul class="hc-avg-2 set-tj">
+                            <li class="active">显示统计</li>
+                            <li>隐藏统计</li>
+                        </ul>
+                    </div>
+                    <div class="clearfix hc-margin-top-lg">
+                        <span class="set-btn set-cancel">取消</span>
+                        <span class="set-btn set-sure">确认</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 图表内容 -->
+        <section id="chart">
+            <div id="hc-chart" class="hc-text-center"></div>
+        </section>
+        <footer class="hc-foot hc-flexbox hc-flex-vertical">
+            <div class="hc-foot-left"></div>
+            <div class="hc-foot-message hc-flex hidden">
+                <div class="hc-total">
+                    <p class="p1 ellipsis hidden">
+                        <span class="hc-total-inner hide">若中奖：奖金<span class="hc-color-red" name="bonus">--</span>元<span class="">(已选<span class="hc-zs" name="zs">0</span>注 <span class="hc-money" name="money">0</span>元)</span></span>
+                        <span></span>
+                        </p>
+                    <p class="p2 ellipsis hidden"><span name="issue">期号获取中...</span><span class="hc-color-red-normal" name="cdtime"></span></p>
+                </div>
+            </div>
+            <div class="hc-foot-right"><span class="hc-btn disabled" name="submit" style="display: none;">确定</span></div>
+        </footer>
+
+        <script type="text/javascript" src="	
+https:/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+        <script type="text/javascript" src="	
+https:/Static/js/v1.0/info/draw/chart/klsf.js?v=22fd492995"></script>
+    </body>
+</html>

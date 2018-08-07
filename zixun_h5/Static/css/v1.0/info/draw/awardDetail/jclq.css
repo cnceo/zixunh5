@@ -1,0 +1,297 @@
+body{
+	background: #ffffff;
+	overflow-y: hidden;
+}
+.headinfo{
+	height: 0.6rem;
+	color: #d5aa9b;
+	font-size:.14rem;
+	text-align: left;
+	padding:.05rem .2rem .07rem .13rem;
+	border-bottom: 1px solid #D9D9D9;
+	background-color: #fbf2eb;
+	position: relative;
+}
+.headinfo .detele-colse{
+	position: absolute;
+	top:50%;
+	right:0.08rem;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width:0.1rem;
+	height:0.1rem;
+	background: url(//static.letoula.com/images/v1.0/info/award/RewardingCloseBtn.png) no-repeat right top;
+	background-size:0.1rem 0.1rem ;
+}
+.headinfo-top{
+	 display: block;
+	 width: 100%;
+	 height:.25rem;
+	 line-height: .25rem;
+}
+.headinfo-bottom{
+	display: block;
+	font-size:.08rem;
+	margin-top:-2px;
+    line-height:.14rem;
+}
+
+.jclq_items{
+	height:100%;
+	overflow-y: auto;
+}
+.wraper{
+	padding-top: 0.44rem;
+	padding-bottom:.72rem;
+	height:100%;
+	overflow-x:hidden ;
+	overflow-y:auto ;
+}
+.no_padding_wraper{
+	padding-bottom:0
+}
+.jclq_date div{
+	box-sizing: border-box;
+	background: #F4F4F4;
+	width:100%;
+	font-size:.14rem;
+	height:.36rem;
+	line-height: .36rem;
+	border-bottom: 1px solid #D9D9D9;
+}
+.jclq_date{
+	box-sizing: border-box;
+	text-indent: .13rem;
+	background: #F4F4F4;
+	font-size:.15rem;
+	color: #7F7F7F;
+	height: .36rem;
+	line-height: .36rem;
+	text-align: left;
+}
+
+.jclq_item{
+	position: relative;
+	height: 1.3rem;
+	box-sizing: border-box;
+	padding: 0 0.2rem 0 .1rem;
+	border-bottom: 1px solid #D9D9D9;
+}
+.am-arrow-right{
+    width:.2rem;
+    height: 100%;
+    position: absolute;
+    right:0;
+    top:0;
+    background: url(/Static/images/v1.0/info/award/arrow_r.png) no-repeat center center;
+    background-size: 30%;
+}
+.jclq_item_title{
+	height: .4rem;
+	line-height: 0.4rem;
+	font-size:.2rem;
+	color: #383838;
+	overflow: hidden;
+}
+.jclq_ls span{
+	height: .2rem;
+	line-height: .2rem;
+	display: block;
+	font-size:.12rem;
+	color: #ACACAC;
+}
+.jclq_ls span:nth-child(1){
+		line-height: .26rem;
+}
+.jclq_ls{
+	width:18%;
+	float:left;
+	text-align: left;
+	box-sizing: border-box;
+}
+.jclq_item_tt{
+	width:82%;
+	float:left;	
+	height:.4rem;
+	text-align: center;
+	font-size:.15rem;
+	color:#383838;
+}
+.jclq_item_title label{
+	display: inline-block;
+	height: .4rem;
+	font-size:.15rem;
+	margin:0 .2rem;
+	font-weight: bolder;
+}
+.jclq_item_result table tr:nth-child(1) td{
+		width: 20%;
+		height:.3rem;
+		box-sizing: border-box;
+		border:1px solid #D9D9D9;
+		font-size:.12rem;
+}
+.jclq_item_result table tr:nth-child(2) td{
+		width: 20%;
+		height:.48rem;
+		box-sizing: border-box;
+		border:1px solid #D9D9D9;
+		font-size:.14rem;
+		font-weight: bolder;
+}
+.jclq_item_result table tr:nth-child(2) td span{
+		font-size:.1rem;
+}
+.jclq_item_result table td.title span{
+		display: inline-block;
+		font-size:.12rem;
+}
+
+.hc-h5-wrap>footer::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.3);
+}
+.hc-h5-wrap>footer {
+    width: 100%;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    border-top:2px solid #D9D9D9;
+    background-color:#ffffff; 
+    padding:0.1rem 0.13rem;
+}
+
+
+footer .footer_btn {
+	width:100%;
+	height:100%;
+	background-color:#E12D3E ;
+	border-radius: 0.03rem;
+	position: relative;
+}
+footer button.btn_red {
+	position: absolute;
+	top:50%;
+	width:100%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-family: "微软雅黑";
+	font-size: .19rem;
+	background-color:#E12D3E ;
+	width: 100%;
+	border: 0;
+	color: #FFFFFF;
+	border-radius: 3px;
+	vertical-align: middle;
+	outline: none !important;
+	cursor: pointer;
+}
+
+.jclq_item_result table tr td{
+	text-align: center;
+}
+/**********单天*************/
+
+/**********日期**********/
+
+/*.jclq_items .jclq_date_items:nth-child(1){
+	border-top: 1px solid #D9D9D9;
+}*/
+
+
+.jclq_date span{
+	float: right;
+	display: inline-block;
+	width: .36rem;
+	height: .36rem;
+}
+.jclq_date span.arrow_up{
+	background: url(//static.letoula.com/images/v1.0/info/award/arrow_up.png) no-repeat center center;
+}
+.jclq_date span.arrow_down{
+	background: url(//static.letoula.com/images/v1.0/info/award/arrow_down.png) no-repeat center center;
+}
+/**********单场************/
+
+.jclq_item:last-child{
+	border:0;
+}
+.jclq_item_result table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.jclq_item_result table td.title{
+	background: #F4F4F4;
+	color: #7F7F7F;
+	font-weight: normal;
+}
+.jclq_item_result table td span{
+	display: block;
+	font-size:.12rem;
+	color:#7F7F7F;
+	font-weight: normal;
+}
+
+
+/**********************/
+.jc_bf_3{
+	color:#E12D3E;
+}
+.jc_bf_1{
+	color: #0199f1;
+}
+.jc_bf_0{
+	color:#03e53d;
+}
+.jclq_item_result table td span.jc_rq_g{
+	color:#E12D3E;
+}
+.jclq_item_result table td span.jc_rq_h{
+	color:#03e53d;
+}
+/**********************/
+
+/**无数据**/
+.no_detail{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.no_detail>div{
+    width: 0.86rem;
+    height: 0.73rem;
+    top: 1.12rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateX(0.1rem);
+    -webkit-transform: translateX(0.1rem);
+    background: url("//static.letoula.com/images/v1.0/info/award/nodetail.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+.no_detail>p{
+    width: 100%;
+    font-size: 0.16rem;
+    line-height: 0.16rem;
+    color: #d6d6d6;
+    top: 2.07rem;
+    text-align: center;
+    position: absolute;
+}

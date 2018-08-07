@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title></title>
+    <script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>
+    <link rel="stylesheet" href="/Static/css/v1.0/info/zixun/zixun_worldCup_team.css?v=e423ba7fab" />
+</head>
+
+<body>
+    <div class="hc-h5-wrap">
+        <header>
+            <div class="header-left">
+                <span class="back" onclick="HCCP.back.history();"></span>
+            </div>
+            <div class="header-right">
+            </div>
+            <div class="header-title"></div>
+        </header>
+        <div class="wraper">
+            <div class="content_wrap">
+                <div class="content">
+                    <div class="content_inner">
+                        <div class="team_wrap tab1 hide">
+                            <div class="item_header">
+                                <div class="item_bg">
+                                    
+                                </div>
+                                <div class="item_title">
+                                    32强分组
+                                </div>
+                            </div>
+                            <div class="item_main hc-cf">
+                                <div class="item">
+                                    <div class="item_inner">
+                                        <div class="inner_title"><span class='group'>A</span><span class="zu">组</span></div>
+                                        <div class="inner_content">
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Russia"></span> <span class="country_name">俄罗斯</span>
+                                            </div>
+                                            <div class="hc-cf match_item ">
+                                                <span class="country_flag SaudiArabia"></span> <span class="country_name hc-size-12">沙特阿拉伯</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Egypt"></span> <span class="country_name">埃及</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Uruguay"></span> <span class="country_name">乌拉圭</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item_inner">
+                                        <div class="inner_title"><span class='group'>B</span><span class="zu">组</span></div>
+                                        <div class="inner_content">
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Portugal"></span> <span class="country_name">葡萄牙</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Spain"></span> <span class="country_name">西班牙</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Morocco"></span> <span class="country_name">摩洛哥</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Iran"></span> <span class="country_name">伊朗</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_main hc-cf">
+                                <div class="item">
+                                    <div class="item_inner">
+                                        <div class="inner_title"><span class='group'>C</span><span class="zu">组</span></div>
+                                        <div class="inner_content">
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag France"></span> <span class="country_name">法国</span>
+                                            </div>
+                                            <div class="hc-cf match_item ">
+                                                <span class="country_flag Australian"></span> <span class="country_name">澳大利亚</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Peru"></span> <span class="country_name">秘鲁</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Denmark"></span> <span class="country_name">丹麦</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item_inner">
+                                        <div class="inner_title"><span class='group'>D</span><span class="zu">组</span></div>
+                                        <div class="inner_content">
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Argentina"></span> <span class="country_name">阿根廷</span>
+                                            </div>
+                                            <div class="hc-cf match_item ">
+                                                <span class="country_flag Iceland"></span> <span class="country_name">冰岛</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Croatia"></span> <span class="country_name">克罗地亚</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Nigeria"></span> <span class="country_name">尼日利亚</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="adv_wrap">
+                            </div> 
+                            <div class="item_main hc-cf">
+                                <div class="item">
+                                    <div class="item_inner">
+                                        <div class="inner_title"><span class='group'>E</span><span class="zu">组</span></div>
+                                        <div class="inner_content">
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Brazil"></span> <span class="country_name">巴西</span>
+                                            </div>
+                                            <div class="hc-cf match_item ">
+                                                <span class="country_flag Switzerland"></span> <span class="country_name">瑞士</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag CostaRica"></span> <span class="country_name hc-size-12">哥斯达黎加</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Serbia"></span> <span class="country_name">塞尔维亚</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item_inner">
+                                        <div class="inner_title"><span class='group'>F</span><span class="zu">组</span></div>
+                                        <div class="inner_content">
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Germany"></span> <span class="country_name">德国</span>
+                                            </div>
+                                            <div class="hc-cf match_item ">
+                                                <span class="country_flag Mexico"></span> <span class="country_name">墨西哥</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Sweden"></span> <span class="country_name">瑞典</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Korea"></span> <span class="country_name">韩国</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="item_main hc-cf">
+                                <div class="item">
+                                    <div class="item_inner">
+                                        <div class="inner_title"><span class='group'>G</span><span class="zu">组</span></div>
+                                        <div class="inner_content">
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Belgium"></span> <span class="country_name">比利时</span>
+                                            </div>
+                                            <div class="hc-cf match_item ">
+                                                <span class="country_flag Panama"></span> <span class="country_name">巴拿马</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Tunisia"></span> <span class="country_name">突尼斯</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag England"></span> <span class="country_name">英格兰</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item_inner">
+                                        <div class="inner_title"><span class='group'>H</span><span class="zu">组</span></div>
+                                        <div class="inner_content">
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Poland"></span> <span class="country_name">波兰</span>
+                                            </div>
+                                            <div class="hc-cf match_item ">
+                                                <span class="country_flag Senegal"></span> <span class="country_name">塞内加尔</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Columbia"></span> <span class="country_name">哥伦比亚</span>
+                                            </div>
+                                            <div class="hc-cf match_item">
+                                                <span class="country_flag Japan"></span> <span class="country_name">日本</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            
+                        </div>
+                        <div class="team_wrap tab2 hide">
+                            <div class="item_header">
+                                <div class="item_bg">
+                                    
+                                </div>
+                                <div class="item_title">
+                                    小组赛
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月14日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>A</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">23:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Russia"></span>
+                                        </span>
+                                        <span class="hostName">俄罗斯</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">沙特</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag SaudiArabia"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月15日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>A</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">20:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Egypt"></span>
+                                        </span>
+                                        <span class="hostName">埃及</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">乌拉圭</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Uruguay"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>B</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">23:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Morocco"></span>
+                                        </span>
+                                        <span class="hostName">摩洛哥</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">伊朗</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Iran"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月16日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>B</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Portugal"></span>
+                                        </span>
+                                        <span class="hostName">葡萄牙</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">西班牙</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Spain"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>C</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">18:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag France"></span>
+                                        </span>
+                                        <span class="hostName">法国</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName hc-size-13">澳大利亚</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Australian"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>D</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">21:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Argentina"></span>
+                                        </span>
+                                        <span class="hostName">阿根廷</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">冰岛</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Iceland"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月17日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>C</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">00:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Peru"></span>
+                                        </span>
+                                        <span class="hostName">秘鲁</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">丹麦</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Denmark"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>D</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">03:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Croatia"></span>
+                                        </span>
+                                        <span class="hostName hc-size-13">克罗地亚</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName hc-size-13">日尼利亚</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Nigeria"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>E</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">20:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag CostaRica"></span>
+                                        </span>
+                                        <span class="hostName hc-size-10">哥斯达黎加</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName hc-size-13">塞尔维亚</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Serbia"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>F</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">23:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Germany"></span>
+                                        </span>
+                                        <span class="hostName">德国</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">墨西哥</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Mexico"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月18日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>E</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Brazil"></span>
+                                        </span>
+                                        <span class="hostName">巴西</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">瑞士</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Switzerland"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>F</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">20:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Sweden"></span>
+                                        </span>
+                                        <span class="hostName">瑞典</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">韩国</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Korea"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>G</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">23:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Belgium"></span>
+                                        </span>
+                                        <span class="hostName">比利时</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">巴拿马</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Panama"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月19日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>G</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Tunisia"></span>
+                                        </span>
+                                        <span class="hostName">突尼斯</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">英格兰</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag England"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>H</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">20:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Columbia"></span>
+                                        </span>
+                                        <span class="hostName hc-size-13">哥伦比亚</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">日本</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Japan"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>H</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">23:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Poland"></span>
+                                        </span>
+                                        <span class="hostName">波兰</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName hc-size-13">塞内加尔</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Senegal"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月20日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>A</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Russia"></span>
+                                        </span>
+                                        <span class="hostName">俄罗斯</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">埃及</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Egypt"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>B</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">20:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Portugal"></span>
+                                        </span>
+                                        <span class="hostName">葡萄牙</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">摩洛哥</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Morocco"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>A</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">23:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Uruguay"></span>
+                                        </span>
+                                        <span class="hostName">乌拉圭</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">沙特</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag SaudiArabia"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月21日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>B</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Iran"></span>
+                                        </span>
+                                        <span class="hostName">伊朗</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">西班牙</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Spain"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>C</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">20:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Denmark"></span>
+                                        </span>
+                                        <span class="hostName">丹麦</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName hc-size-13">澳大利亚</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Australian"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>C</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">23:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag France"></span>
+                                        </span>
+                                        <span class="hostName">法国</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">秘鲁</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Peru"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月22日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>D</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Argentina"></span>
+                                        </span>
+                                        <span class="hostName">阿根廷</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName hc-size-13">克罗地亚</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Croatia"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>E</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">20:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Brazil"></span>
+                                        </span>
+                                        <span class="hostName">巴西</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName hc-size-10">哥斯达黎加</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag CostaRica"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>D</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">23:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Nigeria"></span>
+                                        </span>
+                                        <span class="hostName hc-size-13">尼日利亚</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">冰岛</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Iceland"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月23日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>E</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Serbia"></span>
+                                        </span>
+                                        <span class="hostName hc-size-13">塞尔维亚</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">瑞士</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Switzerland"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>G</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">20:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Belgium"></span>
+                                        </span>
+                                        <span class="hostName">比利时</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">突尼斯</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Tunisia"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>F</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">23:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Korea"></span>
+                                        </span>
+                                        <span class="hostName">韩国</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">墨西哥</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Mexico"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月24日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>F</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Germany"></span>
+                                        </span>
+                                        <span class="hostName">德国</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">瑞典</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Sweden"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>G</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">20:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag England"></span>
+                                        </span>
+                                        <span class="hostName">英格兰</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">巴拿马</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Panama"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>H</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">23:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Japan"></span>
+                                        </span>
+                                        <span class="hostName">日本</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName hc-size-13">塞内加尔</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Senegal"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月25日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>H</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Poland"></span>
+                                        </span>
+                                        <span class="hostName">波兰</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName hc-size-13">哥伦比亚</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Columbia"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>A</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">20:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag SaudiArabia"></span>
+                                        </span>
+                                        <span class="hostName">沙特</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">埃及</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Egypt"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>A</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">23:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Uruguay"></span>
+                                        </span>
+                                        <span class="hostName">乌拉圭</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">俄罗斯</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Russia"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月26日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>B</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Spain"></span>
+                                        </span>
+                                        <span class="hostName">西班牙</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">摩洛哥</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Morocco"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>B</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Iran"></span>
+                                        </span>
+                                        <span class="hostName">伊朗</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">葡萄牙</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Portugal"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>C</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">22:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Australian"></span>
+                                        </span>
+                                        <span class="hostName hc-size-13">澳大利亚</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">秘鲁</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Peru"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>C</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">22:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Denmark"></span>
+                                        </span>
+                                        <span class="hostName">丹麦</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">法国</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag France"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月27日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>D</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Iceland"></span>
+                                        </span>
+                                        <span class="hostName">冰岛</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName hc-size-13">克罗地亚</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Croatia"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>D</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Nigeria"></span>
+                                        </span>
+                                        <span class="hostName hc-size-13">日尼利亚</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">阿根廷</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Argentina"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>F</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">22:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Korea"></span>
+                                        </span>
+                                        <span class="hostName">韩国</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">德国</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Germany"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>F</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">22:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Mexico"></span>
+                                        </span>
+                                        <span class="hostName">墨西哥</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">瑞典</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Sweden"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月28日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>E</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Switzerland"></span>
+                                        </span>
+                                        <span class="hostName">瑞士</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName hc-size-10">哥斯达黎加</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag CostaRica"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>E</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Serbia"></span>
+                                        </span>
+                                        <span class="hostName hc-size-13">塞尔维亚</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">巴西</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Brazil"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>H</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">22:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Japan"></span>
+                                        </span>
+                                        <span class="hostName">日本</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">波兰</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Poland"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>H</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">22:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Senegal"></span>
+                                        </span>
+                                        <span class="hostName hc-size-13">塞内加尔</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName hc-size-13">哥伦比亚</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Columbia"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_match">
+                                <div class="date_title">
+                                6月29日
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>G</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">02:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag England"></span>
+                                        </span>
+                                        <span class="hostName">英格兰</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">比利时</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Belgium"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item_main2">
+                                    <div class="match_wrap hc-cf">
+                                        <span class="group_">
+                                            <span class='group'>G</span>
+                                            <span class="zu">组</span>
+                                        </span>
+                                        <span class="time">20:00</span>
+                                        <span class="hostimg_wrap">
+                                            <span class="hostFlag Panama"></span>
+                                        </span>
+                                        <span class="hostName">巴拿马</span>
+                                        <span class="vs">vs</span>
+                                        <span class="guestName">突尼斯</span>
+                                        <span class="guestimg_wrap">
+                                            <span class="guestFlag Tunisia"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="adv_wrap">
+                            </div> 
+                            <div class="item_header item_header_">
+                                <div class="item_bg item_bg_">
+                                    
+                                </div>
+                                <div class="item_title">
+                                    淘汰赛
+                                </div>
+                            </div>
+                            <div class="out_wrap">
+                                <p class="out_wrap_title">1/8决赛(16强)</p>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    6月30日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">22:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">C组第一</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">D组第二</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月1日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">02:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">A组第一</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">B组第二</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月1日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">22:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">B组第一</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">A组第二</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月2日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">02:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">D组第一</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">C组第二</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月2日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">22:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">E组第一</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">F组第二</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月3日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">02:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">G组第一</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">H组第二</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月3日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">22:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">F组第一</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">E组第二</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月4日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">02:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">H组第一</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">G组第二</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div> 
+                            </div>
+                            <div class="out_wrap">
+                                <p class="out_wrap_title">1/4决赛(8强)</p>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月6日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">22:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">49胜者</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">50胜者</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月7日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">02:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">53胜者</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">54胜者</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月8日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">02:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">51胜者</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">52胜者</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月7日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">22:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">55胜者</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">56胜者</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="out_wrap">
+                                <p class="out_wrap_title">半决赛(4强)</p>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月11日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">02:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">57胜者</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">58胜者</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月12日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">02:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">59胜者</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">60胜者</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="out_wrap">
+                                <p class="out_wrap_title">3/4决赛</p>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月14日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">22:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">61负者</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">62负者</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="out_wrap">
+                                <p class="out_wrap_title">决赛</p>
+                                <div class="out_match">
+                                    <div class="out_title">
+                                    7月15日
+                                    </div>
+                                    <div class="item_main3">
+                                        <div class="match_wrap hc-cf">
+                                            <span class="time">23:00</span>
+                                            <span class="hostimg_wrap">
+                                                <span class="hostFlag noCountry"></span>
+                                            </span>
+                                            <span class="hostName">61胜者</span>
+                                            <span class="vs">vs</span>
+                                            <span class="guestName">62胜者</span>
+                                            <span class="guestimg_wrap">
+                                                <span class="guestFlag noCountry"></span>
+                                            </span>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+        <script type="text/javascript" src="/Static/js/v1.0/info/zixun/zixun_worldCup_team.js?v=4ece29d5b2"></script>
+</body>
+    
+
+
+
+</html>

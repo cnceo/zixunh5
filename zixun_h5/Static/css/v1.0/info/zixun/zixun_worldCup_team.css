@@ -1,0 +1,442 @@
+/*今日好彩公共样式*/
+body{
+    font-family: "Source Han Sans CN","Microsoft YaHei","Helvetica",simsun
+}
+.hc-h5-wrap>header{
+    background-color: #FD8237 ;
+}
+.hc-h5-wrap .header-right {
+    color: #fff;
+}
+.hc-h5-wrap .header-title {
+    /* text-align: left; */
+    width: 0.92rem;
+    background: url(/Static/images/v1.0/info/zixun/logo2.png) no-repeat center;
+    background-size: contain;
+}
+/*今日好彩公共样式*/
+/*img {
+    width: 100%;
+    height: 100%
+}*/
+
+.hc-h5-wrap {
+    padding-top: 0.44rem
+}
+
+.wraper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff
+}
+
+.content_wrap {
+    width: 100%;
+    height: 100%;
+    background-image: url("/Static/images/v1.0/info/zixun/worldCup_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+.content_inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+    padding-bottom: 0.10rem
+}
+
+/*32强阅兵*/
+.item_header{
+    background-image: url("/Static/images/v1.0/info/zixun/worldCup_logo_3.png"),url("/Static/images/v1.0/info/zixun/worldCup_logo_2.png");
+    background-repeat: no-repeat;
+    background-size: 0.25rem 0.50rem,0.62rem 0.15rem;
+    background-position: 0.10rem bottom,0.45rem 0.25rem;
+    margin-bottom: 0.12rem
+}
+.item_bg{
+    height: 0.44rem;
+    width: 100%;
+    background-image: url("/Static/images/v1.0/info/zixun/worldCup_head_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+
+}
+.item_title{
+    height: 0.25rem;
+    line-height: 1;
+    text-indent: 0.45rem;
+    color: #d8f5f6
+}
+.item_main,.item_main2,.item_main3{
+    width: 100%;
+    padding: 0.06rem 0.10rem;
+}
+.item_main .item{
+    width: 48%;
+    background-image: url("/Static/images/v1.0/info/zixun/item_bg12.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+.item_main .item:first-child{
+    float: left;
+}
+.item_main .item:last-child{
+    float: right;
+}
+.inner_title{
+    height: 0.38rem;
+    line-height: 0.38rem;
+    text-align: center;
+    background-image: url("/Static/images/v1.0/info/zixun/item_bg11.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.inner_title span{
+    display: inline-block;
+    text-shadow: 2px 2px 2px #002865;
+    transform: skew(-8deg);
+    -ms-transform: skew(-8deg); /* IE 9 */
+    -webkit-transform: skew(-8deg); /* Safari and Chrome */
+
+}
+.inner_title .group{
+    font-weight: bolder;
+    font-size:0.21rem;
+    color: #fff;
+}
+.inner_title .zu{
+    font-size: 0.13rem;
+    color: #ffd800;
+    padding-left: 0.02rem;
+}
+
+.match_item{
+    font-size: 0.14rem;
+    padding: 0.09rem 0;
+    padding-left: 0.16rem;
+    height: 0.53rem;
+    border-bottom: 1px solid transparent;
+    -webkit-border-image: url('/Static/images/v1.0/info/zixun/split_1.png') 30 round; /* Safari 3.1-5 */
+    -o-border-image: url('/Static/images/v1.0/info/zixun/split_1.png') 30 round;; /* Opera 11-12.1 */
+    border-image: url('/Static/images/v1.0/info/zixun/split_1.png') 30 round;;
+}
+.match_item span{
+    display: inline-block;
+    height: 0.35rem;
+    float: left;
+}  
+.match_item span{
+    height: 0.35rem;
+    line-height: 0.35rem
+}
+.match_item .country_flag{
+    margin-right:0.17rem;
+    width: 0.54rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}  
+.match_item .country_name{
+    
+    color: #fff
+} 
+ .Russia{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Russia.jpg');
+}
+ .SaudiArabia{
+     background-image: url('/Static/images/v1.0/info/zixun/country/SaudiArabia.jpg');
+}
+ .Egypt{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Egypt.jpg');
+}
+ .Uruguay{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Uruguay.jpg');
+}
+ .Portugal{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Portugal.jpg');
+}
+ .Spain{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Spain.jpg');
+}
+ .Morocco{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Morocco.jpg');
+}
+ .Iran{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Iran.jpg');
+}
+ .France{
+     background-image: url('/Static/images/v1.0/info/zixun/country/France.jpg');
+}
+ .Australian{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Australian.jpg');
+}
+ .Peru{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Peru.jpg');
+}
+ .Denmark{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Denmark.jpg');
+}
+ .Argentina{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Argentina.jpg');
+}
+ .Iceland{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Iceland.jpg');
+}
+ .Croatia{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Croatia.jpg');
+}
+ .Nigeria{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Nigeria.jpg');
+}
+ .Brazil{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Brazil.jpg');
+}
+ .Switzerland{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Switzerland.jpg');
+}
+ .CostaRica{
+     background-image: url('/Static/images/v1.0/info/zixun/country/CostaRica.jpg');
+}
+ .Serbia{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Serbia.jpg');
+}
+ .Germany{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Germany.jpg');
+}
+ .Mexico{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Mexico.jpg');
+}
+ .Sweden{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Sweden.jpg');
+}
+ .Korea{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Korea.jpg');
+}
+ .Belgium{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Belgium.jpg');
+}
+ .Panama{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Panama.jpg');
+}
+ .Tunisia{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Tunisia.jpg');
+}
+ .England{
+     background-image: url('/Static/images/v1.0/info/zixun/country/England.jpg');
+}
+ .Poland{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Poland.jpg');
+}
+ .Senegal{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Senegal.jpg');
+}
+ .Columbia{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Columbia.jpg');
+}
+ .Japan{
+     background-image: url('/Static/images/v1.0/info/zixun/country/Japan.jpg');
+}
+.noCountry{
+    background-image: url('/Static/images/v1.0/info/zixun/country/noCountry.png');
+    background-color: #b8daff;
+    background-size: contain !important;
+}
+/*广告位*/
+.adv_wrap{
+    width: 100%;
+    /*padding: 0.09rem 0.10rem;*/
+    
+}
+.adv{
+    width: 100%;
+    padding: 0.09rem 0.10rem;
+    height: 1.36rem;
+    /*background: url('https://hc-dev-images.oss-cn-shenzhen.aliyuncs.com/banner/20180122102007881.png')no-repeat center center;
+    background-size: cover;*/
+    overflow: hidden;
+    border-radius: 3px
+}
+/*完全赛程*/
+/*分组的*/
+.tab2 .item_header_{
+    background-position: 0.10rem bottom,0.45rem 0.10rem;
+}
+.data_match{
+    border-top: 1px solid #000913;
+    border-bottom: 1px solid #00295b;
+}
+.date_title{
+    height:0.34rem;
+    line-height: 0.34rem;
+    color: #e9c60a;
+    font-size: 0.14rem;
+    padding: 0 0.10rem
+}
+.item_main2 .match_wrap{
+   width: 100%;
+   height:0.51rem;
+   line-height: 0.51rem;
+    background-image: url(/Static/images/v1.0/info/zixun/item_bg2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    padding-right: 0.08rem;
+    font-size: 0.14rem
+}
+.item_main2 .match_wrap>span{
+    display: inline-block;
+    float: left;
+    height: 0.51rem;
+    line-height: 0.51rem;
+    text-align: center;
+}
+.item_main2 .match_wrap>span:nth-child(1){
+    width: 14.2%;
+}
+.item_main2 .match_wrap>span:nth-child(2){
+    width: 14.9%;
+    border-right: 1px solid transparent;
+    -webkit-border-image: url(/Static/images/v1.0/info/zixun/split_2.png) 1 round;
+    -o-border-image: url(/Static/images/v1.0/info/zixun/split_2.png) 1 round;
+    border-image: url(/Static/images/v1.0/info/zixun/split_2.png) 1 stretch;
+}
+.item_main2 .match_wrap>span:nth-child(3){
+    width: 17.5%
+}
+.item_main2 .match_wrap>span:nth-child(4){
+    width: 16%
+}
+.item_main2 .match_wrap>span:nth-child(5){
+    width: 5.2%
+}
+.item_main2 .match_wrap>span:nth-child(6){
+    width: 16%
+}
+.item_main2 .match_wrap>span:nth-child(7){
+    width: 16.2%
+}
+.item_main2 .match_wrap>span .group,.zu{
+    display: inline-block;
+    text-shadow: 2px 2px 2px #002865;
+    transform: skew(-8deg);
+    -ms-transform: skew(-8deg); /* IE 9 */
+    -webkit-transform: skew(-8deg); /* Safari and Chrome */
+}
+.item_main2 .group_{
+    font-size: 0
+}
+.item_main2 .group{
+    display: inline-block;
+    font-weight: bolder;
+    font-size:0.21rem;
+    color: #fff;
+    
+}
+.item_main2 .zu{
+    display: inline-block;
+    font-size: 0.13rem;
+    color: #ffd800;
+    line-height: 0.54rem;
+    padding-left: 0.02rem
+}
+.tab2 .match_wrap .hostName{
+    text-align: left
+}
+.tab2 .match_wrap .guestName{
+    text-align: right
+}
+.hostFlag,.guestFlag{
+    display: inline-block;
+    width: 0.43rem;
+    height: 0.27rem;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+/*不分组的*/
+.item_main3 .match_wrap{
+   width: 100%;
+   height:0.51rem;
+   line-height: 0.51rem;
+    background-image: url(/Static/images/v1.0/info/zixun/item_bg2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    padding-right: 0.08rem;
+    font-size: 0.14rem
+}
+.item_main3 .match_wrap>span{
+    display: inline-block;
+    float: left;
+    height: 0.51rem;
+    line-height: 0.51rem;
+    text-align: center;
+}
+.item_main3 .match_wrap>span:nth-child(1){
+    width: 18%;
+    border-right: 1px solid transparent;
+    -webkit-border-image: url(/Static/images/v1.0/info/zixun/split_2.png) 1 round;
+    -o-border-image: url(/Static/images/v1.0/info/zixun/split_2.png) 1 round;
+    border-image: url(/Static/images/v1.0/info/zixun/split_2.png) 1 stretch;
+}
+.item_main3 .match_wrap>span:nth-child(2){
+    width: 17.2%;   
+}
+.item_main3 .match_wrap>span:nth-child(3){
+    width: 22.3%
+}
+.item_main3 .match_wrap>span:nth-child(4){
+    width: 4.4%
+}
+.item_main3 .match_wrap>span:nth-child(5){
+    width: 22.3%
+}
+.item_main3 .match_wrap>span:nth-child(6){
+    width: 15.8%
+}
+.tab2 .item_header_ .item_bg{
+    height: 0.3rem;
+    background-image: none
+}
+.out_title,.out_wrap_title {
+    height: 0.34rem;
+    line-height: 0.34rem;
+    color: #e9c60a;
+    font-size: 0.14rem;
+    padding: 0 0.10rem;
+}
+.out_wrap{
+    padding:0.10rem 0;
+    border-top: 1px solid #000913;
+    border-bottom: 1px solid #00295b;
+}
+.out_wrap_title{
+    height: 0.25rem;
+    font-size: 0.15rem;
+    text-align: center;
+    transform: skew(-8deg);
+    -ms-transform: skew(-8deg);
+    -webkit-transform: skew(-8deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+

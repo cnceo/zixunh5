@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>2018世界杯智勇大闯关</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">   
+    <link rel="stylesheet" href="/Static/css/v1.0/info/zixun/mui.min.css?v=4375b1e6e6" />
+    <!--网页标题左侧显示-->
+    <link rel="icon" sizes="64x64" href="/Static/images/v1.0/cg.ico" type="image/x-icon">
+    <!--收藏夹显示图标-->
+    <link rel="shortcut icon"  sizes="64x64" href="/Static/images/v1.0/cg.ico" type="image/x-icon">
+    
+    <link rel="apple-touch-icon" sizes="64x64" href="/Static/images/v1.0/cg.ico">
+    <script>		
+		(function(doc, win) {
+			var docEl = doc.documentElement, //根元素html
+				//判断窗口有没有orientationchange这个方法，有就赋值给一个变量，没有就返回resize方法。
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if(!clientWidth) return;
+					//把document的fontSize大小设置成跟窗口成一定比例的大小，从而实现响应式效果。
+					if(clientWidth >= 640) {
+						clientWidth = 640;
+					}
+					docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+				};
+			recalc();			
+			if(!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false); //addEventListener事件方法接受三个参数：第一个是事件名称比如点击事件onclick，第二个是要执行的函数，第三个是布尔值
+			doc.addEventListener('DOMContentLoaded', recalc, false) //绑定浏览器缩放与加载时间
+		})(document, window);
+	</script>
+</head>
+<style>
+	/**{touch-action: none; }*/
+	html,body{-webkit-overflow-scrolling: touch;} 
+	p,h4{margin: 0;padding: 0;color: #fff;font-weight: 400;}
+	#web_bg{
+	  position:absolute;
+	  width:100%;height:100%;min-width: 100%;
+	  background-color: #fff;
+	  background-repeat: no-repeat;
+	  background-size: 100%;
+	  background-position: center 0;
+	}
+	.za-jxw{margin-top: 2.01rem;width: 100%;text-align: center;}
+	.za-jxw img{
+		width: 1.775rem;height: 1.48rem;
+	}
+	.za-flex-box{
+	    display: flex;
+	    justify-content: center;	        
+	}
+	.za-flex-box .za-item{width: 33.3%;text-align: center;}
+	.za-jc-botton{
+		width: 66px;height: 24px;line-height: 24px;text-align:center;background: #fff;border: solid 1px #149c21;
+		display: inline-block;color: #149C21;
+	}
+	.green{background: #149C21;color: #fff;}
+	center {margin-top: 3rem;margin-bottom: 0.15rem;}
+	center p{font-size: 0.12rem;line-height: 1.2;color: rgba(255,255,255,0.8);height: 0.15rem;}
+	center h4{font-size: 0.13rem;font-weight: 400;}	
+	.result{margin-top: 0.12rem;}
+	.result .za-item:nth-child(1){text-align: right;}
+	.result .za-item:nth-child(2){text-align: center;}
+	.result .za-item:nth-child(3){text-align: left;}
+	.c_left img,.c_right img{
+		width: 0.47rem;height: 0.47rem;border-radius: 50%;border: solid 1px #fff;
+	}
+	.c_left p,.c_right p{height: 0.21rem;}
+	.vs img{width: 0.62rem;height: 0.47rem;}
+	.za-bottom-p{
+		text-align: center;width: 100%;margin-top: 0.13rem;
+	}
+	.za-bottom-p span{color:#ffe640;}
+	.za-jc-dobtn{width: 100%;margin-top: 0.2rem;text-align: center;background: transparent;}
+	.za-jc-dobtn div{
+		width: 1.685rem;
+	    height: 0.415rem;
+	    line-height: 0.35rem;
+    	display: inline-block;	   
+	    background-size: 100% 100%;
+	    color: #444;
+	    font-weight: bold;
+	    font-size: 0.14rem;
+	    border: 0;	
+	}
+	.jingcai{
+		background: url(/Static/images/v1.0/worldcup/cg_jcbtn.png);
+	}
+	.jingcaied{
+		background: url(/Static/images/v1.0/worldcup/cg_jcbtned.png);
+	}
+	.za-flex-box .za-item2:nth-child(1),.za-flex-box .za-item2:nth-child(3){width: 30%;text-align: center;}	
+	.za-flex-box .za-item2:nth-child(2){width: 40%;text-align: center;}
+	.za-item2 a{text-decoration: underline;font-size: 0.14rem;color: #b966ff;}
+	/*弹层*/
+	.za-promet{
+		width: 100%;height: 100%;top: 0;z-index:9;position: absolute;background: rgba(0,0,0,0.5);
+		display: none;
+	}
+	.cg_result{
+		width:2.165rem;height: 2.665rem;left: 0;right: 0;top: 0;bottom: 0;margin: auto;
+		position: absolute;background-size: 100%;background-repeat: no-repeat;
+	}
+	.success{
+		background-image: url(/Static/images/v1.0/worldcup/cg_s.png);
+	}
+	.fail{
+		background-image: url(/Static/images/v1.0/worldcup/cg_f.png);
+	}
+	.fail .za-jc-dobtn{position: absolute;bottom: 0.4rem;z-index: 99;}
+	
+	/*复活成功提示框*/
+	.cg_fhs{
+		width:2.365rem;height: 3.72rem;left: 0;right: 0;top: 0;bottom: 0;margin: auto;
+		position: absolute;background-size: 100%;background-repeat: no-repeat;
+		background-image: url(/Static/images/v1.0/worldcup/cg_fhs_bg.png);
+	}
+	.cg_fhs .za-jc-dobtn{position: absolute;bottom: 0.4rem;z-index: 99;}
+	/*闯关成功提示框*/
+	.cg_cgs{
+		width:2.975rem;height: 3.88rem;left: 0;right: 0;top: 0;bottom: 0;margin: auto;
+		position: absolute;background-size: 100%;background-repeat: no-repeat;
+		background-image: url(/Static/images/v1.0/worldcup/cg_cgs_bg.png);
+	}
+	.cg_cgs .za-jc-dobtn{position: absolute;bottom: 0.4rem;z-index: 99;}
+	/*闯关失败提示框*/
+	.cg_cgf{
+		width:2.165rem;height: 2.665rem;left: 0;right: 0;top: 0;bottom: 0;margin: auto;
+		position: absolute;background-size: 100%;background-repeat: no-repeat;
+		background-image: url(/Static/images/v1.0/worldcup/cg_cgf_bg.png);
+	}
+	.cg_cgf .za-jc-dobtn{position: absolute;bottom: 0.4rem;z-index: 99;}
+	
+	.za-rule-warp{width: 100%;height: 100%;padding: 0 0;overflow: hidden;}
+	/*活动规则*/
+	.za-rule-bg{
+		width: 100%;
+		height: 5.06rem;
+		overflow: hidden;
+		background-image: url(/Static/images/v1.0/worldcup/cg_r_bg.png);
+		background-size: 100% auto;
+    	background-repeat: no-repeat;
+	    margin-top: 0.7rem;padding-top: 0.99rem;
+	    padding-left: 0.18rem;padding-right: 0.18rem;
+	    position: relative;
+	}	
+	.za-rule-bg div{
+		height: 97%;width: 100%;overflow: hidden;overflow-y: auto;
+	}
+	.za-rule-bg div p , .za-fuhuo-bg div p{font-size: 0.13rem;color: #2A2A2A;}
+	/*竞猜记录*/
+	.za-jcrecord-bg{
+		width: 100%;
+		height: 4.7rem;
+		overflow: hidden;
+		background-image: url(/Static/images/v1.0/worldcup/cg_jcjl_bg.png);
+		background-size: 100% auto;
+    	background-repeat: no-repeat;
+	    margin-top: 0.7rem;padding-top: 1.05rem;
+	    padding-left: 0.18rem;padding-right: 0.18rem;
+	    position: relative;
+	}
+	.za-no-record{
+		width: 100%;margin-top:0.8rem;text-align: center;
+	}
+	.za-no-record img{
+		width:1.79rem;height:1.27rem;
+	}
+	.za-no-record p{
+		margin-top: 0.2rem;color: #2a2a2a;font-size: 0.16rem;
+	}
+	.za-flex-box .jc-item{
+		text-align: center;font-size: 0.18rem;color: #000;
+	}
+	.za-flex-box .jc-item:nth-child(1){
+		width: 50%;padding-right: 0.6rem;
+	}
+	.za-flex-box .jc-item:nth-child(2){
+		width: 25%;text-align: center;
+	}
+	.za-flex-box .jc-item:nth-child(3){
+		width: 25%;
+	}
+	.za-jcrecord-content{
+		position: relative;
+		height: 90%;
+	    overflow: hidden;
+	    overflow-y: auto;
+	    margin-top: 0.1rem;	
+	}
+	.za-jcrecord-content:before{
+		content: '';position: absolute;height: 1px;width: 100%;background: rgba(167,34,222,0.2);
+	}
+	.za-jcrecord-list{
+		width:100%;border-bottom: 1px solid rgba(167,34,222,0.2);
+		height: 0.39rem;
+    	line-height: 0.39rem;float: left;
+	}
+	.za-jcrecord-list p{
+		font-size: 0.12rem;color: #010001;float: left;overflow: hidden;white-space: nowrap;
+	}
+	.za-jcrecord-list p:nth-child(1),.za-jcrecord-list p:nth-child(3){
+		width:auto;
+	}
+	.za-jcrecord-list p:nth-child(1){
+		text-align: left;padding-left: 6px;
+	}
+	.za-jcrecord-list p:nth-child(3){
+		text-align: right;
+	}
+	.za-jcrecord-list p:nth-child(2){
+		width:9%;text-align: center;
+	}
+	.za-jcrecord-list p:nth-child(4){width: 22%;text-align: center;position: absolute;right: 0.9rem;}
+	.za-jcrecord-list p:nth-child(5){width: 22%;text-align: center;position: absolute;right: 0.05rem;}
+	.jc-fuhuo-span{
+		position: absolute;
+	    /* width: 22.5px; */
+	    height: 15px;
+	    line-height: 15px;
+	    text-align: center;
+	    color: rgba(167,34,222,1);
+	    border: solid 1px rgba(167,34,222,0.3);
+	    border-radius: 6px;
+	    font-size: 0.1rem;
+	    padding: 0 2px;
+	    right: 0;
+	    top: 0.11rem;
+	}
+	/*获奖查询*/
+	.za-huojiang-bg{
+		width: 100%;
+		height: 4.7rem;
+		overflow: hidden;
+		background-image: url(/Static/images/v1.0/worldcup/cg_hjcx_bg.png);
+		background-size: 100% auto;
+    	background-repeat: no-repeat;
+	    margin-top: 0.7rem;padding-top: 1.05rem;
+	    padding-left: 0.18rem;padding-right: 0.18rem;
+	    position: relative;
+	}
+	.za-no-jiang{
+		width: 100%;margin-top:0.8rem;text-align: center;
+	}
+	.za-no-jiang img{
+		width:1.59rem;height:1.43rem;
+	}
+	.za-no-jiang p{
+		margin-top: 0.2rem;color: #2a2a2a;font-size: 0.16rem;
+	}
+	.za-flex-box .hj-item{
+		font-size: 0.18rem;
+	}
+	.za-flex-box .hj-item:nth-child(1){width:55%;text-align: center;}
+	.za-flex-box .hj-item:nth-child(2){width:45%;text-align: center;}
+	.za-hjrecord-list{
+		width:100%;border-bottom: 1px solid rgba(167,34,222,0.2);
+		height: 0.44rem;
+    	line-height: 0.44rem;float: left;
+	}
+	.za-hjrecord-list p{float: left;font-size: 0.12rem;color: #000;}
+	.za-hjrecord-list p:nth-child(1){width: 55%;text-align: center;}
+	.za-hjrecord-list p:nth-child(2){width: 45%;text-align: center;}
+	.hj-duijiang{
+		padding: 2px 19px;
+	    border: 1px solid rgba(167,34,222,1);
+	    border-radius: 6px;
+	    color: rgba(167,34,222,1);
+	}
+	/*兑奖*/
+	.za-duijiang-bg{
+		width: 100%;
+	    height: 4.6rem;
+	    background: #fff;
+	    margin-top: 0.96rem;
+	    padding: 0 0.1rem;
+	    position: relative;
+	}
+	.mui-input-group .mui-input-row {
+	    height: 0.4rem;
+	}
+	.mui-input-group:before {height: 0;}
+	.mui-input-group {	    
+	    top: 0.39rem;
+	}
+	.mui-input-group:after {height: 0;}
+	.mui-input-group .mui-input-row:after {
+	    right: 0.15rem;
+	    left: 0.15rem;
+	    height: 1px;
+	    background-color: #999;
+	}
+	
+	.mui-input-row label {
+	    width: 10%;
+	    padding: 0.11rem 0.15rem;
+	}
+	.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea {
+	    width: 88%;margin-top: 0;font-size:0.14rem ;
+	}
+	/*.mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech {
+	    top: 34px;
+	}*/
+	.mui-input-group .mui-button-row {
+	    top: 0.25rem;padding: 0.11rem 0.15rem;
+	}
+	.za-input-span-phone{
+		position: absolute;width: 13px;height: 19px;display: block;
+		background-image:url(/Static/images/v1.0/worldcup/cg_icon2.png) ;
+		background-size: 100% 100% ;background-repeat:no-repeat ;
+		left: 0.15rem;top: 0.1rem;
+	}
+	.za-input-span-user{
+		position: absolute;width: 0.15rem;height: 0.15rem;display: block;
+		background-image:url(/Static/images/v1.0/worldcup/cg_icon3.png) ;
+		background-size: 100% 100% ;background-repeat:no-repeat ;
+		left: 0.15rem;top: 0.12rem;
+	}
+	.za-duijiang-content{
+		position: relative;padding: 0 0.07rem;top: 0.2rem;
+	}
+	.za-duijiang-content p{
+		color: #000;font-size: 0.13rem;
+	}
+	.za-duijiang-content p:nth-child(3),.za-duijiang-content p:nth-child(4),.za-duijiang-content p:nth-child(5){
+		padding-left: 0.11rem;font-size: 0.1rem;line-height: 1.4;color: #444;
+	}
+	.za-duijiang-content p span{
+		width: 0.05rem;height: 0.05rem;background-image: url(/Static/images/v1.0/worldcup/cg_icon1.png);
+		background-size: 100% 100%;background-repeat:no-repeat ;
+		position: relative;
+	    top: -0.04rem;
+	    margin-right: 0.06rem;
+	    display: inline-block;
+	}
+	.za-duijiang-btn{
+		width: 100%;margin-top: 0.83rem;margin-bottom: 0.2rem;
+	}
+	.za-duijiang-btn button{
+		width: 100%;height: 0.335rem;border-radius: 0.15rem;
+		border: 0;background: #d5d4d4;color: #fff;
+		font-size: 0.18rem;letter-spacing: 4px;
+	}
+	.za-wechat-num{
+		width: 100%;display: block;
+	}
+	.za-wechat-num h4{
+		color: #000;font-size: 0.15rem;margin-bottom: 0.2rem;
+	}
+	.za-wechat-num h4 button{
+		font-size: 0.1rem;color: #a722de;border: 1px solid #a722de;border-radius: 5px;
+		padding: 0px 0.08rem;margin-left: 5px;
+    	display: inline-block;top: -0.015rem;
+	}
+	.za-duijiang-close{
+		position: absolute;
+	    width: 0.25rem;
+	    height: 0.36rem;
+	    top: 0.6rem;
+	    right: 0.24rem;
+	    z-index: 9999;
+	    background-image: url(../Static/images/v1.0/worldcup/cg_djclose.png);
+	    background-size: 100%;
+	    background-repeat: no-repeat;
+	}
+	/*复活规则*/
+	.za-fuhuo-bg{
+		width: 100%;
+		height: 4.275rem;
+		overflow: hidden;
+		background-image: url(/Static/images/v1.0/worldcup/cg_f_bg.png);
+		background-size: 100% auto;
+    	background-repeat: no-repeat;
+	    margin-top: 0.94rem;padding-top: 1.08rem;
+	    padding-left: 0.24rem;padding-right: 0.24rem;
+	    position: relative;
+	}	
+	.za-textident{
+		text-indent: 2em;
+	}
+	.za-pheight{height: 0.1rem;}
+	.za-close-span{
+		position: absolute;top: 0;right: 0.06rem;z-index: 9999;width: 0.3rem;height: 0.3rem;
+		border-radius: 50%;background: transparent;
+	}
+	.za-duijiang-bg img{
+		position: relative;height: 1.45rem;width: 1.45rem;margin-top: 0.45rem;
+	}
+	/*马上登录*/
+	.za-login-bg{
+		width: 3.05rem;height: 2.8rem;background: #fff;
+		border-radius: 4px;
+		position: absolute;
+	    top: 0;left: 0;right: 0;bottom: 0;
+	    margin: auto;
+	}
+	.za-login-bg form{
+		position: relative;
+	    top: 0;left: 0;right: 0;bottom: 0;
+	    margin: auto;width: 2.35rem;margin-top: 0.36rem;
+	}
+	.za-login-title{
+		width:100%;text-align:center;color:#333;font-size:0.17rem;margin-top: 0.34rem;
+	}
+	.za-input-row{
+		width: 2.35rem;height: 0.4rem;border-radius: 0.2rem;margin-bottom: 0.12rem;
+	}
+	.za-input-row input{
+		width: 100%;
+	    height: 100%;
+	    border: 1px solid rgba(0,0,0,0.2); 
+	    margin: 0;
+	    padding: 0;
+	    border-radius: 0.2rem;
+	    padding: 0 0.16rem;
+	}
+	.za-input-row span{
+		position: absolute;
+	    display: inline-block;
+	    color: #FE9536;top: 0.14rem;
+	    right: 0.16rem;font-size: 0.1rem;
+	    line-height: 1;
+	}
+	.za-login-bg form button{
+		width: 2.35rem;height: 0.4rem;border-radius: 0.2rem;border: 0;
+		background: #fe9536;color: #fff;letter-spacing: 0.05rem;font-size: 0.16rem;margin-top: 0.09rem;
+	}
+	.za-login-close{
+		position: absolute;top: 0.11rem;right: 0.13rem;
+		width: 0.12rem;height:0.12rem;background-image: url(/Static/images/v1.0/worldcup/cg_close.png);
+		background-size:100% ;background-repeat:no-repeat ;
+	}
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	    font-size: 0.12rem;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	    font-size: 0.12rem;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	    font-size: 0.12rem;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	    font-size: 0.12rem;
+	}
+</style>
+<style>
+	/*iPhone Plus 样式兼容用的*/
+	@media only screen and (min-width: 410px) and (max-width: 420px) {
+		.result {margin-top: 0.22rem;}
+		.jc-fuhuo-span {top: 0.12rem;}
+	}
+	@media only screen and (min-width: 320px) and (max-width: 330px) {
+		.za-pheight{height: 0.05rem;}
+		.za-flex-box .jc-item:nth-child(1){
+			width: 40%;padding-right: 0.1rem;
+		}
+		.za-flex-box .jc-item:nth-child(2){
+			width: 30%;text-align: center;
+		}
+		.za-flex-box .jc-item:nth-child(3){
+			width: 30%;
+		}
+		.za-jcrecord-list p:nth-child(4) {
+		    right: 1.19rem;width: 23%;
+		}
+		.za-jcrecord-list p:nth-child(5) {
+		    width: 30%;
+		}
+		.za-jcrecord-bg {
+		    padding-left: 0.1rem;
+		    padding-right: 0.1rem;
+		}
+		.za-duijiang-bg {height: 4.9rem;}
+		.za-duijiang-bg img {margin-top: 0.25rem;}
+		.za-wechat-num h4 button {top: -0.045rem;}
+		.mui-input-group {top: 0.19rem;}
+		.za-duijiang-content {top: 0.25rem;}
+		.za-duijiang-btn {margin-top: 0.53rem;}
+		.za-input-span-user {top: 0.15rem;}
+		.jc-fuhuo-span {right: 0.05rem;top: 0.1rem;}
+	}
+</style>
+<body>
+	<!--背景图片-->
+    <div id="web_bg" style="background-image: url(/Static/images/v1.0/worldcup/cg_bg.jpg);">   	
+    	<center>
+    		<p id="g_time"></p>
+    		<h4>截止</h4>
+    	</center>
+    	<div class="za-flex-box">
+		    <div class="za-item c_left">
+		    	<img src="/Static/images/v1.0/info/user/user_default_pl.png" />
+		    	<p></p>
+		    </div>
+		    <div class="za-item vs">
+		    	<img src="/Static/images/v1.0/worldcup/cg_vs.png" />
+		    </div>
+		    <div class="za-item c_right">
+		    	<img src="/Static/images/v1.0/info/user/user_default_pl.png" />
+		    	<p></p>
+		    </div>
+		</div>
+		<div class="za-flex-box result">
+			<div class="za-item">
+				<div class="za-jc-botton">胜</div>
+			</div>
+		    <div class="za-item">
+		    	<div class="za-jc-botton">平</div>
+		    </div>
+		    <div class="za-item">
+		    	<div class="za-jc-botton">负</div>
+		    </div>
+		</div>		
+		<p class="za-bottom-p">玩法：<span id="g_mtype"></span></p>		
+		<div class="za-jc-dobtn">
+			<!--横向滚动-->
+			<!--<div class="jingcaied">
+				<marquee direction=left  width=95% scrollamount=5>本场竞猜已结束，敬请期待下一场竞猜</marquee>
+			</div>-->
+			<div id="g_jcBtn" class="jingcai">
+				立即竞猜
+			</div>
+		</div>
+		<div class="za-flex-box" style="margin-top: 0.1rem;">
+			<div class="za-item2">
+				<a id="rule_btn">活动规则</a>
+			</div>
+			<div id="jc_btn" class="za-item2">
+				<a>竞猜记录</a>
+			</div>
+			<div id="hj_btn" class="za-item2">
+				<a>获奖查询</a>
+			</div>
+		</div>				
+    </div>
+    <!--竞猜成功-->
+	<div id="p_success" class="za-promet">
+		<div class="cg_result success">
+			<span class="za-close-span" style="top: 0.1rem;right: 0;"></span>
+		</div>
+	</div>
+	<!--竞猜失败-->
+	<div id="p_fail" class="za-promet">
+		<div class="cg_result fail">
+			<span class="za-close-span" style="top: 0.1rem;right: 0;"></span>
+			<div class="za-jc-dobtn">
+				<div id="c_share" class="jingcai">分享复活</div>
+			</div>
+		</div>
+	</div>
+	<!--复活成功 继续竞猜-->
+	<div id="p_fhs" class="za-promet">
+		<div class="cg_fhs">
+			<span class="za-close-span" style="top: 1.25rem;right: 0;"></span>
+			<div class="za-jc-dobtn">
+				<div id="c_jcbtn" class="jingcai">继续竞猜</div>
+			</div>
+		</div>
+	</div>
+	<!--闯关成功 立即兑奖-->
+	<div id="p_cgs" class="za-promet">
+		<div class="cg_cgs">
+			<span class="za-close-span" style="top: 0.95rem;right: 0.35rem;"></span>
+			<div class="za-jc-dobtn" style="bottom: 0.7rem;">
+				<div id="c_djbtn" class="jingcai" style="width: 1.45rem;margin-right: 0.1rem;">立即兑奖</div>
+			</div>
+		</div>
+	</div>
+	<!--闯关失败-->
+	<div id="p_cgf" class="za-promet">
+		<div class="cg_cgf">
+			<span class="za-close-span"></span>
+			<div class="za-jc-dobtn" >
+				<div id="c_jxcg" class="jingcai" style="width: 1.45rem;margin-right: 0.1rem;">继续闯关</div>
+			</div>
+		</div>
+	</div>
+	<!--复活规则-->
+	<div id="p_fuhuo" class="za-promet">
+		<div class="za-rule-warp">
+			<div class="za-fuhuo-bg">
+				<span class="za-close-span"></span>
+				<div>
+				    <p>1.用户竞猜出现错误的情况，之前累计的“连续闯关数”将归零，并在下一关重新开始新的周期。用户可使用复活权限进行复活，保持闯关数据不清零，且当次竞猜状态由猜错变为猜对;</p>
+					<p class="za-pheight"></p>
+					<p>2.每个竞猜周期（6场之内）用户仅可以使用一次“复活权限”；</p>
+					<p class="za-pheight"></p>
+					<p>					
+					   3.获得“复活权限”的方法：分享活动链接，求助一名新人进行注册助力，即可复活成功。
+					</p>
+					<p class="za-pheight"></p>
+				</div>
+				<div class="za-jc-dobtn">
+					<div id="c_queren" class="jingcai">确认</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<!--活动规则-->
+	<div id="p_rule" class="za-promet">		
+		<div class="za-rule-warp" style="padding: 0 0.12rem;">
+			<div class="za-rule-bg" style="">
+				<span class="za-close-span"></span>
+				<div>
+				    <p>1.玩法介绍：</p>
+					<p class="za-textident">
+						指定场次参与竞猜活动，竞猜内容包括胜、平、负和让球胜平负（“让球胜平负”玩法：“+”为客让主，“-”为主让客，让球数据参照中国竞彩网）
+						，用户每猜对一场比赛就算闯过一关，连续闯过6关算作挑战成功，
+						可获得奖励（本玩法只针对90分钟内赛果，加时赛和点球结果不算在内）
+					</p>
+					<p class="za-pheight"></p>
+					<p>2.活动奖励：</p>
+					<p class="za-textident">					
+						连续闯过6关的用户可获得200元现金奖励。
+					</p>
+					<p class="za-pheight"></p>
+					<p>3.复活说明：</p>
+					<p class="za-textident">										
+						1）用户竞猜出现错误的情况，之前累计的“连续闯关数”将归零，并在下一关重新开始新的周期。用户可使用复活权限进行复活，保持闯关数据不清零，且当次竞猜状态由猜错变为猜对；
+					</p>
+					<p class="za-textident">
+							2）每个竞猜周期（6场之内）用户仅可以使用一次“复活权限”；
+					</p>
+					<p class="za-textident">
+						3）获得“复活权限”的方法：分享活动链接，求助一名新人进行注册助力，即可复活成功。
+					</p>
+					<p class="za-pheight"></p>
+					<p>4.派奖说明：</p>
+					<p class="za-textident">						
+						1）兑奖流程为：</p>
+					<p class="za-textident">a、闯关成功用户关注“我的追求”微信公众号（id:wdzqmb）；</p>
+					<p class="za-textident">b、在公众号后台留言“世界杯智勇大闯关”后按照回复内容添加客服微信；</p>
+					<p class="za-textident">c、向客服提供兑奖码。</p>
+					<p class="za-textident">2）派奖时间为收到用户兑奖信息后的5个工作日之内。</p>
+					</p>
+					<p class="za-pheight"></p>
+					<p>5.若比赛中断、延期或被取消，则本场比赛竞猜视作无效，不算在竞猜周期内。</p>
+					<p class="za-pheight"></p>
+					<p>					
+						6.严厉禁止和打击任何形式的作弊行为。对于作弊用户将冻结账户，已赠送的奖品本平台有权强制收回。
+					</p>
+					<p class="za-pheight"></p>
+					<p>					
+						7.猴彩科技保留本次活动的最终解释权。
+					</p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<!--竞猜记录-->
+	<div id="p_jingcai" class="za-promet">		
+		<div class="za-rule-warp">
+			<div class="za-jcrecord-bg">
+				<!--<span class="za-close-span"></span>
+				<div class="za-no-record" style="display: none;">
+					<img src="/Static/images/v1.0/worldcup/cg_norecord.png" />
+					<p>暂无记录</p>
+				</div>				
+				<div class="za-flex-box">
+					<div class="jc-item">球队</div>
+					<div class="jc-item">赛果</div>
+					<div class="jc-item">竞猜</div>
+				</div>
+				<div class="za-jcrecord-content">					
+					<div class="za-jcrecord-list">
+						<p><img src="/Static/images/v1.0/info/zixun/country/Senegal.jpg"></p>
+						<p>俄罗斯</p>
+						<p>VS</span>
+						<p>西班牙</p>
+						<p><img src="/Static/images/v1.0/info/zixun/country/Senegal.jpg"></p>
+						<p>让球胜</p>
+						<p>猜错<span class="jc-fuhuo-span">复活</span></p>						
+					</div>
+					<div class="za-jcrecord-list">
+						<p><img src="/Static/images/v1.0/info/zixun/country/Senegal.jpg"></p>
+						<p>俄罗斯各</p>
+						<p>VS</span>
+						<p>西班牙说点</p>
+						<p><img src="/Static/images/v1.0/info/zixun/country/Senegal.jpg"></p>
+						<p>让球胜</p>
+						<p>猜错</p>
+					</div>										
+				</div>-->
+			</div>
+		</div>
+	</div>
+	<!--获奖查询-->
+	<div id="p_huojiang" class="za-promet">
+		<div class="za-rule-warp">
+			<div class="za-huojiang-bg">
+				<!--<span class="za-close-span"></span>
+				<div class="za-no-jiang" style="display: none;">
+					<img src="/Static/images/v1.0/worldcup/cg_nojiang.png" />
+					<p>暂无获奖</p>
+				</div>				
+				<div class="za-flex-box">
+					<div class="hj-item">奖品</div>
+					<div class="hj-item">状态</div>
+				</div>
+				<div class="za-jcrecord-content">
+					<div class="za-hjrecord-list">
+						<p>见客户的十分看好谁开的</p>
+						<p>俄罗斯各</p>
+					</div>
+					<div class="za-hjrecord-list">
+						<p>见客户的十分看好谁开的</p>
+						<p>俄罗斯各</p>
+					</div>
+					<div class="za-hjrecord-list">
+						<p>见客户的十分看好谁开的</p>
+						<p>
+							<span class="hj-duijiang">兑奖</span>
+						</p>
+					</div>
+				</div>-->
+			</div>
+		</div>	
+	</div>
+	<!--兑奖-->
+	<!--<div id="p_duijiang" class="za-promet"  style="display: block;">
+		<div class="za-rule-warp" style="padding: 0 0.12rem;">
+			<div class="za-duijiang-bg">
+				<form class="mui-input-group">
+					<div class="mui-input-row">
+						<label><span class="za-input-span-user"></span></label>	
+						<input id="input_name" type="text" class="mui-input-clear" placeholder="请输入乐透啦的昵称">
+					</div>
+					<div class="mui-input-row" style="margin-top: 0.2rem;">
+						<label><span class="za-input-span-phone"></span></label>	
+						<input id="input_phone" type="text" class="mui-input-clear" placeholder="请输入乐透啦的手机号" maxlength="11" onkeyup="value=value.replace(/[^\d]/g,'')" ng-pattern="/[^a-zA-Z]/">
+					</div>					
+					<div class="za-error-info" id="errorinfo"></div>										
+				</form>
+				<div class="za-duijiang-content">
+					<p><span></span>兑奖流程为：已注册乐透啦APP用户直接填写乐透啦用户名+注册乐透啦的手机号即可进行兑奖，若无注册请先下载乐透啦APP，并进行注册。</p>
+					<p><span></span>活动奖励为乐透啦红包，可用于乐透啦APP内购彩消费，红包有效期为七天。</p>
+					<p><span></span>派奖时间为收到用户兑奖信息后的5个工作日之内。</p>
+					<div class="za-duijiang-btn">
+						<button id="submit-btn"  type="button" disabled="disabled">
+							提交
+						</button>
+					</div>
+					<p><span></span>此信息一经提交不可更改！</p>
+				</div>
+			</div>
+		</div>
+	</div>-->
+	<!--兑奖-->
+	<div id="p_duijiang" class="za-promet" >
+		<div class="za-rule-warp" style="padding: 0 0.24rem;">
+			<div class="za-duijiang-close">
+				
+			</div>
+			<div class="za-duijiang-bg">
+				<div style="text-align: center;">	
+					<img src="/Static/images/v1.0/worldcup/cg_qcode.png" />
+					<h4 style="color: #000;font-size: 0.14rem;font-weight: bold;letter-spacing: 1px;">我的追球</h4>
+				</div>								
+				<div class="za-duijiang-content">
+					<div class="za-wechat-num" style="">
+						<h4>公众号ID:wdzqmb<button data-clipboard-action="copy" data-clipboard-target="#wechatid" id="copy_btn">复制</button></h4>
+						<h4>兑奖码:<span id="code-span"></span><button data-clipboard-action="copy" data-clipboard-target="#djcode" id="copy_btn2">复制</button></h4>
+						<input id="wechatid" style="height: 0px;display: none;" value="wdzqmb"/>
+						<input id="djcode" style="height: 0px;display: none;" value=""/>
+					</div>
+					<p style="font-weight: bold;"><span></span>兑奖流程：</p>
+					<p class="za-padding-left">a、闯关成功用户关注“我的追求”微信公众号（id:wdzqmb）；</p>
+					<p class="za-padding-left">b、在公众号后台留言“世界杯智勇大闯关”后按照回复内容添加客服微信；</p>	
+					<p class="za-padding-left">c、向客服提供兑奖码。</p>
+					<p style="font-weight: bold;margin-top: 0.1rem;"><span></span>派奖时间为收到用户兑奖信息后的5个工作日内。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--马上登录-->	
+	<div id="p_login" class="za-promet">
+		<div class="za-login-bg">
+			<p class="za-login-title">马上登录，开启闯关</p>
+			<form >
+				<div class="za-input-row">
+					<input id="lg_num" class="mui-input-clear" type="text"  placeholder="请输入手机号" maxlength="11" onkeyup="value=value.replace(/[^\d]/g,'')" ng-pattern="/[^a-zA-Z]/"/>
+					<span id="code-btn">获取验证码</span>
+				</div>
+				<div class="za-input-row">
+					<input id="lg_code" class="mui-input-clear" type="text"  placeholder="请输入验证码" maxlength="10" onkeyup="value=value.replace(/[^\d]/g,'')" ng-pattern="/[^a-zA-Z]/"/>
+				</div>
+				<button type="button" id="login-btn">登录</button>
+			</form>
+			<div class="za-login-close"></div>
+		</div>
+	</div>
+    <script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+    <script type="text/javascript" src="/Static/lib/jquery/jquery-3.1.0.min.js?v=05e51b1db5"></script>
+    <script type="text/javascript" src="/Static/js/v1.0/info/zixun/mui.min.js?v=2581360193"></script>
+    <script type="text/javascript" src="/Static/js/v1.0/info/user/user_util.js?v=2c498ee3f43123126"></script>
+    <script type="text/javascript" src="/Static/lib/tools/md5.js?v=67eaccd3f5"></script>
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+    <script type="text/javascript" src="/Static/js/v1.0/worldcup/cg_index.js?v=erfwdf234234eer"></script>
+    <style>
+    	.layui-m-layer0 .layui-m-layerchild {
+		    width: 70%;		    
+		}
+		.layui-m-layercont {
+		    font-size: 0.18rem;
+		    padding: 0.36rem 0.4rem;
+		}
+		.layui-m-layerbtn, .layui-m-layerbtn span {
+		    font-size: 0.16rem;
+		    border-radius: 0 0 10px 10px;
+		    border-top: 1px solid #E5E5E5;
+		    height: 0.44rem;
+		}
+		.layui-m-layerbtn span[yes] {
+		    color: #fd8237;
+		    border-color: transparent; 
+		    background-color: transparent; 
+		}
+		body .layui-m-layer .layui-m-layer-demo-css {
+		    bottom: 10px;background-color: #fff;
+		}
+		.layui-m-layerchild {
+		    border-radius: 4px;
+		}
+		.layui-m-layer-demo-css .layui-m-layercont {
+		    padding: 25px 67px;color: #333;font-family: "PingFangSC-Medium";font-size: 0.16rem;
+		}
+		.layui-m-layer0 .layui-m-layerchild { width: auto;}
+		.layui-m-layershade {background-color: rgba(0,0,0,0);}
+    </style>
+    <script>	
+    	$("#web_bg").css("height", document.documentElement.clientWidth * 606 / 375 + "px")
+    	$(".za-promet").css("height",document.documentElement.clientWidth * 606 / 375 + "px")
+    	window.onresize = function() {
+    		$("#web_bg").css("height", document.documentElement.clientWidth * 606 / 375 + "px")
+    		$(".za-promet").css("height",document.documentElement.clientWidth * 606 / 375 + "px")
+    	}
+    	$(document).ready(function(){      
+		    var clipboard = new Clipboard('#copy_btn',{
+		    	text: function(){
+		    		var targetText = $("#wechatid").val();
+		            return targetText;
+		        }
+		    });
+		    var clipboard2 = new Clipboard('#copy_btn2',{
+		    	text: function(){
+		    		var targetText = $("#djcode").val();
+		            return targetText;
+		        }
+		    });
+	        clipboard.on('success', function(e) {    
+	            console.info('Action:', e.action);    
+	            console.info('Text:', e.text);    
+	            console.info('Trigger:', e.trigger);    
+	            layer.open({
+		            content: '复制成功'
+		            ,skin: 'msg'
+		            ,time: 2 //2秒后自动关闭
+		          });    	    
+	            e.clearSelection();  	            
+	        });
+	        clipboard2.on('success', function(e) {    
+	            console.info('Action:', e.action);    
+	            console.info('Text:', e.text);    
+	            console.info('Trigger:', e.trigger);    
+	            layer.open({
+		            content: '复制成功'
+		            ,skin: 'msg'
+		            ,time: 2 //2秒后自动关闭
+		          });    	    
+	            e.clearSelection();  	            
+	        });
+	        clipboard.on('error', function(e) {
+	            console.log(e);
+	        });
+		});    
+    </script>
+</body>
+</html>

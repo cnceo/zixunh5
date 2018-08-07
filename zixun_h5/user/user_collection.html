@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+		<meta http-equiv="Expires" content="0">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>我的收藏</title>
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/mui.min.css?v=4375b1e6e6" />
+		<!--<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>-->
+		<link rel="stylesheet" href="/Static/css/v1.0/common/reset.css?v=ed0ec998e6" />
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/zixun.css?v=5288ab0b49" />
+
+		<style>
+			.hc-h5-wrap {
+				padding-top: 44px;
+			}
+			
+			.hc-h5-wrap>header {
+				height: 44px;
+				line-height: 44px;
+			}
+			
+			.mui-icon-back:before,
+			.mui-icon-left-nav:before {
+				color: #fff;
+			}
+			
+			.mui-title {
+				color: #fff;
+			}
+			
+			.wraper {
+				padding-top: 0;
+				background: #edeff3;
+				padding-bottom: 0;
+			}
+			
+			.za-nocontent-img {
+				width: 1.35rem;
+				height: 1.1rem;
+				margin-top: 1.23rem;
+			}
+			
+			.mui-table-view {
+				background-color: #edeff3
+			}
+			
+			.mui-table-view .mui-media,
+			.mui-table-view .mui-media-body {
+				background: #fff;
+			}
+			
+			.mui-table-view:before,
+			.mui-table-view:after,
+			.mui-table-view-cell:after {
+				height: 0;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) .mui-active {
+				background-color: #fff;
+			}
+			
+			.mui-table-view-cell {
+				padding: 15px 15px;
+				margin-top: 9px;
+				height: 113px;
+			}
+			
+			.mui-table-view .mui-media-object {
+				line-height: 77px;
+				max-width: 120px;
+				height: 77px;
+			}
+			
+			.mui-table-view-cell p {
+				line-height: 20px;
+				margin-top: 5px;
+				font-size: 15px;
+				color: #000;
+			}
+			
+			.za-read-span {
+				position: absolute;
+				margin-top: 19px;
+				text-align: center;
+				color: #666;
+				padding: 1px 4px;
+				height: 14px;
+				line-height: 14px;
+				border-radius: 4px;
+				font-size: 10px;
+				right: 15px;
+			}.za-read-span span{
+				display: block;
+				float: left;
+			}
+			.za-read-span span:nth-child(1){
+				background: url("/Static/images/v1.0/info/zixun/readNum.png");
+				height: 0.11rem;
+				width: 0.19rem;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				margin-right: 0.05rem;
+				position: relative;
+				top: 0.02rem;
+			}
+			.mui-ellipsis-2 {
+				height: 40px;
+			}
+			
+			.samll-font-7 {
+				font-size: 14px;
+				transform: scale(0.5);
+				transform-origin: 0 0;
+				-ms-transform: scale(0.5);
+				/* IE 9 */
+				-ms-transform-origin: 0 0;
+				/* IE 9 */
+				-webkit-transform: scale(0.5);
+				/* Safari 和 Chrome */
+				-webkit-transform-origin: 0 0;
+				/* Safari 和 Chrome */
+				-moz-transform: scale(0.5);
+				/* Firefox */
+				-moz-transform-origin: 0 0;
+				/* Firefox */
+				-o-transform: scale(0.5);
+				/* Opera */
+				-o-transform-origin: 0 0;
+				/* Opera */
+			}
+			
+			.small-font {
+				font-size: 12px;
+				-webkit-transform-origin-x: 0;
+				-webkit-transform: scale(0.58);
+				transform: scale(0.58);
+			}
+			
+			.smallsize-font {
+				font-size: 7px;
+			}
+			
+			.rigth-class {
+				right: 30px;
+			}
+			.content_inner {
+				padding-top: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="hc-h5-wrap">
+			<header id="header" class="mui-bar mui-bar-nav back_gradient">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">我的收藏</h1>
+			</header>
+			<div class="wraper">
+				<center id="no-content-msg" style="display: none;">
+					<img class="za-nocontent-img" src="/Static/images/v1.0/info/user/user_collect.png" />
+					<p style="margin-top: 42px;">快去挖掘有价值的文章吧！</p>
+				</center>
+				<div class="content_wrap">
+					<div id="refresh" class="hc-bg-ff hc-size-14 hc-text-center">
+						<div class="refresh">
+							<div class="pull_logo hc-g"></div>
+							<div class="pull_txt hc-g hc-line-16 hc-color-7f">下拉即可刷新</div>
+							<div class="pull_time hc-g hc-size-11 hc-line-16 hc-color-ac">暂未更新</div>
+						</div>
+					</div>
+					<div class="content">
+						<div class="content_inner">
+							<ul class="mui-table-view" id="content">
+								<!--<li class="mui-table-view-cell mui-media">
+									<a >
+										<img class="mui-media-object mui-pull-left" src="/Static/images/v1.0/info/zixun/country/Spain.jpg">
+										<div class="mui-media-body">										
+											<p class='mui-ellipsis-2'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+											<span class="za-read-span samll-font-7">阅读量5453223</span>
+										</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media">
+									<a >
+										<img class="mui-media-object mui-pull-left" src="/Static/images/v1.0/info/zixun/country/Spain.jpg">
+										<div class="mui-media-body">										
+											<p class='mui-ellipsis-2'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+											<span class="za-read-span samll-font-7">阅读量5453223</span>
+										</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media">
+									<a >
+										<img class="mui-media-object mui-pull-left" src="/Static/images/v1.0/info/zixun/country/Spain.jpg">
+										<div class="mui-media-body">										
+											<p class='mui-ellipsis-2'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+												<span class="za-read-span samll-font-7">阅读量5453223</span>
+										</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media">
+									<a >
+										<img class="mui-media-object mui-pull-left" src="/Static/images/v1.0/info/zixun/country/Spain.jpg">
+										<div class="mui-media-body">										
+											<p class='mui-ellipsis-2'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+												<span class="za-read-span samll-font-7">阅读量5453223</span>
+										</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media">
+									<a >
+										<img class="mui-media-object mui-pull-left" src="/Static/images/v1.0/info/zixun/country/Spain.jpg">
+										<div class="mui-media-body">										
+											<p class='mui-ellipsis-2'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+												<span class="za-read-span samll-font-7">阅读量5453223</span>
+	
+										</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media">
+									<a >
+										<img class="mui-media-object mui-pull-left" src="/Static/images/v1.0/info/zixun/country/Spain.jpg">
+										<div class="mui-media-body">										
+											<p class='mui-ellipsis-2'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+												<span class="za-read-span samll-font-7">阅读量5453223</span>
+										</div>
+									</a>
+								</li>-->
+
+							</ul>
+						</div>
+						<!-- 加个icp -->
+						<p class="hc-text-center icp hide">
+							<a class="hc-color-ac" href="http://www.miitbeian.gov.cn/">粤ICP备17077541号-2</a>
+						</p>
+					</div>
+					<div class="loading" style="display: none;">
+						<div class="loading_bar"></div>
+						<div class="loading_ball"></div>
+						<div class="shuju">数据加载中...</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/zixun/mui.min.js?v=2581360193"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/user_util.js?v=2c498ee3f6"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/user_collection.js?v=a379f2e49b"></script>
+		<script>
+			$('.loading').hide()
+		</script>
+	</body>
+
+</html>

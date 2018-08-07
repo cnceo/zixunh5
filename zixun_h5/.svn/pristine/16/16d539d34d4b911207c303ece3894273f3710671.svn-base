@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+		<meta http-equiv="Expires" content="0">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>直播-今日好彩 新媒体彩票资讯平台</title>
+		<meta name="keywords" content="直播,比分直播,足球比分,篮球比分">
+		<meta name="description" content="今日好彩直播为广大体育爱好者及彩民提供体育直播赛事及适时比分直播数据，直播频道包含足球直播、篮球NBA直播">
+		<link rel="stylesheet" href="/Static/css/v1.0/common/reset.css?v=ed0ec998e6" />
+		<!--<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>-->
+		<link rel="stylesheet" href="/Static/css/v1.0/live/index.css?v=eee56d44a1" />
+
+	</head>
+
+	<body class="hc-bg-black">
+		<header class="hc-head-wrap ">
+			<div class="hc-head back_gradient">
+				<div class="hc-head-title">
+					<span>直播大厅</span>
+				</div>
+			</div>
+		</header>
+
+		<!-- <div class="ad"></div> -->
+
+		<!-- mobile -->
+		<div class="m_header-wrap">
+			<div class="m_header" style="top: 0.44rem">
+				<div class="m_main">
+					<section class="m_lotylist hc-cf">
+						<ul>
+							<li>
+								<a data-lotyid="1" class="hc-active">竞彩足球</a>
+							</li>
+							<!-- <li><a data-lotyid="2">竞彩篮球</a></li> -->
+							<li>
+								<a data-lotyid="3">北京单场</a>
+							</li>
+							<li>
+								<a data-lotyid="4">胜负彩</a>
+							</li>
+						</ul>
+					</section>
+					<section class="m_filter"></section>
+				</div>
+			</div>
+		</div>
+
+		<div class="issue-wrap">
+			<div class="issue-box" style="top: 0.79rem">
+				<main>
+					<div class="box_u">
+						<ul class="hc-cf">
+							<li class="last hc-color-ac">上一期</li>
+							<li class="time">加载中...</li>
+							<li class="next hc-color-ac">下一期</li>
+						</ul>
+					</div>
+					<div class="box_d hide"></div>
+				</main>
+			</div>
+		</div>
+		<section class="bf-wrap">
+			<ul>
+				<div class="loading">
+					<div></div><span>数据加载中...</span></div>
+			</ul>
+		</section>
+		<section id="filter_popup" class="popup_wrap hide">
+		</section>
+		<div class="refresh">
+			<img src="/Static/images/v1.0/live/refresh.png">
+		</div>
+		<!--<script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>-->
+		<script type='text/javascript' src='/Static/js/v1.0/common/all.min.js?v=195a55cb47'></script>
+		<script type='text/javascript' src='/Static/js/v1.0/config.js?v=bc1c63e491'></script>
+		<script type='text/javascript' src='/Static/lib/tools/layer.js?v=ae540cbe1b'></script>
+		<script type="text/javascript" src="/Static/js/v1.0/live/index.js?v=55767092a7"></script>
+		<!-- 单独引的js文件 -->
+		<script type="text/javascript" src="/Static/js/v1.0/info/zixun/zixun_live.js?v=4e217542342e"></script>
+
+	</body>
+
+</html>

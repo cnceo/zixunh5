@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>2018世界杯智勇大闯关—分享复活</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">   
+    <link rel="stylesheet" href="/Static/css/v1.0/info/zixun/mui.min.css?v=4375b1e6e6" />
+    <!--网页标题左侧显示-->
+    <link rel="icon" sizes="64x64" href="/Static/images/v1.0/cg.ico" type="image/x-icon">
+    <!--收藏夹显示图标-->
+    <link rel="shortcut icon"  sizes="64x64" href="/Static/images/v1.0/cg.ico" type="image/x-icon">
+    
+    <link rel="apple-touch-icon" sizes="64x64" href="/Static/images/v1.0/cg.ico">    
+    <script>		
+		(function(doc, win) {
+			var docEl = doc.documentElement, //根元素html
+				//判断窗口有没有orientationchange这个方法，有就赋值给一个变量，没有就返回resize方法。
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if(!clientWidth) return;
+					//把document的fontSize大小设置成跟窗口成一定比例的大小，从而实现响应式效果。
+					if(clientWidth >= 640) {
+						clientWidth = 640;
+					}
+					docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+				};
+			recalc();			
+			if(!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false); //addEventListener事件方法接受三个参数：第一个是事件名称比如点击事件onclick，第二个是要执行的函数，第三个是布尔值
+			doc.addEventListener('DOMContentLoaded', recalc, false) //绑定浏览器缩放与加载时间
+		})(document, window);
+	</script>
+</head>
+<style>
+	html,body{-webkit-overflow-scrolling: touch;}
+	p,h4{margin: 0;padding: 0;font-weight: 400;}
+	#web_bg{
+	   position:absolute;
+	  width:100%;height:100%;min-width: 100%;
+	  background-color: #fff;
+	  background-repeat: no-repeat;
+	  background-size: 100%;
+	  background-position: center 0;
+	}
+	.za-promet{
+		width: 100%;height: 100%;top: 0;z-index:9;position: absolute;background: rgba(0,0,0,0.5);
+		display: none;
+	}
+	.za-share-warp{
+		margin-top: 2.42rem;position: relative;padding: 0 0.1rem;
+	}	
+	.za-share-content{
+		height: 3.06rem;width: 100%;background-image: url(/Static/images/v1.0/worldcup/cg_s_wbg.png);
+		background-repeat: no-repeat;background-size:100% 100%;position: relative;
+	}
+	.za-share-header{
+		text-align: center;
+	    top: 0.2rem;
+	    position: relative;
+	}
+	.za-share-header img{
+		width: 0.55rem;height: 0.55rem;border-radius: 50%;border: solid 1px #CCCCCC;
+	}
+	.za-share-header p{line-height: 1;font-size: 0.1rem;color: #2a2a2a;height: 0.13rem;}
+	.za-share-header h4{font-size: 0.12rem;color: #e3b25b;margin-top: 0.1rem;}
+	.za-flex-share{
+	    display: flex;
+	    justify-content: center;
+	    width: 100%;margin-top: 0.32rem;	    
+	}
+	.za-flex-share .flex-item:nth-child(1),.za-flex-share .flex-item:nth-child(3){
+		height: 1px;width: 0.65rem;background: #ebebeb;margin-top: 0.06rem;
+	}
+	.za-flex-share .flex-item:nth-child(2){
+		color: #999;line-height: 1;font-size: 0.12rem;padding: 0 0.28rem;
+	}
+	.za-flex-share2{
+		display: flex;
+	    justify-content: center;
+	    width: 100%;margin-top: 0.11rem;
+	}
+	.za-flex-share2 .item{
+		height: 0.32rem;
+	    line-height: 0.32rem;
+	    width: 0.24rem;
+	    text-align: center;
+	    background: #000;
+	    color: #fff;
+	    font-size: 0.24rem;
+	    margin-right: 0.02rem;
+	}
+	.za-flex-share2 .item:nth-child(3),.za-flex-share2 .item:nth-child(6){
+		background: #fff;width: 0.14rem;color: #000;
+	}
+	.za-jc-dobtn{width: 100%;text-align: center;background: transparent;}
+	.za-jc-dobtn div{
+		width: 2.12rem;
+	    height: 0.51rem;
+	    line-height: 0.51rem;
+    	display: inline-block;
+	    background-size: 100% 100%;
+	    color: #444;
+	    font-weight: bold;
+	    font-size: 0.14rem;
+	    border: 0;	
+	}
+	.yaoqing{
+		background: url(/Static/images/v1.0/worldcup/cg_s_y.png);
+	}
+	.help{
+		background: url(/Static/images/v1.0/worldcup/cg_s_help.png);
+	}
+	.zhuli-s{
+		background: url(/Static/images/v1.0/worldcup/cg_s_zs.png);
+	}
+	.fuhuo-s{
+		background: url(/Static/images/v1.0/worldcup/cg_s_fs.png);
+	}
+	.fuhuo-f{
+		background: url(/Static/images/v1.0/worldcup/cg_s_ff.png);
+	}
+	.fuhuo-ed{
+		background: url(/Static/images/v1.0/worldcup/cg_s_fed.png);
+	}
+	.za-share-footer{text-align: center;margin-top: 0.33rem;}
+	.za-share-footer p{
+		color: #2576ff;font-size: 0.12rem;margin-bottom: 0.01rem;height: 0.21rem;
+	}
+	.za-footer-warp{
+		width:100%;position: relative;text-align: center;margin-top: -0.1rem;
+	}
+	.za-footer-warp div{
+		width: 3.58rem;
+	    height: 0.54rem;
+	    line-height: 0.48rem;
+    	display: inline-block;
+	    background: url(/Static/images/v1.0/worldcup/cg_s_join.png);
+	    background-size: 100% 100%;
+	    color: #ff6200;
+	    font-size: 0.13rem;
+	    border: 0;	
+	}
+	
+	.za-opemt {
+		position: absolute;
+		z-index: 99999;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background-image: url(/Static/images/v1.0/worldcup/bg_share.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+	
+	.za-opemt-weixin {
+		position: absolute;
+		z-index: 99999;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background-image: url(/Static/images/v1.0/worldcup/bg_share_wx.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+</style>
+<style>
+	/*iPhone Plus 样式兼容用的*/
+	@media only screen and (min-width: 410px) and (max-width: 420px) {
+		
+	}
+	@media only screen and (min-width: 320px) and (max-width: 330px) {
+		.za-share-footer {margin-top: 0.25rem;}
+	}
+</style>
+<body>
+	<!--背景图片-->
+    <div id="web_bg" style="background-image: url(/Static/images/v1.0/worldcup/cg_bg2.jpg);">   	
+    	<div class="za-share-warp">
+    		<div class="za-share-content">
+    			<div class="za-share-header">
+    				<img src="/Static/images/v1.0/info/user/user_default_pl.png" />
+    				<p></p>
+    				<h4>闯关成功可获得乐透啦200元红包</h4>
+    			</div>
+    			<div class="za-flex-share">
+    				<div class="flex-item"></div>
+    				<div class="flex-item">倒计时</div>
+    				<div class="flex-item"></div>
+    			</div>
+    			<div class="za-flex-share2">
+    				<div id="_h1" class="item">0</div>
+    				<div id="_h2" class="item">0</div>
+    				<div class="item">:</div>
+    				<div id="_m1" class="item">0</div>
+    				<div id="_m2" class="item">0</div>
+    				<div class="item">:</div>
+    				<div id="_s1" class="item">0</div>
+    				<div id="_s2" class="item">0</div>    				    				
+    			</div>
+    			<div class="za-share-footer">
+    				<p>暂无人助力</p>
+    				<div class="za-jc-dobtn">
+						<div id="z-btn" class="yaoqing"></div>
+					</div>
+    			</div>
+    		</div>
+    	</div>   	
+    	<div class="za-footer-warp">
+    		<div>
+    			我也要参与
+    		</div>
+    	</div>    	
+    </div>	
+    <div id="opemt" class="za-opemt-weixin" style="display: none;"></div>
+    <script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+    <script type="text/javascript" src="/Static/lib/jquery/jquery-3.1.0.min.js?v=05e51b1db5"></script>
+    <script type="text/javascript" src="/Static/js/v1.0/info/zixun/mui.min.js?v=2581360193"></script>
+    <script type="text/javascript" src="/Static/js/v1.0/info/user/user_util.js?v=2c498ee3f6"></script>
+    <script type="text/javascript" src="/Static/js/v1.0/worldcup/cg_share.js?v=d5080cec14"></script>
+    <style>
+    	.layui-m-layer0 .layui-m-layerchild {
+		    width: 67%;		    
+		}
+		.layui-m-layercont {
+		    font-size: 0.18rem;
+		    padding: 0.3rem 0.45rem;
+		}
+		.layui-m-layerbtn, .layui-m-layerbtn span {
+		    font-size: 0.16rem;
+		    border-radius: 0 0 10px 10px;
+		    border-top: 1px solid #E5E5E5;
+		    height: 0.44rem;
+		}
+		.layui-m-layerbtn span[yes] {
+		    color: #fd8237;
+		    border-color: transparent; 
+		    background-color: transparent; 
+		}
+    </style>
+    <script>   	    	
+ 		$("#opemt").css("height", document.documentElement.clientWidth * 623 / 375 + "px")
+ 		$("#web_bg").css("height", document.documentElement.clientWidth * 606 / 375 + "px")
+    	window.onresize = function() {
+    		$("#web_bg").css("height", document.documentElement.clientWidth * 606 / 375 + "px")
+    		$("#opemt").css("height", document.documentElement.clientWidth * 623 / 375 + "px")
+    	}
+    </script>
+</body>
+</html>

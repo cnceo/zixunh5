@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+		<meta http-equiv="Expires" content="0">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>我的</title>
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/mui.min.css?v=4375b1e6e6" />
+		<!--<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>-->
+		<link rel="stylesheet" href="/Static/css/v1.0/common/reset.css?v=ed0ec998e6" />
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/zixun.css?v=5288ab0b49" />
+		<script type="text/javascript">
+			document.domain = document.domain.slice(2);
+		</script>
+		<style>
+			body {
+				font-family: 'PingFangSC-Medium', "Source Han Sans CN", "Microsoft YaHei", "Helvetica", simsun;
+			}
+			.wraper {
+				padding-top: 0;
+				background-color: #edeff3;
+			}
+			
+			.footer_wrap {
+				position: fixed;
+				bottom: 0;
+			}
+			
+			.go_index ._img {
+				background-image: url("/Static/images/v1.0/info/zixun/index_unselect.png")
+			}
+			
+			.go_my ._img {
+				background-image: url("/Static/images/v1.0/info/user/user_selected.png")
+			}
+			
+			.go_my ._text {
+				color: #FF6C00;
+			}
+			
+			.go_world ._img {
+				background-image: url("/Static/images/v1.0/worldcup/world_unselect.png")
+			}
+			
+			.hc-h5-wrap {
+				padding-top:0 ;
+				background: #edeff3;
+			}
+			
+			.za-user-header-wrap {
+				width: 100%;
+				height: 1.43rem;
+				margin-bottom: 0.95rem;
+				position: relative;
+			}
+			.myCenter{
+				width: 3.16rem;
+				height: 1.37rem;
+				background-color: white;
+				position: absolute;
+				top: 0.75rem;
+				left: 0.29rem;
+				border-radius: 0.03rem;
+				box-shadow: 0px 0px 10px #f6e0d6;
+			}
+			.myCenter #userimg{
+				display: block;
+				height: 0.84rem;
+				width: 0.84rem;
+				margin: 0 auto;
+				position: relative;
+				top: -0.29rem;
+				border-radius: 50%;
+				box-shadow:  0px 6px 15px rgba(95,40,17,0.2);
+				border: 0.01rem solid #f07a37;
+			}
+			/*#ff9a70*/
+			/*.za-user-img-content{margin-top:28px ;width: 82px;height: 82px;border-radius: 50%;border: solid 2px #e76666;}*/
+			
+			.za-user-unlogin {
+				width: 100%;
+				text-align: center;
+				font-family: "PingFangSC-Regular";
+				color: black;
+				font-size: 0.18rem;
+				position: relative;
+    			top: -0.07rem;
+			}
+			
+			.za-user-logined {
+				width: 100%;
+				text-align: center;
+				font-size: 0.18rem;
+			}
+			
+			.za-user-logined img {
+				width: 13px;
+				height: 13px;
+				margin-left: 5px;
+				margin-top: -2px;
+			}
+			
+			.za-user-body-wrap {
+				width: 100%;
+				margin-top: 10px;
+			}
+			.za-user-body-wrap ul {
+				background-color: transparent !important;
+			}
+			.za-user-body-wrap ul li{
+				display: block;
+				width: 3.45rem;
+				border: 0.01rem solid #ede6e4;
+				border-radius: 0.05rem;
+				margin: 0.09rem auto;
+				background-color: white;
+			}
+			.mui-table-view:before,
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-table-view-cell:after {
+				left: 0;
+				background-color: #E5E5E5;
+			}
+			
+			.mui-table-view-cell {
+				padding: 11px 15px;
+				height: 44px;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
+				font-size: 13px;
+			}
+			
+			.mui-navigate-right img {
+				margin-top: -3px;
+				margin-right: 5px;
+			}
+			
+			.za-massage-badge-1 {
+				position: absolute;
+				min-width: 14px;
+				height: 14px;
+				background: #FF6C00;
+				border-radius: 0.1rem;
+				font-size: 10px;
+				color: #fff;
+				text-align: center;
+				line-height: 14px;
+				margin-left: 5px;
+				font-size: 10px;
+				margin-top: 3px;
+			}
+			
+			.za-massage-badge-2 {
+				position: absolute;
+				width: 36px;
+				height: 14px;
+				background: #FF6C00;
+				border-radius: 10px;
+				font-size: 10px;
+				color: #fff;
+				text-align: center;
+				line-height: 14px;
+				margin-left: 5px;
+				margin-top: 3px;
+			}
+			
+			.za-unlogin-btn {
+				width: 100%;
+				height: 36px;
+				line-height: 36px;
+				text-align: center;
+				color: #fff;
+				border-radius: 4px;
+				font-size: 15px;
+				position: relative;
+				margin: auto;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				border: 0;
+			}
+			
+			.za-unlogin-btn:active {
+				position: relative;
+				top: 1px;
+			}
+			.layui-m-layerbtn span[yes] {
+				border: none !important;
+				background-color: #fa6d23 !important;
+			}
+		</style>
+	</head>
+
+	<body ontouchmove="event.preventDefault()">
+		<div class="hc-h5-wrap">
+			<div class="wraper">
+				<div class="za-user-header-wrap back_gradient">	
+					<div class="myCenter">
+						<img id="userimg" class="za-user-img-content" src="/Static/images/v1.0/info/user/user_default.png" />
+						<div id="tologin" class="za-user-unlogin" style="display:none; font-size: 0.18rem;font-weight: bold;">用户登录</div>
+						<div id="username" class="za-user-logined" style="display:none;"><span id="username_span" style="font-size: 0.18rem;font-weight: bold;"></span><img src="" id="imgsrc" /></div>
+					</div>	
+				</div>
+
+				<div class="za-user-body-wrap">
+					<ul class="mui-table-view">
+						<li id="msg" class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								<img style="width: 18px;height: 14px;" src="/Static/images/v1.0/info/user/user_massage.png" /> 通知消息
+								<span id="usermsg" style="display: none;" class="za-massage-badge-1">9</span>
+							</a>
+						</li>
+						<li id="collection" class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								<img style="width: 18px;height: 17px;" src="/Static/images/v1.0/info/user/user_collection.png" /> 我的收藏
+							</a>
+						</li>
+						<li id="setting" class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								<img style="width: 18px;height: 18px;" src="/Static/images/v1.0/info/user/user_setting.png" /> 设置
+							</a>
+						</li>
+					</ul>
+					<div style="position: relative;margin-top:0.34rem ;padding: 11px 15px;">
+						<button type="button" class="za-unlogin-btn back_gradient" style="display: none;">
+							退出登录
+						</button>
+					</div>
+
+				</div>
+
+				<div class="footer_wrap hc-cf">
+					<div class="footer_item go_index">
+						<div class="_img"></div>
+						<div class="_text" style="color: #939393;">首页</div>
+					</div>
+					<!--<div class="footer_item go_world">
+		                <div class="_img"></div>
+		                <div class="_text">世界杯</div>
+		            </div>-->
+					<div class="footer_item go_live">
+						<div class="_img"></div>
+						<div class="_text">直播</div>
+					</div>
+					<div class="footer_item go_my">
+						<div class="_img"></div>
+						<div class="_text">我的</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+		<!--<script type='text/javascript' src='/Static/js/v1.0/common/all.min.js?v=195a55cb47'></script>
+		<script type='text/javascript' src='/Static/js/v1.0/config.js?v=bc1c63e491'></script>
+		<script type='text/javascript' src='/Static/lib/tools/layer.js?v=ae540cbe1b'></script>-->
+		<script type="text/javascript" src="/Static/js/v1.0/info/zixun/mui.min.js?v=2581360193"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/user_util.js?v=2c498ee3f6"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/user_index.js?v=7adbdb965a"></script>
+	</body>
+
+</html>

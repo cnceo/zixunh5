@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+		<meta http-equiv="Expires" content="0">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>404-今日好彩 彩票新媒体资讯平台 </title>
+		<meta name="baidu-site-verification" content="Y2sKmjbpfp" />
+		<meta name="keywords" content="404">
+		<meta name="description" content="404">
+		<!--<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>-->
+		<link rel="stylesheet" type="text/css" href="/Static/css/v1.0/common/reset.css?v=ed0ec998e66" />
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/zixun.css?v=5288ab0b49" />
+		<!--<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/swiper.min.css?v=e24628d798" />-->
+		<link rel="shortcut icon" href="/Static/images/v1.0/favicon.ico">
+		<style>
+			.go_world ._img {
+				background-image: url("/Static/images/v1.0/worldcup/world_unselect.png")
+			}
+			
+			.tab_wrap {
+				position: absolute !important;
+				top: 0.44rem;
+			}
+			
+			.tip404 {
+				background: url("/Static/images/v1.0/common/404.png");
+				background-position: 0 30%;
+				background-repeat: no-repeat;
+				height: 100%;
+				position: absolute;
+				width: 100%;
+				top: 0;
+				background-color: white;
+				z-index: 9999;
+				background-size: contain;
+			}
+			
+			.tipTime {
+				position: absolute;
+				display: block;
+				top: 61%;
+				text-align: center;
+				width: 100%;
+				font-size: 16px;
+				font-weight: 600;
+			}
+			
+			.tipTime span {
+				color: #b3b3b3;
+			}
+			
+			.tipTime a {
+				color: #feaa28;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="hc-h5-wrap" id="zixun">
+			<header id="header" class="back_gradient">
+				<div class="header-left">
+
+				</div>
+				<div class="header-right">
+				</div>
+				<div class="header-title"></div>
+			</header>
+
+			<!--404页面提示-->
+			<div class="tip404" id="tip404">
+				<p class="tipTime">
+					<span>5秒之后自动跳转</span>
+					<a href="/">首页</a>
+				</p>
+			</div>
+		</div>
+		<script type='text/javascript' src='/Static/js/v1.0/common/all.min.js?v=195a55cb47'></script>
+		<script type='text/javascript' src='/Static/js/v1.0/config.js?v=bc1c63e491'></script>	
+	</body>
+
+</html>
+
+<script type="text/javascript">
+	$(function() {
+		//	404 页面的函数
+		//需要根据是否是头条跳转来决定是否进行计时 '/404.html?id=toutiao'
+		var hrefname = window.location.href;
+		hrefname = hrefname.split("=");
+		if(hrefname.length > 1 && hrefname[1] == "toutiao"){
+			$("#tip404 span").html("");
+			$("#tip404 a").html("");
+		}else{
+			tip404Fn();
+		}
+		function tip404Fn() {
+			clearInterval(timer404);
+			$("#tip404").show();
+			var time = 5;
+			var timer404 = setInterval(function() {
+				time--;
+				var mess = time + "秒之后自动跳转";
+				$("#tip404 span").html(mess);
+				if(time <= 0) {
+					mess = "即将跳转至";
+					$("#tip404 span").html(mess);
+					window.location.href = "/";
+					clearInterval(timer404);
+					return;
+				}
+			}, 1000)
+		}
+		
+	})
+</script>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+		<meta http-equiv="Expires" content="0">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>走势图-今日好彩 彩票新媒体资讯平台</title>
+		<meta name="keywords" content="推荐 走势图 双色球 中奖">
+		<meta name="description" content="全面的双色球走势图，为您的购彩提高最及时的参考信息">
+		<link rel="shortcut icon" href="/Static/images/v1.0/favicon.ico">
+		<!--<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>-->
+		<link rel="stylesheet" type="text/css" href="/Static/css/v1.0/common/reset.css?v=ed0ec998e66"/>
+        <style type="text/css">
+        	.hc-h5-wrap{
+        		padding-bottom: 0.49rem
+        	}
+        	.bet-play-1{
+        		padding-bottom: 0 !important;
+        	}
+        </style>
+	</head>
+
+	<body class="hc-bg">
+    <!--筛选期数-->
+        <div class="set-wrap hide">
+            <div>
+                <div class="set-con hc-padding-sm">
+                    <div class='clearfix set-title'>
+                        <span><label></label></span>
+                        <span>走势图设置</span>
+                        <span><label></label></span>
+                    </div>
+                    <ul class="clearfix set-qs hc-margin-top-sm">
+                        <li data-numissue="30" class="active">近30期</li>
+                        <li data-numissue="50">近50期</li>
+                        <li data-numissue="100">近100期</li>
+                    </ul>
+                    <div class="clearfix set-display hc-margin-top-sm hc-padding-horizontal-lg">
+                        <ul class="hc-avg-2 set-yl">
+                            <li class="active">显示遗漏</li>
+                            <li>隐藏遗漏</li>
+                        </ul>
+                        <ul class="hc-avg-2 set-zx">
+                            <li class="active">显示折线</li>
+                            <li>隐藏折线</li>
+                        </ul>
+                        <ul class="hc-avg-2 set-tj">
+                            <li class="active">显示统计</li>
+                            <li>隐藏统计</li>
+                        </ul>
+                    </div>
+                    <div class="clearfix hc-margin-top-lg">
+                        <span class="set-btn set-cancel">取消</span>
+                        <span class="set-btn set-sure">确认</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hc-h5-wrap">
+            <header>
+                <div class="header-left"><span class="hc-block back" onclick="HCCP.back.history();"></span></div>
+                <div class="header-title"></div>
+                <div class="header-right hc-cf"><span class="hc-block header-icon chartSetting hc-fl"></span></div>
+            </header>
+            <section id="hc-bet-play">
+                <!-- 直选 -->
+                <div class="bet-play-1">
+                    <nav class="hc-avg-5">
+                        <li>近期开奖</li>
+                        <li><span class="r_zs"></span>走势</li>
+                        <li><span class="b_zs"></span>走势</li>
+                        <li><span class="r_zs"></span>冷热</li>
+                        <li><span class="b_zs"></span>冷热</li>
+                    </nav>    
+                    <ul class="chart-main">
+                        <li class="hide jqkj"></li>   
+                        <li class="hide bwnum">
+                            <dl style="display: none" class="_ssq hc-dl hc-bg table-fixed-top">
+                                <dt>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                            <td>期号</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </dt>
+                                <dd class="scroll_bar scroll_t1">
+                                    <table class="hc-scroll">
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>02</td>
+                                                <td>03</td>
+                                                <td>04</td>
+                                                <td>05</td>
+                                                <td>06</td>
+                                                <td>07</td>
+                                                <td>08</td>
+                                                <td>09</td>
+                                                <td>10</td>
+                                                <td>11</td>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>14</td>
+                                                <td>15</td>
+                                                <td>16</td>
+                                                <td>17</td>
+                                                <td>18</td>
+                                                <td>19</td>
+                                                <td>20</td>
+                                                <td>21</td>
+                                                <td>22</td>
+                                                <td>23</td>
+                                                <td>24</td>
+                                                <td>25</td>
+                                                <td>26</td>
+                                                <td>27</td>
+                                                <td>28</td>
+                                                <td>29</td>
+                                                <td>30</td>
+                                                <td>31</td>
+                                                <td>32</td>
+                                                <td>33</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </dd>
+                            </dl>
+                            <dl style="display: none" class="_dlt hc-dl hc-bg table-fixed-top">
+                                <dt>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                            <td>期号</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </dt>
+                                <dd class="scroll_bar scroll_t1">
+                                    <table class="hc-scroll">
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>02</td>
+                                                <td>03</td>
+                                                <td>04</td>
+                                                <td>05</td>
+                                                <td>06</td>
+                                                <td>07</td>
+                                                <td>08</td>
+                                                <td>09</td>
+                                                <td>10</td>
+                                                <td>11</td>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>14</td>
+                                                <td>15</td>
+                                                <td>16</td>
+                                                <td>17</td>
+                                                <td>18</td>
+                                                <td>19</td>
+                                                <td>20</td>
+                                                <td>21</td>
+                                                <td>22</td>
+                                                <td>23</td>
+                                                <td>24</td>
+                                                <td>25</td>
+                                                <td>26</td>
+                                                <td>27</td>
+                                                <td>28</td>
+                                                <td>29</td>
+                                                <td>30</td>
+                                                <td>31</td>
+                                                <td>32</td>
+                                                <td>33</td>
+                                                <td>34</td>
+                                                <td>35</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </dd>
+                            </dl>
+                            <div class="chart_"></div>
+                        </li>
+                        <li class="hide swnum">
+                             <dl style="display: none" class="_ssq hc-dl hc-bg table-fixed-top">
+                                <dt>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                            <td>期号</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </dt>
+                                <dd class="scroll_bar scroll_t1">
+                                    <table class="hc-scroll">
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>02</td>
+                                                <td>03</td>
+                                                <td>04</td>
+                                                <td>05</td>
+                                                <td>06</td>
+                                                <td>07</td>
+                                                <td>08</td>
+                                                <td>09</td>
+                                                <td>10</td>
+                                                <td>11</td>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>14</td>
+                                                <td>15</td>
+                                                <td>16</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </dd>
+                            </dl>
+                            <dl style="display: none" class="_dlt hc-dl hc-bg table-fixed-top">
+                                <dt>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                            <td>期号</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </dt>
+                                <dd class="scroll_bar scroll_t1">
+                                    <table class="hc-scroll">
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>02</td>
+                                                <td>03</td>
+                                                <td>04</td>
+                                                <td>05</td>
+                                                <td>06</td>
+                                                <td>07</td>
+                                                <td>08</td>
+                                                <td>09</td>
+                                                <td>10</td>
+                                                <td>11</td>
+                                                <td>12</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </dd>
+                            </dl>
+                            <div class="chart_"></div>
+                        </li>
+                        <li class="hide">
+                            <div class="chart_"></div>
+                        </li>
+                        <li class="hide">
+                            <div class="chart_"></div>
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+            
+        </div>
+        <!--<script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>-->
+        <script type='text/javascript' src='/Static/js/v1.0/common/all.min.js?v=195a55cb47'></script>
+        <script type='text/javascript' src='/Static/js/v1.0/config.js?v=bc1c63e491'></script>
+        <script type='text/javascript' src='/Static/js/v1.0/h5config.js?v=bc1c63e491'></script>
+        <script type="text/javascript">
+        	//获取路由参数
+        	var lotyid = 10;
+
+        	//对应lotyID下的走势图
+			switch(+lotyid){
+				case 10:
+				default:
+                $("title").text("双色球-今日好彩新媒体彩票资讯平台")
+				$(".header-title").text("双色球")
+				document.write('<link rel="stylesheet" href="/Static/css/v1.0/info/draw/chart/ssq.css?v=b199bbf8bf"/>');
+				document.write('<script type="text/javascript" src="/Static/js/v1.0/info/draw/chart/ssq.js?v=c1f2233996"></sc'+'ript>')
+                $(".r_zs").text("红球")
+                $(".b_zs").text("蓝球")
+                $("._ssq").show();
+
+				break;
+				case 11:
+                $("title").text("大乐透-今日好彩新媒体彩票资讯平台")
+				$(".header-title").text("大乐透")
+				document.write('<link rel="stylesheet" href="/Static/css/v1.0/info/draw/chart/dlt.css?v=b40c493f8b"/>');
+				document.write('<script type="text/javascript" src="/Static/js/v1.0/info/draw/chart/dlt.js?v=78d2f2d378"></sc'+'ript>')
+                $(".r_zs").text("前区")
+                $(".b_zs").text("后区")
+                $("._dlt").show();
+                
+			}
+
+			//底部下载地址
+			var downloadHtml = '<div class="zixun_down" style="'
+				downloadHtml += 'text-align:center;background-color:#FD8237 ;width:100%;height:0.49rem;position:fixed;bottom:0;font-size:0'
+				downloadHtml += '">'
+				downloadHtml += '<div class="wrap_content hc-cf" style="display:inline-block;line-height:0.49rem">'
+				downloadHtml += '<span class="down_img_wrap" style="padding-right:0.15rem;display:inline-block;height:0.49rem;float:left"><img class="down_img" style="width:0.41rem;height:0.41rem" src="/Static/images/v1.0/info/zixun/download.png"></span>'
+				downloadHtml += '<span class="down_text" style="font-size:0.16rem;color:#fff;display:inline-block;height:0.49rem;float:left">注册送88元！</span>'
+				downloadHtml += '</div></div>'
+
+			$("body").append(downloadHtml)
+
+			//底部广告跳转
+			$(".zixun_down").on('click', function(event) {
+				event.preventDefault();
+				/* Act on the event */
+				HCCP.FUNC.go(URL_LETOULA)
+			});
+
+        </script>
+        <script type="text/javascript" src="/Static/lib/seo/seoBaiduUp.js?v=e907a0bd2223423r2"></script>
+    </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+		<meta http-equiv="Expires" content="0">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>验证码登录</title>
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/mui.min.css?v=4375b1e6e6" />
+		<!--<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>-->
+		<link rel="stylesheet" href="/Static/css/v1.0/common/reset.css?v=ed0ec998e6" />
+    	<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/zixun.css?v=5288ab0b49" />
+		<script type="text/javascript">
+			document.domain = document.domain.slice(2);
+		</script>
+		<style>
+			.hc-h5-wrap {
+			    padding-top: 44px;
+			}
+			.hc-h5-wrap>header {
+			    height: 44px;
+			    line-height: 44px;
+			}
+			.mui-icon-back:before, .mui-icon-left-nav:before {
+			    color: #fff;
+			}
+			.mui-title {
+			    color: #fff;
+			}
+			.wraper{padding-top: 0;}
+			.mui-input-group:after {height: 0;}
+			.mui-input-group .mui-input-row:after {
+			    right: 15px;
+			    left: 15px;
+			    height: 1px;
+			    background-color: #999;
+			}
+			.mui-input-group .mui-input-row {
+			    height: 62px;
+			}
+			.za-input-span-phone{
+				position: absolute;width: 13px;height: 19px;display: block;
+				background-image:url(/Static/images/v1.0/info/user/user_phone.png) ;
+				background-size: 100% 100% ;background-repeat:no-repeat ;
+				left: 15px;top: 33px;
+			}
+			.za-input-span-pass{
+				position: absolute;width: 13px;height: 15px;display: block;
+				background-image:url(/Static/images/v1.0/info/user/user_password.png) ;
+				background-size: 100% 100% ;background-repeat:no-repeat ;
+				left: 15px;top: 35px;
+			}
+			.mui-input-row label {
+			    width: 10%;
+			    padding: 11px 15px;
+			}
+			.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea {
+			    width: 90%;margin-top: 22px;font-size: 14px;
+			}
+			.mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech {
+			    top: 34px;
+			}
+			.za-invalid-btn {
+			    padding: 0 5px 0 5px;
+			    height: 26px;
+			    position: absolute;
+			    font-size: 12px;
+			    color: #FD8237 ;
+			    right: 30px;
+			    top: 29px;
+			    display: inline-block;
+			    border: 0;
+			}
+			.za-unlogin-btn{
+				width: 3.45rem;height: 0.36rem;line-height: 0.36rem;text-align: center;
+				background: #FD8237 ;color: #fff;border-radius: 6px;font-size: 0.15rem;
+				position: absolute;margin:auto;left: 0;right: 0;top: 0;bottom: 0;
+			}	
+			.mui-input-group .mui-button-row {
+			    top: 25px;padding: 0 15px;
+			}
+			.za-error-info{
+				color: #FD8237 ;width: 100%;height: 19px;left: 15px;top: 0.05rem;position: relative;font-size: 12px;
+			}
+			.mui-btn-blue, .mui-btn-primary, input[type=submit] {
+			    width: 100%;height: 36px;text-align: center;
+				background: #FD8237 ;color: #fff;border-radius: 3px;font-size: 15px;
+				position: relative;margin:auto;left: 0;right: 0;top: 0;bottom: 0;
+				border: 0;
+			}
+			.za-a-footer-left{
+				float: left;margin-left: 15px;font-size: 15px;
+			}	
+			.za-a-footer-right{
+				float: right;margin-right: 15px;color: #FD8237 ;font-size: 15px;
+			}
+			#loginbtn:active{border: 0;}	
+		</style>
+	</head>
+	<body>
+		<div class="hc-h5-wrap">  
+			<header id="header" class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">用户登录</h1>
+			</header>			
+	        <div class="wraper">
+	        	<form class="mui-input-group">
+					<div class="mui-input-row">
+						<button id="code-btn" class="za-invalid-btn" type="button">获取验证码</button>
+						<label><span class="za-input-span-phone"></span></label>
+						<input id="input_phone" type="text" placeholder="请输入手机号" maxlength="11" onkeyup="value=value.replace(/[^\d]/g,'')" ng-pattern="/[^a-zA-Z]/">
+						
+					</div>
+					<div class="mui-input-row">
+						<label><span class="za-input-span-pass"></span></label>						
+						<input id="input_password"  class="mui-input-clear" type="text"  placeholder="请输入验证码" maxlength="10" onkeyup="value=value.replace(/[^\d]/g,'')" ng-pattern="/[^a-zA-Z]/">
+					</div>
+					<div class="za-error-info" id="errorinfo"></div>
+					<div class="mui-button-row">
+						<button id="loginbtn" class="mui-btn mui-btn-primary" type="button" >登录</button>&nbsp;&nbsp;
+					</div>					
+				</form>									
+	        </div>
+       </div>
+		<script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/zixun/mui.min.js?v=2581360193"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/user_util.js?v=2c498ee3f6"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/smsLogin.js?v=af08f5d12be21342423"></script>
+	</body>
+</html>

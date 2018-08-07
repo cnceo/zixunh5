@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	</head>
+	<link rel="stylesheet" href="swiper.css" />
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	html{
+		font-size: 625%;	
+		position: relative;	
+	}
+	.head{
+		height: 0.44rem;
+		width: 100%;
+		background-color: red;
+		position: fixed;
+		top: 0;	
+	}
+	.bottom{
+		height: 0.44rem;
+		width: 100%;
+		background-color: red;
+		position: fixed;
+		bottom: 0;
+	}
+	.contain{
+		height: 100%;
+		width: 100%;
+		margin-top: 0.44rem;
+		margin-bottom: 0.44rem;
+	}
+	li{
+		margin-bottom: 0.1rem;
+		display: block;
+		height: 0.44rem;
+		font-size: 0.15rem;
+		background-color: aqua;
+	}
+</style>
+	<body>
+		<div class="head">
+			
+		</div>
+		<div class="contain">
+			<ul>
+				<li>1</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li>1</li>
+				
+			</ul>
+		</div>
+		<div class="bottom">
+			
+		</div>
+		
+			
+	</body>
+
+</html>

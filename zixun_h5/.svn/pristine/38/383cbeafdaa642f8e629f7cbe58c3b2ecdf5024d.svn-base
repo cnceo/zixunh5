@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords"  content="">
+		<meta name="description" id="description" content="">
+		<title>开始答题</title>		
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/swiper.min.css?v=2334234fd" />
+		<script>		
+			(function(doc, win) {
+				var docEl = doc.documentElement, //根元素html
+					//判断窗口有没有orientationchange这个方法，有就赋值给一个变量，没有就返回resize方法。
+					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+					recalc = function() {
+						var clientWidth = docEl.clientWidth;
+						if(!clientWidth) return;
+						//把document的fontSize大小设置成跟窗口成一定比例的大小，从而实现响应式效果。
+						if(clientWidth >= 640) {
+							clientWidth = 640;
+						}
+						docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+					};
+				recalc();
+				
+				if(!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false); //addEventListener事件方法接受三个参数：第一个是事件名称比如点击事件onclick，第二个是要执行的函数，第三个是布尔值
+				doc.addEventListener('DOMContentLoaded', recalc, false) //绑定浏览器缩放与加载时间
+			})(document, window);
+		</script>
+		<style>
+			body{font-size: 14px;font-family: 'Helvetica Neue',Helvetica,sans-serif;}
+			*{margin: 0;padding: 0;} 
+			@font-face {
+				font-family:'LiHei';
+				src: url(/Static/css/v1.0/match/MFLiHei.otf);
+			}
+			/*body部分*/
+			.za-content-bg{
+				position: relative;
+				background-image: url(/Static/images/v1.0/match/ac_bg2.png?v=23423e34e2);
+				background-size: cover;
+				background-repeat: no-repeat;background-position: center;
+				display: block;
+				width: 100%;
+			}
+			.za-pormt{width: 100%;height: 100%;background: rgba(0,0,0,0.5);position: fixed;top: 0;display: none;z-index: 11;}
+			.rule-warp{
+				width:3.32rem;height:4.51rem;background:rgba(226,197,154,1);border-radius:4px;
+				margin-top: 0.76rem;position: relative;
+			}
+			.close{width: 0.25rem;height: 0.25rem;position: absolute;top: -0.1rem;right: -0.1rem;
+				background-image: url(/Static/images/v1.0/match/ac_close.png?v=23423e34e2);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+			.r-rbt{width: 1.725rem;height: 0.3rem;margin-top: 0.36rem;}
+			.rule-content{height: 3.16rem;padding: 0 0.145rem;overflow-y: auto;margin-top: 0.2rem;}
+			.rule-item{margin-bottom: 0.15rem;text-align: left;}
+			.rule-item .num{width: 16px;height: 16px;line-height: 16px;border-radius: 50%;background: #662F12;color: #fff;font-size: 12px;
+    			float: left;text-align: center;margin-right: 0.06rem;}
+    		.rule-item p{font-size: 0.12rem;color: #333;padding-left: 0.22rem;}
+    		.rule-content h4{font-size: 0.14rem;font-weight: bold;color: #FF5A00;text-align: left;margin-bottom: 0.03rem;}
+    		.cover{font-size: 0.12rem;color: #000;font-weight: bold;margin-top: 0.1rem;}
+    		.hb-warp{position: relative;width:2.275rem;height:2.995rem;margin-top: 1.855rem;background:rgba(226,197,154,1);
+				border-radius:4px;
+    		}
+    		.hb-warp p{width:1.91rem;height:0.3rem;font-size:0.12rem;color:rgba(0,0,0,1);line-height:0.18rem;margin-top: 0.1rem;margin-bottom: 0.25rem;}
+    		.hb-header{width: 1.77rem;height: 0.635rem;margin-top: -0.15rem;}
+    		.hb-code{width: 1.08rem;height: 1.08rem;}
+    		.duijiang{font-size: 15px;color: #000;margin-top: 0.15rem;line-height: 1;}
+    		.duijiang button{line-height: 1;padding: 0 5px;text-align: center;border-radius: 3px;margin-left: 6px;
+    		border: 1px solid rgba(255,90,0,1);font-size: 0.1rem;color: #FF5A00;background: transparent;}
+    		
+    		.lose-warp{position: relative;width:2.275rem;height:2.995rem;background:rgba(226,197,154,1);border-radius:4px;margin-top: 1.855rem;}
+    		.lose-header{width: 1.985rem;height: 1.42rem;margin-top: -0.67rem;}
+    		.lose-con{height:0.375rem;font-size:0.15rem;color:rgba(122,113,87,1);line-height:0.235rem;padding: 0 0.12rem;margin-top: 0.3rem;}
+    		.dt-btn{width: 1.79rem;height: 0.49rem;margin-top: 0.44rem;line-height: 0.49rem;
+				background-image: url(/Static/images/v1.0/match/ac_btn2.png?v=23423e34e2);
+				background-size: cover;
+				background-repeat: no-repeat;background-position: center;
+				font-family: 'LiHei';font-size: 0.18rem;color: #5C301B;display: inline-block;
+			}
+			.za-ss{width: 0.965rem;height: 0.33rem;margin-top: 0.38rem;}
+			.ss-p{font-size:0.15rem;color:rgba(219,32,19,1);line-height:0.235rem;letter-spacing: 1px;margin-top: 0.03rem;}
+			.ss-p strong{font-family: 'LiHei';font-size: 0.18rem;}
+			.ss-p2{font-size:0.12rem;color:rgba(219,32,19,1);line-height:0.235rem;}
+			
+			.lj-h{width: 1.62rem;height: 0.305rem;background-image: url(/Static/images/v1.0/match/ac_ljh.png?v=23423e34e2);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;position: relative;top: 0.17rem;
+				}
+			.lj-h p{color: #5C301B;font-size: 0.18rem;font-family: 'LiHei';line-height: 1;bottom: 0;position: absolute;
+    			text-align: center;width: 100%;}
+    		.lj-input{width:1.765rem;height:0.315rem;
+				background:rgba(255,255,255,1);border-radius:0.15rem;border: 0;
+    			margin-top: 0.5rem;padding-left: 0.15rem;box-sizing: border-box;
+    		}
+    		.lj-p{font-size: 0.12rem;color: #000;margin-top: 0.05rem;}
+    		.cj-h{display: flex;justify-content: center;margin-top: 0.2rem;}
+    		.cj-h img{display: inline-block;width: 0.25rem;height: 0.25rem;margin-right: 0.05rem;}
+    		.cj-h p{display: inline-block;font-size:0.15rem;color:rgba(219,32,19,1);line-height:0.235rem;}
+    		.cj-c{width:1.08rem;height: 1.08rem;background: #EB6337;border-radius: 50%;line-height: 1.08rem;display: flex;
+    			justify-content: center;align-items: center;margin-top: 0.28rem;border: 4px solid #F5C22C;}
+    		.cj-c p{font-family: 'LiHei';font-size: 0.28rem;color: #fff;line-height: 1.2;width: 70%;letter-spacing: 2px;}
+    		
+    		.title-warp{width: 3.04rem;height: 1.065rem;position: relative;top: 1rem;
+				background-image: url(/Static/images/v1.0/match/ac_dth.png?v=23423e34e2);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;}
+			.count{width: 0.58rem;height: 0.58rem;line-height: 0.58rem;text-align: center;border: 2px solid #FF5A00;margin-left: 1.21rem;
+			font-family: 'LiHei';font-size: 0.24rem;color: #DB2013;position: absolute;top: -0.25rem;background: #fff;border-radius: 50%;}
+			.question{color: #fff;font-size: 20px;font-weight: bold;line-height: 1.25;    
+			display: flex;justify-content: center;align-items: center;height: 1.065rem;padding: 0 0.1rem;padding-top: 7px;letter-spacing: 2px;
+		    }
+			.za-row{width:1.01rem;height:0.335rem;line-height: 0.365rem;text-align: center;
+			background:rgba(255,255,255,1);border-radius:0.3rem;
+			border: 1px solid #FF5A00;color: #000;font-size: 20px;font-weight: bold;position: absolute;
+    		bottom: -0.15rem;margin-left: 1.005rem;}
+    		.select-warp{position: relative;top: 1.56rem;}
+			.select-i{width:2.03rem;height:0.45rem;line-height:0.45rem;text-align: center;background:rgba(255,255,255,1);border-radius:0.225rem;
+			box-shadow:0px 1px 2px rgba(219,32,19,1);margin-bottom: 0.25rem;font-size: 0.18rem;color: #DB2013;}
+			.s-nots{background: #fff;color: #DB2013;}
+			.s-dos{background: #FF5A00;color: #fff;}
+			.s-right{background: #34C624;color: #fff;}
+    		.s-wrong{background: #E63830;color: #fff;}
+    		
+    		.swiper-container{height: 100%;width: 100%;}
+    		.swiper-slide {width: 100%;height: 100%;}
+    		.swiper-wrapper{width: 100%;height: 100%;}
+    		
+    		#cdown h1{font-family: 'LiHei';position: absolute;left: 0;right: 0;bottom: 0;top: 0;margin: auto;
+			    height: 50px;width: 150px;line-height: 50px;text-align: center;color: #DB2013;
+			    font-size: 50px;}
+			    
+    		.animation{
+				animation:mymove 3s linear;
+    			-webkit-animation:mymove 3s linear; /* Safari 和 Chrome */
+    			/*animation-iteration-count:infinite;
+				-webkit-animation-iteration-count:infinite;*/
+			}
+			/*@keyframes mymove{
+				0%{transform:rotateY(0deg);}
+				10%{transform:rotateY(-360deg);}
+				20%{transform:rotateY(0deg);}
+				30%{transform:rotateY(-360deg);}
+				40%{transform:rotateY(0deg);}
+				50%{transform: rotateY(-360deg);} 
+				60%{transform:rotateY(0deg);}
+				70%{transform:rotateY(-360deg);}
+				80%transform:rotateY(0deg);}
+				90%{transform:rotateY(-360deg);}	  
+				100%{transform: rotateY(0deg);} 			   			  
+			}*/
+			@keyframes mymove{
+				0%{transform:rotateY(0deg);}
+				15%{transform:rotateY(-360deg);}
+				30%{transform:rotateY(0deg);}
+				45%{transform:rotateY(-360deg);}
+				60%{transform:rotateY(0deg);}
+				80%{transform: rotateY(-360deg);} 
+				100%{transform:rotateY(0deg);}							   			  
+			} 
+			
+			.animation-todown{
+				animation:todown 0.12s linear;
+    			-webkit-animation:todown 0.12s linear;
+			}
+			@keyframes todown{
+				0%{transform: scale(0);}													
+				100%{transform: scale(1);}					   			  
+			} 
+			
+			.hide-class{
+				animation:hide-out 0.4s linear;
+    			-webkit-animation:hide-out 0.4s linear;
+    			visibility:hidden;
+			}
+			@keyframes hide-out{
+				0%{opacity: 1;}	
+				50%{opacity: 0.5;}	
+				0%{opacity: 0;visibility:hidden;}																	   			  
+			}
+		</style>
+		<style>
+			/*iPhone5 样式*/
+			@media only screen and (min-width: 320px) and (max-width: 320px) {
+				
+			}
+			/*iPhoneX 等全屏幕手机 样式*/
+			@media only screen and (min-width: 375px) and (min-height: 812px){
+		  		
+		    }
+		</style>
+	</head>
+	<body>		
+		<div class="za-content-bg">			
+			<!-- Swiper  swiper-no-swiping-->			
+			<div class="swiper-container swiper-no-swiping">
+			    <div class="swiper-wrapper" id="sw-question">
+		            <!--<div class="swiper-slide">		            	
+						<center>
+							<div class="title-warp">
+								<div class="count">10</div>
+								<p class="question">新中国厂里与那一年？</p>
+								<div class="za-row"><span>2</span>/<span>5</span></div>					
+							</div>
+							
+							<div class="select-warp">
+								<div asw='0' class="select-i">2017</div>
+								<div asw='0' class="select-i">21212</div>
+								<div asw='1' class="select-i">2545</div>
+								<div asw='0' class="select-i">456565</div>
+							</div>				
+						</center>							
+		            </div>
+		            <div class="swiper-slide">		            	
+						<center>
+							<div class="title-warp">
+								<div class="count">9</div>
+								<p class="question">新中国厂里与那一年？</p>
+								<div class="za-row"><span>2</span>/<span>5</span></div>					
+							</div>							
+							<div class="select-warp">
+								<div asw='0' class="select-i">2017</div>
+								<div asw='0' class="select-i">21212</div>
+								<div asw='1' class="select-i">2545</div>
+								<div asw='0' class="select-i">456565</div>
+							</div>				
+						</center>			
+		            </div>	            -->
+			    </div>
+			</div>			
+			<!--<center>
+				<div class="title-warp">
+					<div class="count">10</div>
+					<p class="question">新中国厂里与那一年？</p>
+					<div class="za-row"><span>2</span>/<span>5</span></div>					
+				</div>
+				
+				<div class="select-warp">
+					<div asw='0' class="select-i">2017</div>
+					<div asw='0' class="select-i">21212</div>
+					<div asw='1' class="select-i">2545</div>
+					<div asw='0' class="select-i">456565</div>
+				</div>				
+			</center>						-->
+		</div>
+		<!--挑战失败-->
+		<div class="za-pormt" id="p-lose">
+			<center>
+				<div class="lose-warp animation-todown">
+					<div id="c-lose" class="close"></div>
+					<img class="lose-header" src="/Static/images/v1.0/match/ac_lose.png" />
+					<p class="lose-con">分享公众号文章到朋友圈或微信群可获得复活机会</p>
+					<div id="btn-fh" class="dt-btn" style="margin-top: 0.79rem;">立即复活</div>
+				</div>
+			</center>						
+		</div>
+		<!--挑战成功抽奖-->
+		<div class="za-pormt" id="p-cj">
+			<center>
+				<div class="lose-warp animation-todown">
+					<div id='c-cj' class="close"></div>
+					<img class="lose-header" src="/Static/images/v1.0/match/ac_ss.png" />
+					<div class="cj-h">
+						<img src="/Static/images/v1.0/match/ac_ball.png" />
+						<p>获得一次抽奖机会</p>
+					</div>
+					<div class="cj-c" >
+						<p>点击抽奖</p>
+					</div>
+					<p class="ss-p2" style="font-size: 0.12rem;">中途退出，需重新进行答题挑战</p>
+				</div>
+			</center>						
+		</div>
+		<!--挑战成功-->
+		<div class="za-pormt" id="p-ss">
+			<center>
+				<div class="lose-warp animation-todown">
+					<div class="close" id="c-ss"></div>
+					<img class="lose-header" src="/Static/images/v1.0/match/ac_ss.png" />
+					<img class="za-ss" src="/Static/images/v1.0/match/ac_ss2.png" />
+					<p class="ss-p">获得<strong>10</strong>元七分彩红包</p>
+					<div class="dt-btn" id="btn-lq">点击领取</div>
+					<p class="ss-p2" style="font-size: 0.12rem;">中途退出，需重新进行答题挑战</p>
+				</div>
+			</center>						
+		</div>
+		<!--输入手机号领奖-->
+		<div class="za-pormt" id="p-lj">
+			<center>
+				<div class="lose-warp animation-todown">
+					<div class="close" id="c-lj"></div>
+					<div class="lj-h"><p>输入手机号</p></div>
+					<input class="lj-input" value="" oninput="if(value.length>11)value=value.slice(0,11)" onkeyup="value=value.replace(/[^\d]/g,'')" ng-pattern="/[^a-zA-Z]/" type="number">
+					<p class="lj-p">输入手机号，完成身份认证</p>
+					<div id="btn-lj" class="dt-btn" style="margin-top: 0.74rem;">点击领取</div>
+					<p class="ss-p2" style="font-size: 0.12rem;">中途退出，需重新进行答题挑战</p>
+				</div>
+			</center>						
+		</div>
+		<!--领取红包-->
+		<div class="za-pormt" id="p-hb">
+			<center>
+				<div class="hb-warp animation-todown">
+					<div class="close" id="c-hb"></div>
+					<img class="hb-header" src="/Static/images/v1.0/match/ac_hb.png" />
+					<p>扫描下面的二维码添加工作人员微信发送兑奖码领取红包</p>
+					<img class="hb-code" src="/Static/images/v1.0/match/ac_code.png" />
+					<div class="duijiang">兑奖码：<span id="dj-code"></span><button data-clipboard-action="copy" data-clipboard-target="#wechatid" id="copy_btn" type="button">复制</button></div>
+					<input id="wechatid" style="height: 0px;display: none;" value=""/>
+				</div>
+			</center>
+		</div>
+		<!--开始答题前的倒计时-->
+		<div class="za-pormt" id="cdown" style="display: none;background: rgba(0,0,0,1);z-index: 999;">
+			<h1></h1>
+		</div>
+		<script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+		<script type="text/javascript" src="/Static/lib/swiper/swiper-3.4.1.jquery.min.js"></script>
+		<script src="/Static/js/v1.0/match/at_dt.js?v=32442342sdsdd"></script>
+		<script>
+			var c_width = document.documentElement.clientWidth;
+			var bg_height = c_width*603/375;			
+			$(".za-content-bg").css("height",bg_height + "px")
+			//窗体宽度发生变化
+			window.onresize = function() {
+				//背景图片 比例 667*375  	要根据
+				c_width = document.documentElement.clientWidth;
+				bg_height = c_width*603/375;
+				$(".za-content-bg").css("height", bg_height+ "px")				
+			}												        
+			//选项 点击事件
+//			$('.select-warp .select-i').click(function(){
+//				var index = $(this).index();
+//				$('.select-warp .select-i').attr('class','select-i')
+//				$(this).addClass('s-dos')
+//				var asw = $(this).attr('asw')
+//				setTimeout(function(){					
+//					$('.select-warp .select-i').attr('class','select-i')
+//					if(asw == 1){					
+//						$('.select-warp .select-i').eq(index).addClass('s-right')
+//						setTimeout(function(){swiper.slideNext();},500)
+//					}else{
+//						$('.select-warp .select-i').eq(index).addClass('s-wrong')
+//						$('.select-warp .select-i').each(function(el,item){
+//							if($('.select-warp .select-i').eq(el).attr('asw') == '1'){
+//								$('.select-warp .select-i').eq(el).addClass('s-right')
+//							}
+//						})
+//					}					 
+//				},300)								
+//			})						
+		</script>
+	</body>
+</html>

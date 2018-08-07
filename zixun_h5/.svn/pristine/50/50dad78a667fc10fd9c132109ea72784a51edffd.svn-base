@@ -1,0 +1,771 @@
+html,body{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			overflow-scrolling: touch;
+    		-webkit-overflow-scrolling: touch;
+			}
+			.layui-m-layer {
+				background-color: black !important;
+			}
+			body {
+				/*overflow: auto;
+				overflow-scrolling: touch;
+				-webkit-overflow-scrolling: touch;*/
+				background: #fff !important;
+				font-family: "Source Han Sans CN","Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+				color: #1a1a1a;
+				font-size: 0.17rem;
+				letter-spacing: 1px;
+				box-sizing: border-box;
+                padding-bottom: 0.5rem;
+                padding-top: 0.44rem;
+			}
+			/*h5今日好彩详情样式适配*/
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			*,:after,:before {-webkit-box-sizing: border-box;box-sizing: border-box;}
+			.hc-h5-wrap{
+				overflow-y: auto;
+				position: relative;
+			}
+			header {
+				background: -webkit-linear-gradient(left,#FF1E00, #FFC100) !important; /* Safari 5.1 - 6.0 */
+				background: -o-linear-gradient(left,#FF1E00, #FFC100) !important; /* Opera 11.1 - 12.0 */
+				background: -moz-linear-gradient(left,#FF1E00, #FFC100) !important; /* Firefox 3.6 - 15 */
+				background: linear-gradient(left,#FF1E00, #FFC100) !important; /* 标准的语法 */
+				position: absolute !important;
+				top: 0;
+				z-index: 9999;
+				width: 100%;
+				height: 0.44rem;
+			}
+			
+			.header-title {
+				width: 0.92rem;
+				height: 100%;
+				background: url("/Static/images/v1.0/info/zixun/logo2.png") no-repeat center;
+				background-size: contain;
+				float: left;
+				height: 100%;
+			}
+			.header-left{
+				float: left;
+				height: 100%;
+			}
+			.header-right {
+				color: #fff;					
+				padding: 0.15rem;	
+				float: right; 
+				height: 100%;
+				width: 0.44rem;
+				position: relative;
+			}
+			.header-right a{
+				position:relative;
+				top: 0.07rem;
+				display: block;
+				width: 100%;
+				border-top: 0.02rem solid white;
+			}
+			.header-right a:nth-child(1){
+				top: 0.09rem;
+				transform: rotateZ(90deg);
+				-ms-transform:rotateZ(90deg); 	/* IE 9 */
+				-moz-transform:rotateZ(90deg); 	/* Firefox */
+				-webkit-transform:rotateZ(90deg); /* Safari 和 Chrome */
+				-o-transform:rotateZ(90deg); 
+			}
+			#nav_more_view{
+				width: 100%;
+				position: fixed;
+				top: 0.44rem;
+				z-index: 9999;
+				display: none;
+			}
+			.nav_more_top{
+				height: 0.44rem;
+				width: 100%;
+				background: #fff;
+			}
+			.nav_more_top p{
+				text-indent: 0.22rem;
+				margin: 0;
+				padding: 0.11rem 0px;
+				float: left;
+				font-size: 0.15rem;
+				color:#333;
+			}
+			.my-label-list {
+				background: white;
+				padding: 0.1rem;
+				height: auto;
+				box-shadow: 0 7px 12px rgba(95,40,17,0.3);
+				-webkit-box-shadow: 0 7px 12px rgba(95,40,17,0.3);
+			}
+			.my-label-list ul{
+			    /*display: flex;
+			    flex-direction: row;
+			    justify-content: flex-start;
+			    flex-wrap: wrap;*/
+			    overflow: hidden;
+			}
+			.my-label-list ul li{
+			    border: 0.01rem solid #D3D3D3;
+			    border-radius: 0.15rem;
+			    font-size: 0.15rem;
+			    text-align: center;
+			    margin-right: 0.05rem;
+			    margin-bottom: 0.15rem;
+			    width: 0.79rem;
+			    height: 0.29rem;
+			    line-height: 0.29rem;
+			    float: left;
+			}
+			.my-label-list ul li.tabSelected{
+				background-color: #FF6C00;		
+				border: none;		
+			}
+			.my-label-list ul li.tabSelected a{
+				color: white;
+			}
+			.my-label-list ul li:active a{
+				color: #FF6C00;
+			}
+			.za_footer_wrap {
+				width: 100%;
+				height: 0.49rem;
+				background: #FFF;
+				position: absolute !important;
+				bottom: 0;
+				border-top: 1px solid #d9d9d9;
+				z-index: 9999;
+				padding-top: 0.11rem;
+			}
+			
+			.za_footer_wrap .footer_item {
+				float: left;
+				width: 33.33%;
+				text-align: center;
+			}
+			
+			.za_footer_wrap .footer_item img {
+				height: 24px;
+				width: 25px;
+			}
+			
+			.footer_item span {
+				background: #FF6C00;
+				height: 15px;
+				min-width: 15px;
+				line-height: 15px;
+				padding: 0px 4px;
+				font-size: 10px;
+				position: absolute;
+				float: right;
+				border-radius: 10px;
+				z-index: 5;
+				color: #fff;
+				margin-left: 14px;
+				text-align: center;
+			}
+			#push-content a{
+				display: block;
+			}
+			.tipsSc{
+				    height: 0.4rem;
+				    width: 1.5rem;
+				    background: rgba(0,0,0,0.6);
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				    bottom: 0;
+				    right: 0;
+				    margin: auto;
+				    display: none;
+				    border-radius: 1.08rem;
+				    z-index: 999;
+				    line-height: 0.4rem;
+				    text-align: center;
+				    color: white;
+				    padding: 0 0.1rem;
+			}
+			
+			.tipsSc p{
+				width: 100%;
+			}
+			
+			
+		/*css的分界线*/
+			
+			.layui-m-layerchild{
+				background-color: transparent !important;
+				width: 100% !important;
+				height: 100% !important;
+			}
+			.layui-m-layercont{
+				padding: 0 !important;
+				height: 100% !important;
+			}
+			.layui-m-layermain .layui-m-layersection{
+				display: block !important; 
+				height: 100% !important;
+			}
+			.share{
+				 cursor:pointer
+			}
+			.wrap {
+				word-wrap : break-word;
+				overflow: hidden;				
+				/*height: 100%;*/
+				overflow-y: scroll;
+				padding-bottom: 0.20rem;
+			}
+			.wrap div{
+				padding: 0 0.1rem;
+
+			}
+			.title {
+				margin-top: 0.18rem;
+				width: 100%;
+				font-size: 0.23rem;
+				line-height: 0.32rem;
+				font-weight: bold;
+				letter-spacing: 1px;
+			}
+			.date {
+				display: block;
+				color: #828282;
+				font-size: 0.12rem;
+				line-height: 2;
+				margin: 0 0  0.06rem  0;
+				color: #000000;
+			}
+			.date .author{
+				margin-right: 0.15rem;
+			}
+			.content {
+				display: block;
+				padding-top: 0.19rem;
+				color: #000000 ;
+			}
+			.content p,
+			.content span{
+				font-size: 0.17rem;
+				line-height: 0.29rem;
+				/*text-align: justify;*/
+				color: #000000 ;
+			}
+			.content p {
+				margin-bottom:0.28rem !important;
+			}
+			.content img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+				box-sizing: border-box;
+				vertical-align: middle;
+				border:0;
+				margin-bottom: 0.28rem;
+			}
+			.content p span img{
+				display: inline-block;
+				margin-bottom:0
+			}
+			.content p img{
+				display: inline-block;
+				margin-bottom:0
+			}
+			.jumpUrl{
+				text-indent: 0;
+				box-sizing: border-box;
+				display: block;
+				margin: 0.28rem auto 0.10rem;
+				width: 2rem;
+				height: 0.50rem;
+				font-size: 0.17rem;
+				color: #fff;
+				text-align: center;
+				line-height: 0.30rem;
+				border-radius: 25px;
+				padding: 0.10rem;
+				background-color: #FF6C00;
+				text-decoration: none;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+
+			/*附注*/
+			.vice-content{
+				padding-top: 0.2rem;
+				margin-top: 0.15rem;
+			}
+			.vice-content:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+
+			/*阅读量*/
+			.readCount {
+				float: left;
+				height: 0.20rem;
+				line-height: 0.20rem;
+				display: inline-block;
+				margin: 0.025rem;
+				text-align: center;
+				font-size: 0.11rem;
+				color: #828282;
+				padding: 0 0.05rem;
+				border-radius: 6px;
+				padding: 0 !important;
+			}
+
+			/*分享*/
+			.share-content{
+				float: right;
+			}
+			.share-content>div{
+				width: 0.25rem;
+				height: 0.25rem;
+				float: left;
+				margin-left: 0.08rem;				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+			.share-content>div.weixin{
+				background-image: url("/Static/images/v1.0/info/zixun/weixin.png");
+			}
+			.share-content>div.weixinFriend{
+				background-image: url("/Static/images/v1.0/info/zixun/weixinFriend.png");
+			}
+			.share-content>div.QQ{
+				background-image: url("/Static/images/v1.0/info/zixun/QQ.png");
+			}
+			.share-content>div.sinaWeibo{
+				background-image: url("/Static/images/v1.0/info/zixun/sinaWeibo.png");
+			}
+
+			/*广告图*/
+			.ad{
+				margin: .2rem 0;
+				display: block;
+				width: 100%;
+				max-height: 1.35rem;
+				overflow: hidden;
+				border-radius: 3px;
+			}
+
+			/*相关推荐*/
+			#push-wrap{
+				display: none;
+				/*padding-bottom: 0.49rem;*/
+				border-top: 0.05rem solid #edeff3;
+			}
+			.push-wrap{
+				width: 100%;
+				text-align: center;
+			}
+			.push-title{
+				margin-top: 0.12rem;
+				font-size: 0.18rem;
+				font-weight: 900;
+				margin-bottom: 0.12rem;
+				overflow: hidden;
+				padding: 0.01rem 0.10rem;
+			}
+			.push-title span{
+				display: block;
+				float: left;
+			}
+			.push-title span:nth-child(1){
+				height: 0.15rem;
+    		    width: 0.03rem;
+    			margin-top: 0.06rem;
+   				margin-right: 0.05rem;
+   				background: -webkit-linear-gradient(left,#FF1E00, #FFC100) !important; /* Safari 5.1 - 6.0 */
+				background: -o-linear-gradient(left,#FF1E00, #FFC100) !important; /* Opera 11.1 - 12.0 */
+				background: -moz-linear-gradient(left,#FF1E00, #FFC100) !important; /* Firefox 3.6 - 15 */
+				background: linear-gradient(left,#FF1E00, #FFC100) !important; /* 标准的语法 */
+			}
+			.hr{
+				width: 98%;
+				height: 1px;
+				margin: auto;
+				background-color: #eee
+			}
+			.item {
+			    width: 100%;
+			    padding: 0.09rem 0.10rem;
+			    /*border-bottom: 1px solid #f0f0f2;*/
+			}
+			.item_con {
+			    height: 0.75rem;
+			    width: 100%;
+			}
+			.s_back_content {
+			    width: 29.58%;
+			    height: 100%;
+			    float: left;
+			    border-radius: 3px;
+			}
+			.item_text {
+			    float: left;
+			    width: 70.42%;
+			    height: 100%;
+			    padding-left: 0.12rem;
+			    position: relative;
+			    text-align: left;
+			}
+			.item.c_af .item_title {
+			    color: #afafaf;
+			}
+			.item_title {
+			    font-size: 0.17rem;
+			    height: 0.50rem;
+			    line-height: 0.25rem;
+			    color: #1a1a1a;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 2;
+			    -webkit-box-orient: vertical;
+			}
+			.empty_p {
+			    height: 0.10rem;
+			}
+			.wrap_tag {
+			    width: 100%;
+			    height: 0.15rem;
+			    line-height: 0.15rem;
+			}
+			.wrap_tag span {
+			    display: inline-block;
+			    text-align: center;
+			    height: 0.15rem;
+			    line-height: 0.15rem;
+			    font-size: 0.11rem;
+			    float: left;
+			}
+			.redTag {
+				color: #828282;
+				float: right;
+			}
+			.redTag span:nth-child(1){
+				margin-right: 0.05rem;
+				width: 0.19rem;
+				height: 0.11rem;
+				background: url("/Static/images/v1.0/info/zixun/readNum.png");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				display: inline-block;
+				position: relative;
+				top: 0.02rem;
+			}
+			.zdTag {
+			    width: 0.31rem;
+			    margin-left: 0.07rem;
+			    background-color: #4580d8;
+			    color: #f3f7fc;
+			    border-radius: 2px;
+			}
+
+			.more-jump{
+				display: block;
+				width: 100%;
+				font-size: .12rem;
+				line-height: 0.6rem;
+				outline: none;
+				position: relative;
+				letter-spacing: 0;
+			}
+			.iation-name{
+				color:#FD8237 !important;			
+			}
+			.more-jump>a{
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0
+			}
+
+
+			@media screen and (min-width: 0px){html{font-size: 85.333px;}}
+			@media screen and (min-width: 320px){html{font-size: 85.333px;}}
+			@media screen and (min-width: 360px){html{font-size: 100px;}} 
+			@media screen and (min-width: 374px){html{font-size: 100px;}}
+			@media screen and (min-width: 400px){html{font-size: 106.667px;}}
+			@media screen and (min-width: 413px){html{font-size: 110.4px;}}
+			@media screen and (min-width: 426px){html{font-size: 113.6px;}}
+			@media screen and (min-width: 450px){html{font-size: 120px;}}
+			@media screen and (min-width: 480px){html{font-size: 128px;}}
+			@media screen and (min-width: 540px){html{font-size: 144px;}}
+			@media screen and (min-width: 590px){html{font-size: 157.33px;}}
+			@media screen and (min-width: 600px){html{font-size: 160px;}}
+			@media screen and (min-width: 640px){html{font-size: 170.667px;}}
+		/*幻灯片播放图片 css*/
+		.swiper-container {
+		    margin-left: auto;
+		    margin-right: auto;
+		    position: relative;
+		    overflow: hidden;
+		    z-index: 1;
+		    height: 100%;
+		}
+		.swiper-container-android .swiper-slide, .swiper-wrapper {
+		    -webkit-transform: translate3d(0,0,0);
+		    -moz-transform: translate3d(0,0,0);
+		    -o-transform: translate(0,0);
+		    -ms-transform: translate3d(0,0,0);
+		    transform: translate3d(0,0,0);
+		}
+		.swiper-wrapper {
+		    position: relative;
+		    width: 100%;
+		    height: 100%;
+		    z-index: 1;
+		    display: -webkit-box;
+		    display: -moz-box;
+		    display: -ms-flexbox;
+		    display: -webkit-flex;
+		    display: flex;
+		    -webkit-transition-property: -webkit-transform;
+		    -moz-transition-property: -moz-transform;
+		    -o-transition-property: -o-transform;
+		    -ms-transition-property: -ms-transform;
+		    transition-property: transform;
+		    -webkit-box-sizing: content-box;
+		    -moz-box-sizing: content-box;
+		    box-sizing: content-box;
+		    -webkit-align-items: center;
+			align-items: center;
+		}
+		.swiper-slide {
+		    -webkit-flex-shrink: 0;
+		    -ms-flex: 0 0 auto;
+		    flex-shrink: 0;
+		    width: 100%;
+		    position: relative;
+		}
+		.swiper-container-horizontal > .swiper-scrollbar {
+		    position: absolute;
+		    left: 1%;
+		    bottom: 3px;
+		    z-index: 50;
+		    height: 5px;
+		    width: 98%;
+		}
+		.image-check{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			/*min-height: */
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			overflow: hidden;
+			background-color: rgb(0,0,0);
+			z-index: 19941116
+		}
+		.image-content{
+			width: 100%;
+			/*min-height: 50%;*/
+			height: 100%;
+			text-align: center;
+		}
+		.swiper-pagination{
+			position: absolute;
+			font-size: 20px;
+			line-height: 1;
+			bottom: 22px;
+			left: 15px;
+			color: #fff;
+			z-index: 66;
+			
+		}
+		.swiper-pagination-current{
+			font-size: 30px;
+			line-height: 0.8;
+			display: inline-block;
+			vertical-align: bottom;
+			/*font-weight: 600;*/
+		}
+		.swiper-pagination-total{
+			display: inline-block;
+			vertical-align: bottom;
+			line-height: 0.8;
+			font-weight: 200;
+		}
+		.swiper-pagination-dis{
+			display: inline-block;
+			vertical-align: bottom;
+			font-weight: 100
+		}
+		/*zsscode*/
+			.main-comment-list{
+				padding-left: 0;
+			}
+			.lincoapp-comment .main-comment-list li {
+			    background: #fff;list-style: none;
+			    padding: 10px 0;padding-bottom: 20px;
+			    background: #fff;
+			    margin-bottom: 20px;
+			    list-style: none;
+			    /*border-bottom: solid 1px #e5e5e5;*/
+			    border-top: solid 1px #e5e5e5;
+			    height: 116px;
+			}
+			.lincoapp-comment .main-comment-list li:last-child{
+				/*margin: 9px 0;*/
+			}
+			.lincoapp-comment .main-comment-list .u-img {
+			    display: block;
+			    float: left;
+			    width: 37px;
+			    height: 37px;
+			    margin-right: 6px;
+			}
+			.lincoapp-comment .main-comment-list .img {
+			    width: 100%;
+			    height: 100%;
+			    border-radius: 50%;
+			    -webkit-border-radius: 50%;
+			}
+			.lincoapp-comment .main-comment-list .detail {
+			    overflow: hidden;
+			    font-size: 14px;
+			    color: #333;
+			}
+			.lincoapp-comment .main-comment-list .cmt-name-wrap {
+			    position: relative;
+			    font-size: 10px;
+			    color: #888;
+			}
+			.lincoapp-comment .main-comment-list .cmt-name {
+			    display: block;
+			    -webkit-box-flex: 1;
+			    margin-bottom: -2px;
+			    font-weight: 400;
+			    font-size: 14px;
+			    color: #333;margin-top: 9px;
+			}
+			.lincoapp-comment .main-comment-list .cmt-title {
+			    position: relative;
+			    display: box;
+			    display: -webkit-box;
+			    padding-right: .3rem;
+			    font-size: 10px;
+			    color: #888;
+			}
+			.lincoapp-comment .main-comment-list .cmt-title time, .lincoapp-comment .main-comment-list .cmt-title span {
+			    margin-right: 0px;font-size: 10px;font-family: "PingFangSC-Regular";
+			    position: absolute;right: 0;top: -16px;
+			}			
+			.lincoapp-comment .main-comment-list .cmt-title .btn-report {
+			    position: absolute;
+			    right: 0;
+			    top: 0;
+			    color: #666;
+			}
+			.lincoapp-comment .main-comment-list .cmt-title .btn-report-2 {
+			    position: absolute;
+			    right: 0;
+			    top: 0;
+			    color: #666;
+			}
+			.lincoapp-comment .main-comment-list .cmt-content {
+			    margin: 3px 0;margin-top: 10px;
+			    line-height: 1.5;
+			    font-size: 12px;height: 35px;
+			    color: #333;font-family: "PingFangSC-Regular";
+			    display: -webkit-box;
+			    overflow: hidden;
+			
+			    white-space: normal !important;
+			    text-overflow: ellipsis;
+			    word-wrap: break-word;
+			
+			    -webkit-line-clamp: 2;
+			    -webkit-box-orient: vertical;
+			}
+			.lincoapp-comment .main-comment-list .cmt-bar {
+			    text-align: right;margin-bottom: 15px;font-family: "PingFangSC-Regular";
+			}
+			.lincoapp-comment .main-comment-list .cmt-btn2 {
+			    display: inline-block;
+			    color: #333;
+			    font-size: 12px;margin-right: 15px;
+			}
+			.lincoapp-comment .main-comment-list .cmt-btn2:before {
+			    content: '';
+			    display: inline-block;
+			    width: 17px;
+			    height: 17px;
+			    background: url("/Static/images/v1.0/info/user/icon_reply.png") no-repeat;
+			    -webkit-background-size: 1.5rem auto;
+			    background-size: 100% auto;
+			    margin-right: 4px;
+			    vertical-align: -5px;
+			}
+			.lincoapp-comment .main-comment-list .btn-report:before {
+			    content: '';
+			    display: inline-block;
+			    width: 17px;
+			    height: 17px;
+			    background: url("/Static/images/v1.0/info/user/icon_unzan.png") no-repeat;
+			    -webkit-background-size: 100% auto;
+			    background-size: 100% auto;
+			    vertical-align: -3px;
+			}
+			.lincoapp-comment .main-comment-list .btn-report-2:before {
+			    content: '';
+			    display: inline-block;
+			    width: 17px;
+			    height: 17px;
+			    background: url("/Static/images/v1.0/info/user/icon_dozan.png") no-repeat;
+			    -webkit-background-size: 100% auto;
+			    background-size: 100% auto;
+			    vertical-align: -3px;
+			}
+			/*//轮播*/
+			.swiper-pagination {
+			    position: absolute;
+			    text-align: center;
+			    -webkit-transition: .3s;
+			    -moz-transition: .3s;
+			    -o-transition: .3s;
+			    transition: .3s;
+			    -webkit-transform: translate3d(0,0,0);
+			    -ms-transform: translate3d(0,0,0);
+			    -o-transform: translate3d(0,0,0);
+			    transform: translate3d(0,0,0);
+			    z-index: 10;
+			}
+			.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+			    bottom: 20px;
+			    left: 0;
+			    width: 100%;text-align: center;
+			}
+			.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+			    margin: 0 5px;
+			}
+			.swiper-pagination-bullet {
+			    width: 4px;
+			    height: 4px;
+			    display: inline-block;
+			    border-radius: 100%;
+			    background: #000;
+			    opacity: .2;
+			}
+			.swiper-pagination-bullet-active {
+			    opacity: 1;
+			    background: #007aff;
+			}

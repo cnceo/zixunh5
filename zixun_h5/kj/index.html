@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+		<meta http-equiv="Expires" content="0">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>开奖-今日好彩 彩票新媒体资讯平台</title>
+		<meta name="baidu-site-verification" content="Y2sKmjbpfp" />
+		<meta name="keywords" content="开奖 中奖">
+		<meta name="description" content="第一时间掌握开奖信息，助您早日中奖">
+		<!--<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>-->
+		<link rel="stylesheet" href="/Static/css/v1.0/info/draw/award.css?v=d2dbe65878" />
+		<link rel="stylesheet" type="text/css" href="/Static/css/v1.0/common/reset.css?v=ed0ec998e66" />
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/zixun.css?v=5288ab0b49" />
+		<link rel="shortcut icon" href="/Static/images/v1.0/favicon.ico">
+	</head>
+	<style>
+		.TabClass.am-nav {
+			top: 0.44rem;
+			height: 2rem;
+		}
+		
+		.TabClass.am-g {
+			padding-top: 0rem;
+		}
+	</style>
+
+	<body class="am-bg-ff">
+		<!--id="kaijiang"-->
+		<div id="zixun" class="hc-h5-wrap">
+			<header id="header" class="back_gradient">
+				<div class="header-left">
+
+				</div>
+				<div class="header-right">
+				</div>
+				<div class="header-title"></div>
+			</header>
+			<!--tab切换-->
+			<div class="tab_wrap TabClass" id="tab_wrap">
+				<div class="tab hc-cf">
+					<div class="ul_wrap">
+					
+						<!--#include virtual="/includes/common/navbar.shtml"-->
+
+					</div>
+					<div class="extent" v-on:click="tabShowHide">
+						<div class="extent_icon"></div>
+					</div>
+				</div>
+			</div>
+			<!--隐藏的切换栏目-->
+			<div v-show="hideTab" class="TabClass am-g am-nav am-animation-slide-top  am-padding-horizontal-0 am-padding-vertical-xs am-bg-ff">
+				<div class="change_lanmu hc-cf">
+					<span class="hc-fl" style="font-size: 0.15rem;font-weight: bold;">切换栏目</span>
+					<div class="div_fr hc-fr">
+						<span class=" cancle" v-on:click="tabShowHide"></span>
+					</div>
+				</div>
+				<ul class="TabClass am-g am-nav-normal am_ul hc-cf">
+					<li v-for="item in columnInfo" v-bind:class="{selected:item.choiced}" v-bind:columnid="item.columnid"><span>{{item.columnname}}</span></li>
+				</ul>
+			</div>
+			<div class="am-g" style="padding-top:0;padding-bottom: 1.15rem;">
+				<div class="kj_content">
+					<ul class="am-text-hc">
+						<!-- 双色球 -->
+						<li class="kj_ssq kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">双色球</label>
+									<label class="kj_qihao">第<hc name="ssq_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="ssq_date"></hc>
+                                </label>
+									<label class="kj_week">(<hc name="ssq_week"></hc>)</label>
+								</div>
+								<div class="kj_item ssq_item">
+									<span class="am-lott-ball am-lott-ball-red">-</span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-blue"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!-- 大乐透 -->
+						<li class="kj_dlt kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">大乐透</label>
+									<label class="kj_qihao">第<hc name="dlt_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="dlt_date"></hc>
+                                </label>
+									<label class="kj_week">(<hc name="dlt_week"></hc>)</label>
+								</div>
+								<div class="kj_item dlt_item">
+									<span class="am-lott-ball am-lott-ball-red">-</span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-blue"></span>
+									<span class="am-lott-ball am-lott-ball-blue"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!--福彩3D-->
+						<li class="kj_fc3d kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">福彩3D</label>
+									<label class="kj_qihao">第<hc name="fc3d_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="fc3d_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item fc3d_item">
+									<span class="am-lott-ball am-lott-ball-red">-</span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-padding-left-sm am-text-hc-sm">试机号：<strong><hc name="fc3d_sjh"></hc></strong></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!--排列3-->
+						<li class="kj_pl3 kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">排列3</label>
+									<label class="kj_qihao">第<hc name="pl3_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="pl3_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item pl3_item">
+									<span class="am-lott-ball am-lott-ball-red">-</span>
+									<span class="am-lott-ball am-lott-ball-red">-</span>
+									<span class="am-lott-ball am-lott-ball-red">-</span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!-- 竞彩足球 -->
+						<li class="kj_jczq kj-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">竞彩足球</label>
+									<label class="kj_date">
+                                    <hc name="jczq_date"></hc>
+                                </label>
+									<label class="kj_week">(<hc name="jczq_week"></hc>)</label>
+								</div>
+								<div class="kj_item jczq_item">
+									<div class="jczq_dt">
+										<label>
+                                        <hc name="jczq_host"></hc>
+                                    </label>
+										<label class="jczq_bf">
+                                        <hc name="jczq_bf"></hc>
+                                    </label>
+										<label>
+                                        <hc name="jczq_guest"></hc>
+                                    </label>
+									</div>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!-- 竞彩篮球 -->
+						<li class="kj_jclq kj-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">竞彩篮球</label>
+									<label class="kj_date">
+                                    <hc name="jclq_date"></hc>
+                                </label>
+									<label class="kj_week">(<hc name="jclq_week"></hc>)</label>
+								</div>
+								<div class="kj_item jclq_item">
+									<div class="jclq_dt">
+										<label>
+                                        <hc name="jclq_host"></hc>
+                                    </label>
+										<label class="jclq_bf">
+                                        <hc name="jclq_bf"></hc>
+                                    </label>
+										<label>
+                                        <hc name="jclq_guest"></hc>
+                                    </label>
+									</div>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+
+						<!-- 北京单场 -->
+						<li class="kj_zqdc kj-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">北京单场</label>
+									<label class="kj_date">
+                                    <hc name="zqdc_date"></hc>
+                                </label>
+									<label class="kj_week">(<hc name="zqdc_week"></hc>)</label>
+								</div>
+								<div class="kj_item zqdc_item">
+									<div class="zqdc_dt">
+										<label>
+                                        <hc name="zqdc_host"></hc>
+                                    </label>
+										<label class="zqdc_bf">
+                                        <hc name="zqdc_bf"></hc>
+                                    </label>
+										<label>
+                                        <hc name="zqdc_guest"></hc>
+                                    </label>
+									</div>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!-- 胜负彩 -->
+						<li class="kj_sfc kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title" style="margin-bottom:0.1rem">
+									<label class="kj_name">胜负彩/任选9场</label>
+									<label class="kj_qihao">第<hc name="sfc_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="sfc_date"></hc>
+                                </label>
+									<label class="kj_week">(<hc name="sfc_week"></hc>)</label>
+								</div>
+								<div class="kj_item sfc_item">
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+									<span class="am-lott-ball-green"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+
+						<!--排列5-->
+						<li class="kj_pl5 kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">排列5</label>
+									<label class="kj_qihao">第<hc name="pl5_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="pl5_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item pl5_item">
+									<span class="am-lott-ball am-lott-ball-red">-</span>
+									<span class="am-lott-ball am-lott-ball-red">-</span>
+									<span class="am-lott-ball am-lott-ball-red">-</span>
+									<span class="am-lott-ball am-lott-ball-red">-</span>
+									<span class="am-lott-ball am-lott-ball-red">-</span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!-- 七乐彩 -->
+						<li class="kj_qlc kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">七乐彩</label>
+									<label class="kj_qihao">第<hc name="qlc_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="qlc_date"></hc>
+                                </label>
+									<label class="kj_week">(<hc name="qlc_week"></hc>)</label>
+								</div>
+								<div class="kj_item qlc_item">
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-blue"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!-- 七星彩 -->
+						<li class="kj_qxc kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">七星彩</label>
+									<label class="kj_qihao">第<hc name="qxc_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="qxc_date"></hc>
+                                </label>
+									<label class="kj_week">(<hc name="qxc_week"></hc>)</label>
+								</div>
+								<div class="kj_item qxc_item">
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!--新11选5-->
+						<li class="kj_xj11x5 kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">新11选5</label>
+									<label class="kj_qihao">第<hc name="xj11x5_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="xj11x5_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item xj11x5_item">
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!--粤11选5-->
+						<li class="kj_gd11x5 kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">粤11选5</label>
+									<label class="kj_qihao">第<hc name="gd11x5_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="gd11x5_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item gd11x5_item">
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!--鲁11选5-->
+						<li class="kj_sd11x5 kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">鲁11选5</label>
+									<label class="kj_qihao">第<hc name="sd11x5_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="sd11x5_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item sd11x5_item">
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!--陕西11选5-->
+						<li class="kj_sx11x5 kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">陕11选5</label>
+									<label class="kj_qihao">第<hc name="sx11x5_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="sx11x5_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item sx11x5_item">
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!--青海11选5-->
+						<li class="kj_qh11x5 kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">青11选5</label>
+									<label class="kj_qihao">第<hc name="qh11x5_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="qh11x5_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item qh11x5_item">
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!--广西11选5-->
+						<li class="kj_gx11x5 kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">桂11选5</label>
+									<label class="kj_qihao">第<hc name="gx11x5_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="gx11x5_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item gx11x5_item">
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!--江西11选5-->
+						<li class="kj_jx11x5 kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">赣11选5</label>
+									<label class="kj_qihao">第<hc name="jx11x5_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="jx11x5_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item jx11x5_item">
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!--广西快3-->
+						<li class="kj_gxk3 kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">桂快3</label>
+									<label class="kj_qihao">第<hc name="gxk3_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="gxk3_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item gxk3_item clearfix">
+									<div>
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<span class="am-padding-left-sm am-text-hc-sm">和值：<strong><hc name="gxk3_sjh"></hc></strong></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!--赣快3-->
+						<li class="kj_jxk3 kj-digit-ball clearfix">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">赣快3</label>
+									<label class="kj_qihao">第<hc name="jxk3_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="jxk3_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item jxk3_item clearfix">
+									<div>
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<span class="am-padding-left-sm am-text-hc-sm">和值：<strong><hc name="jxk3_sjh"></hc></strong></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+						<!--广西快乐10分-->
+						<li class="kj_gxklsf kj-digit-ball clearfix ">
+							<div class='am-arrow-left'>
+								<div class="kj_title">
+									<label class="kj_name">桂快乐十分</label>
+									<label class="kj_qihao">第<hc name="gxklsf_qihao"></hc>期</label>
+									<label class="kj_date">
+                                    <hc name="gxklsf_date"></hc>
+                                </label>
+								</div>
+								<div class="kj_item gxklsf_item">
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+									<span class="am-lott-ball am-lott-ball-red"></span>
+								</div>
+							</div>
+							<div class='am-arrow-right'>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--数据未渲染前的提示-->
+			<div class="loading" v-show="loading">
+				<div class="loading_bar"></div>
+				<div class="loading_ball"></div>
+				<div class="shuju">数据加载中...</div>
+			</div>
+
+		</div>
+		<div class="footer_wrap hc-cf">
+			<div class="footer_item go_index">
+				<div class="_img"></div>
+				<div class="_text">首页</div>
+			</div>
+			<div class="footer_item go_live">
+				<div class="_img"></div>
+				<div class="_text">直播</div>
+			</div>
+			<div class="footer_item go_my">
+				<div class="_img"></div>
+				<div class="_text">我的</div>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="/Static/lib/vue.min.js?v=2142342ewtwfv"></script>
+	<!--<script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>-->
+	<script type='text/javascript' src='/Static/js/v1.0/common/all.min.js?v=195a55cb47'></script>
+	<script type='text/javascript' src='/Static/js/v1.0/config.js?v=bc1c63e491'></script>
+	<!--<script type='text/javascript' src='/Static/lib/tools/layer.js?v=ae540cbe1b'></script>-->
+	<script type="text/javascript" src="/Static/js/v1.0/info/zixun/zixun.js?v=e907a0bd2223423r2"></script>
+	<script type="text/javascript" src="/Static/js/v1.0/info/draw/award.js?v=5a93143537"></script>
+	<!--<script src="/Static/js/v1.0/zstat.js?v=71f9d79a7a"></script>-->
+
+</html>

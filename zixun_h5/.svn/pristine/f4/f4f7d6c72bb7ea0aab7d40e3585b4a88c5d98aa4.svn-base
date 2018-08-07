@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+		<meta http-equiv="Expires" content="0">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>开奖信息-七乐彩</title>
+		<!--<script type="text/javascript" src="	
+https:/Static/js/v1.0/	
+common/allcss.js?t_20170214"></script>-->
+<link rel="stylesheet" type="text/css" href="/Static/css/v1.0/common/reset.css?v=ed0ec998e66" />
+		<link rel="stylesheet" href="	
+https:/Static/css/v1.0/info/draw/awardDetail/qlc.css?v=c37dbaa28f" />
+<link rel="stylesheet" href="/Static/css/v1.0/info/draw/awardDetail/awardDetail.css?v=d2dbe65878" />
+		
+	</head>
+
+	<body class="bg_f4" style="background-color: #f4f4f4;">
+		<div id="qlc_detail" class="hc-h5-wrap">
+			<header>
+				<div class="header-left"><span class="hc-block back" onclick="javascript:history.back(-1);"></span></div>
+				<div class="header-title">七乐彩开奖详情</div>
+				<div class="header-right hc-cf"></div>
+			</header>
+			<div class="wraper no_padding_wraper">
+				<div class="qlc_header">
+					<div class="ssq_kjx_top">
+						<p>
+							<span class='issue'>第<hc name="issue"></hc>期</span>
+							<span class='date'><hc name="qlcdate"></hc></span>
+						</p>
+						<div class='qlc_item'></div>
+					</div>
+					<div class="xlgc">
+						<div class="qlc_xl">
+							<span>本期销量（元）</span>
+							<span class="qlc_money"><hc name="sales"></hc></span>
+						</div>
+						<div class="qlc_gc">
+							<span>奖池滚存（元）</span>
+							<span class="qlc_money"><hc name="prizePool"></hc></span>
+						</div>
+					</div>
+				</div>
+				<div class="qlc_detail_content">
+					<table>
+						<tr>
+							<td class="title">奖项</td>
+							<td class="title">中奖注数</td>
+							<td class="title">每注奖金（元）</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<footer class="hide">
+				<div class="footer_btn">
+					<button class="btn_red">七乐彩投注</button>
+				</div>
+			</footer>
+		</div>
+	<!--<script type="text/javascript" src="	
+https:/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>	-->
+<script type='text/javascript' src='/Static/js/v1.0/common/all.min.js?v=195a55cb47'></script>
+		<script type='text/javascript' src='/Static/js/v1.0/config.js?v=bc1c63e491'></script>
+		<!--<script type='text/javascript' src='/Static/lib/tools/layer.js?v=ae540cbe1b'></script>-->
+<script type='text/javascript' src='https:/Static/js/v1.0/h5config.js?v=acd9a87cc0'></script>;
+	<script type="text/javascript" src="	
+https:/Static/js/v1.0/info/draw/awardDetail/qlc_detail.js?v=548fb2eb75"></script>
+	<script src="	
+https:/Static/js/v1.0/award_common.js?v=296d1b0c8b"></script>	
+	<!--<script src="	
+https:/Static/js/v1.0/zstat.js?v=71f9d79a7a"></script>-->
+	</body>
+
+</html>

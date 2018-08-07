@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+		<meta http-equiv="Expires" content="0">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>设置</title>
+		<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/mui.min.css?v=4375b1e6e6" />
+		<link rel="stylesheet" href="/Static/css/v1.0/info/user/mui.picker.css?v=d4e0f60194" />
+		<link rel="stylesheet" href="/Static/css/v1.0/info/user/mui.poppicker.css?v=8986825478" />
+		<link rel="stylesheet" href="/Static/css/v1.0/info/user/mui.picker.min.css?v=97fa75454d" />
+		<!--<script type="text/javascript" src="/Static/js/v1.0/common/allcss.js?v=c2927691a6"></script>-->
+		<link rel="stylesheet" href="/Static/css/v1.0/common/reset.css?v=ed0ec998e6" />
+    	<link rel="stylesheet" href="/Static/css/v1.0/info/zixun/zixun.css?v=5288ab0b49" />
+		<style>
+			.hc-h5-wrap>header {
+			    height: 44px;
+			    line-height: 44px;
+			}
+			.hc-h5-wrap {
+			    padding-top: 44px;
+			}
+			.mui-bar .mui-btn-link {
+			    font-size: 12px;
+			    color: #fff;
+			}
+			.mui-icon-back:before, .mui-icon-left-nav:before {
+			    color: #fff;
+			}
+			.mui-bar-nav.mui-bar .mui-icon {
+			    margin-right: -10px;
+			    margin-left: -10px;
+			    padding-right: 10px;
+			    padding-left: 10px;
+			}
+			.mui-bar .mui-icon {
+			    font-size: 24px;
+			    padding-top: 10px;
+			    padding-bottom: 10px;
+			}
+			.mui-bar .mui-title {
+			    right: 40px;
+			    left: 40px;
+			}
+			.mui-title {
+			    font-size: 15px;
+			    line-height: 44px;
+			    margin: 0 -10px;
+			    color: #fff;
+			}
+			.wraper{padding-top: 0;background: #edeff3;}
+			.mui-table-view:before, .mui-table-view:after{height: 0;}
+			.mui-table-view-cell:after {
+			    left: 0;
+			    background-color: #E5E5E5;
+			}
+			.mui-table-view-cell {
+			    padding: 11px 15px;
+			    height: 44px;
+			}
+			.mui-navigate-right img{margin-top: -5px;margin-right: 5px;}
+			.mui-table-view-cell>a:not(.mui-btn) {
+			    font-size: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="hc-h5-wrap">  
+			<header id="header" class="mui-bar mui-bar-nav back_gradient">			
+				<h1 class="mui-title">设置</h1>
+				<button id="goback" class="mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span></button>				
+			</header>
+	        <div class="wraper">
+	        	<ul class="mui-table-view">
+					<li id="msg" class="mui-table-view-cell">
+		                <a class="mui-navigate-right"> 
+		                    <!--<img style="width: 18px;height: 14px;" src="/Static/images/v1.0/info/user/user_massage.png" />-->
+		                    	修改密码
+		                </a>
+		            </li>
+		            <li id="collection" class="mui-table-view-cell">
+		                <a class="mui-navigate-right">
+		                    <!--<img style="width: 18px;height: 17px;" src="/Static/images/v1.0/info/user/user_collection.png" />-->
+		                    	关于今日好彩
+		                </a>
+		            </li>		           
+				</ul>				
+	        </div>
+       </div>
+		<script type="text/javascript" src="/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+		<script type="text/javascript" src="/Static/js/v1.0/info/zixun/mui.min.js?v=2581360193"></script>		 
+		<script type="text/javascript" src="/Static/js/v1.0/info/user/user_util.js?v=2c498ee3f6"></script>
+		<script>
+			mui.init();
+			$(".mui-table-view li").click(function(){
+				if(!USER.ifLogin()){//跳转登录界面
+					window.location.href = USER.hrefUrl.login + "?router=setting";
+					return;
+				}
+				var index = $(this).index();
+				switch(index){
+		            case 0 :
+		                window.location.href = USER.hrefUrl.changepass;
+		                break;
+		            case 1 :
+		                window.location.href = USER.hrefUrl.about;
+		                break;         
+		        }
+			})
+			$("#goback").click(function(){
+				window.location.href = USER.hrefUrl.index;
+			})
+		</script>
+	</body>
+</html>

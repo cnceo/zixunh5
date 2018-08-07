@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate">
+        <meta http-equiv="Expires" content="0">
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <title>福彩3d</title>
+        <script type="text/javascript" src="	
+https:/Static/js/v1.0/	
+common/allcss.js"></script>
+        <link rel="stylesheet" href="	
+https:/Static/css/v1.0/info/draw/chart/fc3d.css?v=a6ae1254b6"/>
+    </head>
+    <body class="hc-bg">
+    <!--筛选期数-->
+        <div class="set-wrap hide">
+            <div>
+                <div class="set-con hc-padding-sm">
+                    <div class='clearfix set-title'>
+                        <span><label></label></span>
+                        <span>走势图设置</span>
+                        <span><label></label></span>
+                    </div>
+                    <ul class="clearfix set-qs hc-margin-top-sm">
+                        <li data-numissue="30" class="active">近30期</li>
+                        <li data-numissue="50">近50期</li>
+                        <li data-numissue="100">近100期</li>
+                    </ul>
+                    <div class="clearfix set-display hc-margin-top-sm hc-padding-horizontal-lg">
+                        <ul class="hc-avg-2 set-yl">
+                            <li class="active">显示遗漏</li>
+                            <li>隐藏遗漏</li>
+                        </ul>
+                        <ul class="hc-avg-2 set-zx">
+                            <li class="active">显示折线</li>
+                            <li>隐藏折线</li>
+                        </ul>
+                        <ul class="hc-avg-2 set-tj">
+                            <li class="active">显示统计</li>
+                            <li>隐藏统计</li>
+                        </ul>
+                    </div>
+                    <div class="clearfix hc-margin-top-lg">
+                        <span class="set-btn set-cancel">取消</span>
+                        <span class="set-btn set-sure">确认</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="k3" class="hc-h5-wrap">
+            <header>
+                <div class="header-left"><span class="hc-block back" onclick="goBack()"></span></div>
+                <div class="header-title"><span class="header-drop">直选</span></div>
+                <div class="header-right hc-cf"><span class="hc-block header-icon chartSetting hc-fl"></span></div>
+            </header>
+             <!--导航-->
+            <div class="hc-g hc-nav hc-animation-slide-top hide">
+                <ul class="hc-avg-3 hc-padding-right-14 hc-padding-bottom-xs hc-g-ul-one">
+                    <li class="hc-margin-vertical-xs hc-padding-left-14">
+                        <a playname="1" class="hc-btn hc-block hc-btn-block hc-radius-xs active">直选</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-14">
+                        <a playname="2" class="hc-btn hc-block hc-btn-block hc-radius-xs">组三</a>
+                    </li>
+                    <li class="hc-margin-vertical-xs hc-padding-left-14">
+                        <a playname="3" class="hc-btn hc-block hc-btn-block hc-radius-xs">组六</a>
+                    </li>
+                </ul>
+            </div>
+
+            <section id="hc-bet-play">
+                <!-- 直选 -->
+                <div class="bet-play-1 hide">
+                    <nav class="hc-avg-4">
+                        <li>近期开奖</li>
+                        <li>百位走势</li>
+                        <li>十位走势</li>
+                        <li>个位走势</li>
+                    </nav>    
+                    <ul class="chart-main">
+                        <li class="hide"></li>   
+                        <li class="hide bwnum">
+                            <table class="hc-bg table-fixed-top">
+                                <colgroup><col width="17%" /></colgroup>
+                                    <tbody><tr><td></td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr></tbody>
+                            </table>
+                            <div class="chart_"></div>
+                            <div class="table-fixed-bottom">
+                                <dl class='hc-dl hc-cf select_numb'>
+                                    <dt><p>选号</p></dt>
+                                    <dd>
+                                        <ul class='hc-cf'>
+                                            <li><div class="red_ball" val="0">0</div></li>
+                                            <li><div class="red_ball" val="1">1</div></li>
+                                            <li><div class="red_ball" val="2">2</div></li>
+                                            <li><div class="red_ball" val="3">3</div></li>
+                                            <li><div class="red_ball" val="4">4</div></li>
+                                            <li><div class="red_ball" val="5">5</div></li>
+                                            <li><div class="red_ball" val="6">6</div></li>
+                                            <li><div class="red_ball" val="7">7</div></li>
+                                            <li><div class="red_ball" val="8">8</div></li>
+                                            <li><div class="red_ball" val="9">9</div></li>
+                                        </ul>
+                                    </dd>
+                                <dl>
+                            </div>
+                        </li>
+                        <li class="hide swnum">
+                            <table class="hc-bg table-fixed-top">
+                                <colgroup><col width="17%" /></colgroup>
+                                    <tbody><tr><td></td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr></tbody>
+                            </table>
+                            <div class="chart_"></div>
+                            <div class="table-fixed-bottom">
+                                <dl class='hc-dl hc-cf select_numb'>
+                                    <dt><p>选号</p></dt>
+                                    <dd>
+                                        <ul class='hc-cf'>
+                                            <li><div class="red_ball" val="0">0</div></li>
+                                            <li><div class="red_ball" val="1">1</div></li>
+                                            <li><div class="red_ball" val="2">2</div></li>
+                                            <li><div class="red_ball" val="3">3</div></li>
+                                            <li><div class="red_ball" val="4">4</div></li>
+                                            <li><div class="red_ball" val="5">5</div></li>
+                                            <li><div class="red_ball" val="6">6</div></li>
+                                            <li><div class="red_ball" val="7">7</div></li>
+                                            <li><div class="red_ball" val="8">8</div></li>
+                                            <li><div class="red_ball" val="9">9</div></li>
+                                        </ul>
+                                    </dd>
+                                <dl>
+                            </div>
+                        </li>
+                        <li class="hide gwnum">
+                            <table class="hc-bg table-fixed-top">
+                                    <colgroup><col width="17%" /></colgroup>
+                                        <tbody><tr><td></td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr></tbody>
+                            </table>
+                            <div class="chart_"></div>
+                            <div class="table-fixed-bottom">
+                                <dl class='hc-dl hc-cf select_numb'>
+                                    <dt><p>选号</p></dt>
+                                    <dd>
+                                        <ul class='hc-cf'>
+                                            <li><div class="red_ball" val="0">0</div></li>
+                                            <li><div class="red_ball" val="1">1</div></li>
+                                            <li><div class="red_ball" val="2">2</div></li>
+                                            <li><div class="red_ball" val="3">3</div></li>
+                                            <li><div class="red_ball" val="4">4</div></li>
+                                            <li><div class="red_ball" val="5">5</div></li>
+                                            <li><div class="red_ball" val="6">6</div></li>
+                                            <li><div class="red_ball" val="7">7</div></li>
+                                            <li><div class="red_ball" val="8">8</div></li>
+                                            <li><div class="red_ball" val="9">9</div></li>
+                                        </ul>
+                                    </dd>
+                                <dl>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- 组三 -->
+                <div class="bet-play-2 hide">
+                    <nav class="hc-avg-2">
+                        <li>近期开奖</li>
+                        <li>号码走势</li>
+                    </nav>    
+                    <ul class="chart-main">
+                        <li class="hide">
+                            <div class="chart_"></div>
+                        </li>   
+                        <li class="hide z3num">
+                        <table class="hc-bg table-fixed-top">
+                                <colgroup><col width="17%" /></colgroup>
+                                    <tbody><tr><td></td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr></tbody>
+                            </table>
+                            <div class="chart_"></div>
+                            <div class="table-fixed-bottom">
+                                <dl class='hc-dl hc-cf select_numb'>
+                                    <dt><p>选号</p></dt>
+                                    <dd>
+                                        <ul class='hc-cf'>
+                                            <li><div class="red_ball" val="0">0</div></li>
+                                            <li><div class="red_ball" val="1">1</div></li>
+                                            <li><div class="red_ball" val="2">2</div></li>
+                                            <li><div class="red_ball" val="3">3</div></li>
+                                            <li><div class="red_ball" val="4">4</div></li>
+                                            <li><div class="red_ball" val="5">5</div></li>
+                                            <li><div class="red_ball" val="6">6</div></li>
+                                            <li><div class="red_ball" val="7">7</div></li>
+                                            <li><div class="red_ball" val="8">8</div></li>
+                                            <li><div class="red_ball" val="9">9</div></li>
+                                        </ul>
+                                    </dd>
+                                <dl>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 组六 -->
+                <div class="bet-play-3 hide">
+                    <nav class="hc-avg-2">
+                        <li>近期开奖</li>
+                        <li>号码走势</li>
+                    </nav>    
+                    <ul class="chart-main">
+                        <li class="hide">
+                            <div class="chart_"></div>
+                        </li>   
+                        <li class="hide z6num">
+                        <table class="hc-bg table-fixed-top">
+                                <colgroup><col width="17%" /></colgroup>
+                                    <tbody><tr><td></td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr></tbody>
+                            </table>
+                            <div class="chart_"></div>
+                            <div class="table-fixed-bottom">
+                                <dl class='hc-dl hc-cf select_numb'>
+                                    <dt><p>选号</p></dt>
+                                    <dd>
+                                        <ul class='hc-cf'>
+                                            <li><div class="red_ball" val="0">0</div></li>
+                                            <li><div class="red_ball" val="1">1</div></li>
+                                            <li><div class="red_ball" val="2">2</div></li>
+                                            <li><div class="red_ball" val="3">3</div></li>
+                                            <li><div class="red_ball" val="4">4</div></li>
+                                            <li><div class="red_ball" val="5">5</div></li>
+                                            <li><div class="red_ball" val="6">6</div></li>
+                                            <li><div class="red_ball" val="7">7</div></li>
+                                            <li><div class="red_ball" val="8">8</div></li>
+                                            <li><div class="red_ball" val="9">9</div></li>
+                                        </ul>
+                                    </dd>
+                                <dl>
+                            </div>
+                        </li>
+                    </ul>
+                </div> 
+                
+            </section>
+   
+            <footer>
+                <div class="footer_left"></div>
+                <div class="footer_message">
+                    <p class="fm_p1 hidden nowrap"><span class="selectTitle"></span><span class="p_total hide">(已选<em class="zs">0</em>注 <em class="money">0</em>元)</span></p>
+                    <p class="fm_p2 hc-k3-stop hidden nowrap">正在获取期号中...</p>
+                </div>
+                <div class="footer_right"><span class="f_btn submit hc-text-center">确定</span></div>
+            </footer>
+            
+        </div>
+        <script type="text/javascript" src="	
+https:/Static/js/v1.0/common/alljs.js?v=b2c3de62b7"></script>
+        <script type="text/javascript" src="	
+https:/Static/js/v1.0/info/draw/chart/fc3d.js?v=db3ca2f4c9"></script>
+    </body>
+</html>
